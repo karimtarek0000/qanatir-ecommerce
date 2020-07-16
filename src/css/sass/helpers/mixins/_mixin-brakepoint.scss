@@ -1,0 +1,64 @@
+////////////////////////////
+// MEDIA MANGER
+/*
+
+Screen mobile xs = 600
+Screen tablet portrate sm = 900
+Screen tablet landscape ms = 1200
+Screen desktop normal from 1200 to 1800
+Screen big from 1800 to xxxxxxl;
+
+*/
+////////////////////////////
+// MIXIN MEDIA QUERY MANGER
+@mixin respond($pointbreak, $specificMedia: false, $direction: "max-width") {
+  @if ($pointbreak == phone) {
+    // PHONE SCREEN EXTRA SMALL 600PX = 37.5EM
+
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  } @else if ($pointbreak == tablet-p) {
+    // TABLET PORTRATE SMALL 900PX = 56.25EM
+
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  } @else if ($pointbreak == tablet-l) {
+    // TABLET LANDSCAPE MEDIUM 1200PX = 75EM
+
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  } @else if ($pointbreak == large-dt) {
+    // LARGE DESKTOP 1800PX = 112.5EM
+
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  } @else if ($pointbreak == proplem) {
+    // PROPLEM SOLVING MEDIA QUERY
+
+    @media only screen and (min-width: 56.3125em) {
+      @content;
+    }
+  } @else if ($pointbreak == device) {
+    // MEDIA DEVICE
+
+    @media only screen and(hover: none) {
+      @content;
+    }
+  } @else if ($pointbreak == pixel) {
+    // RESOLUTION 2X // LARGE
+
+    @media only screen and (min-resolution: 192dpi) and ($specificMedia),
+      only screen and (-webkit-min-device-pixel-ratio: 2) and ($specificMedia) {
+      @content;
+    }
+  } @else {
+    // WRITE MEDIA
+    @media only screen and (#{$direction}: #{$pointbreak}px) {
+      @content;
+    }
+  }
+}

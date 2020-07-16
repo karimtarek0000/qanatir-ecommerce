@@ -1,0 +1,14 @@
+// COLOR THEME
+$allThemes: orange, red, black;
+// THEME MAP
+$themes: (
+  #{nth($allThemes, 1)}: (
+      color: #{nth($allThemes, 1)},
+    ),
+  #{nth($allThemes, 2)}: (
+      color: #{nth($allThemes, 2)},
+    ),
+  #{nth($allThemes, 3)}: (
+      color: #{nth($allThemes, 3)},
+    )
+);

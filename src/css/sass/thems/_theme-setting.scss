@@ -1,0 +1,19 @@
+// SELECT COLOR
+ul.select-color {
+  li {
+    //
+    @for $i from 1 through length($allThemes) {
+      &:nth-child(#{$i}) {
+        background-color: nth($allThemes, $i);
+      }
+    }
+  }
+}
+
+// EACH ALL THEME COLORS
+@each $class, $color in $themes {
+  // CLASS WILL BE ADD IN BODY AND CHANGE ALL ELEMENT IN DOM
+  .#{$class} {
+    @import "./theme.scss";
+  }
+}
