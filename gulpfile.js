@@ -9,11 +9,10 @@ const rename = require("gulp-rename");
 const cssMinify = require("gulp-clean-css");
 const prefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
-const liveReload = require("gulp-livereload");
+const server = require("browser-sync").create();
 const gulpClean = require("gulp-clean");
 const babel = require("gulp-babel");
 const pugEngin = require("gulp-pug");
-const imagemin = require("gulp-imagemin");
 const imageminPngquat = require("imagemin-pngquant");
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
 const rollup = require("@rollup/stream");
@@ -44,6 +43,12 @@ const DEST_FOLDER = {
   img: "./dist/img/",
 };
 ///////////////////////////////////
+//
+const dir = {
+  src: "./",
+  dest: "./dist/",
+};
+///////////////////////////////////
 // PRODUCTION
 const DEST_FOLDER_PRO = {
   style: `${DEST_FOLDER.style}/*.css`,
@@ -66,8 +71,7 @@ const styleDev = () => {
     .pipe(concat("style.css"))
     .pipe(sass())
     .pipe(sourceMaps.write())
-    .pipe(dest(DEST_FOLDER.style))
-    .pipe(liveReload());
+    .pipe(dest(DEST_FOLDER.style));
 };
 // TASK - JS
 const jsDev = () => {
@@ -87,8 +91,7 @@ const jsDev = () => {
     )
     .pipe(concat("main.js"))
     .pipe(sourceMaps.write())
-    .pipe(dest(DEST_FOLDER.js))
-    .pipe(liveReload());
+    .pipe(dest(DEST_FOLDER.js));
 };
 // TASK - JS MODULE
 const jsModule = () => {
@@ -107,30 +110,16 @@ const jsModule = () => {
     .pipe(buffer())
     .pipe(sourceMaps.init({ loadMaps: true }))
     .pipe(sourceMaps.write())
-    .pipe(dest(DEST_FOLDER.js))
-    .pipe(liveReload());
+    .pipe(dest(DEST_FOLDER.js));
 };
+
 // TASK PUG JS
 const pug = () => {
   return src(SRC_FOLDER.pug1)
     .pipe(pugEngin({ pretty: true }))
-    .pipe(dest(DEST_FOLDER.pug))
-    .pipe(liveReload());
+    .pipe(dest(DEST_FOLDER.pug));
 };
-// TASK IMAGE COMP
-const imageComp = () => {
-  src(SRC_FOLDER.img)
-    .pipe(
-      imagemin([
-        imagemin.gifsicle(),
-        imagemin.jpegtran(),
-        imagemin.svgo(),
-        imageminPngquat(),
-        imageminJpegRecompress(),
-      ])
-    )
-    .pipe(dest(DEST_FOLDER.img));
-};
+
 // TASK - STYLE - PRODUCTION
 const stylePro = () => {
   //
@@ -141,6 +130,7 @@ const stylePro = () => {
     .pipe(rename("style.min.css"))
     .pipe(dest(DEST_FOLDER.style));
 };
+
 // TASK - JS - PRODUCTION
 const jsPro = () => {
   return src(DEST_FOLDER_PRO.js)
@@ -149,26 +139,36 @@ const jsPro = () => {
     .pipe(rename("main.min.js"))
     .pipe(dest(DEST_FOLDER.js));
 };
+
+// RELOAD SERVER
+async function reload() {
+  server.reload();
+}
+
 ///////////////////////////////////
 //// WATCH TASKS
-const watcher = () => {
+const watcher = async () => {
+  // SERVER
+  await server.init({
+    server: {
+      baseDir: dir.dest,
+    },
+    port: 5000,
+  });
   console.log("Watch Run");
-  // SERVER AND LIVERELOAD
-  require("./server.js");
-  liveReload.listen();
   // WATCH STYLE CSS AND SASS
-  watch(SRC_FOLDER.styleWatch, series(styleDev));
+  watch(SRC_FOLDER.styleWatch, parallel(styleDev, reload));
   // WATCH JAVASCRIPT
-  watch(SRC_FOLDER.js, series(jsDev));
+  watch(SRC_FOLDER.js, parallel(jsDev, reload));
   // WATCH PUG
-  watch(SRC_FOLDER.pug2, series(pug));
+  watch(SRC_FOLDER.pug2, parallel(pug, reload));
   // WATCH USE JAVASCRIPT MODULE
-  // watch(SRC_FOLDER.js, series(jsModule));
+  // watch(SRC_FOLDER.js, parallel(jsModule, reload));
 };
 ///////////////////////////////////
 // EXPORTS
 // DEFAULT NORMAL
 exports.default = parallel(pug, styleDev, jsDev, watcher);
-exports.build = series(stylePro, jsPro, imageComp);
+exports.build = series(stylePro, jsPro);
 // DEFAULT USE JS MODULE
 // exports.default = parallel(pug, styleDev, jsModule, watcher);
