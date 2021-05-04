@@ -1,5 +1,5 @@
 //
-const { task, src, dest, watch, series, parallel } = require("gulp");
+const { src, dest, watch, series, parallel } = require("gulp");
 //
 const sass = require("gulp-sass");
 const plumber = require("gulp-plumber");
@@ -9,12 +9,13 @@ const rename = require("gulp-rename");
 const cssMinify = require("gulp-clean-css");
 const prefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
+const imagemin = require("gulp-imagemin");
+const imageminMozjpeg = require("imagemin-mozjpeg");
+const imageminOptipng = require("imagemin-optipng");
 const server = require("browser-sync").create();
 const gulpClean = require("gulp-clean");
 const babel = require("gulp-babel");
 const pugEngin = require("gulp-pug");
-const imageminPngquat = require("imagemin-pngquant");
-const imageminJpegRecompress = require("imagemin-jpeg-recompress");
 const rollup = require("@rollup/stream");
 const rollupBabel = require("@rollup/plugin-babel");
 const commonjs = require("@rollup/plugin-commonjs");
@@ -31,9 +32,10 @@ const SRC_FOLDER = {
   js: "./src/js/**/*.js",
   pug1: "./src/html/*.pug",
   pug2: "./src/html/**/*.pug",
-  img: "./dist/img/**/*.{png, jpg, jpeg}",
+  img: "./dist/img/**/*",
   jsModule: "./src/js/app.js",
 };
+
 ///////////////////////////////////
 // DEST
 const DEST_FOLDER = {
@@ -42,18 +44,21 @@ const DEST_FOLDER = {
   pug: "./dist",
   img: "./dist/img/",
 };
+
 ///////////////////////////////////
-//
+// DIR
 const dir = {
   src: "./",
   dest: "./dist/",
 };
+
 ///////////////////////////////////
 // PRODUCTION
 const DEST_FOLDER_PRO = {
   style: `${DEST_FOLDER.style}/*.css`,
   js: `${DEST_FOLDER.js}/*.js`,
 };
+
 ///////////////////////////////////
 //// TASKS
 // TASK - STYLE - DEVELOPMENT
@@ -73,6 +78,7 @@ const styleDev = () => {
     .pipe(sourceMaps.write())
     .pipe(dest(DEST_FOLDER.style));
 };
+
 // TASK - JS
 const jsDev = () => {
   return src(SRC_FOLDER.js)
@@ -93,6 +99,7 @@ const jsDev = () => {
     .pipe(sourceMaps.write())
     .pipe(dest(DEST_FOLDER.js));
 };
+
 // TASK - JS MODULE
 const jsModule = () => {
   return rollup({
@@ -140,6 +147,21 @@ const jsPro = () => {
     .pipe(dest(DEST_FOLDER.js));
 };
 
+// MINIFICATION IMAGES
+const imageMin = () => {
+  return src(SRC_FOLDER.img)
+    .pipe(
+      imagemin([
+        imagemin.mozjpeg({ quality: 50, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+        }),
+      ])
+    )
+    .pipe(dest(DEST_FOLDER.img));
+};
+
 // RELOAD SERVER
 async function reload() {
   server.reload();
@@ -168,7 +190,7 @@ const watcher = async () => {
 ///////////////////////////////////
 // EXPORTS
 // DEFAULT NORMAL
-exports.default = parallel(pug, styleDev, jsDev, watcher);
-exports.build = series(stylePro, jsPro);
+// exports.default = parallel(pug, styleDev, jsDev, watcher);
+exports.build = series(stylePro, jsPro, imageMin);
 // DEFAULT USE JS MODULE
 // exports.default = parallel(pug, styleDev, jsModule, watcher);
