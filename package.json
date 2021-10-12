@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "postcss ./src/css/style.css -o ./dist/css/style.css --watch"
+  },
   "author": "karim tarek",
   "license": "ISC",
   "browserslist": [
@@ -30,6 +32,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.0",
@@ -40,15 +43,22 @@
     "rollup": "^2.21.0",
     "sass": "^1.26.10",
     "static-server": "^2.2.1",
+    "tailwindcss-debug-screens": "^2.1.0",
+    "tailwindcss-logical": "^2.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-ftp": "^0.6.1",
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
     "@babel/core": "^7.14.0",
+    "autoprefixer": "^10.3.7",
     "bootstrap": "^4.5.0",
     "browser-sync": "^2.26.14",
     "cors": "^2.8.5",
-    "imagemin-mozjpeg": "^9.0.0"
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.16"
   }
 }

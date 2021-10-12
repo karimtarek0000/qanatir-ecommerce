@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 62.5%;
+    @apply box-border;
+
+    @media (max-width: 600px) {
+      font-size: 58%;
+    }
+  }
+
+  body {
+    @apply font-Futura;
+    @apply bg-oldLace;
+    /* height: 10000px; */
+  }
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url(../fonts/futura-ltcn/FutuLt.ttf);
+}
+
+.gradient {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.2));
+}
+
+.control-hover .action-toggle-video,
+.control-hover .action-link-story {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.control-hover:hover .action-toggle-video,
+.control-hover:hover .action-link-story {
+  opacity: 1;
+}
+
+.owl-item,
+.owl-stage,
+.owl-stage-outer {
+  height: 100%;
+}
+
+.owl-dots {
+  transform: translateY(-5rem);
+}
+
+.owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  @apply bg-white;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  @apply bg-plantation;
+}
+
+.owl-dots .owl-dot:not(:last-child) {
+  margin-right: 1.5rem;
+}

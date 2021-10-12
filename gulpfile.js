@@ -22,6 +22,7 @@ const commonjs = require("@rollup/plugin-commonjs");
 const { nodeResolve } = require("@rollup/plugin-node-resolve");
 const source = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
+const postcss = require("gulp-postcss");
 
 ///////////////////////////////////
 //// SRC - DEST
@@ -39,8 +40,8 @@ const SRC_FOLDER = {
 ///////////////////////////////////
 // DEST
 const DEST_FOLDER = {
-  style: "./dist/css",
-  js: "./dist/js",
+  style: "./dist/assets/css",
+  js: "./dist/assets/js",
   pug: "./dist",
   img: "./dist/img/",
 };
@@ -64,7 +65,7 @@ const DEST_FOLDER_PRO = {
 // TASK - STYLE - DEVELOPMENT
 const styleDev = () => {
   //
-  return src(SRC_FOLDER.style)
+  return src("./src/css/*.css")
     .pipe(
       plumber(function (error) {
         console.log("Style Task Error");
@@ -72,10 +73,7 @@ const styleDev = () => {
         this.emit("end");
       })
     )
-    .pipe(sourceMaps.init())
-    .pipe(concat("style.css"))
-    .pipe(sass())
-    .pipe(sourceMaps.write())
+    .pipe(postcss())
     .pipe(dest(DEST_FOLDER.style));
 };
 
@@ -126,6 +124,9 @@ const pug = () => {
     .pipe(pugEngin({ pretty: true }))
     .pipe(dest(DEST_FOLDER.pug));
 };
+const html = () => {
+  return src("./src/html/*.html").pipe(dest("./dist"));
+};
 
 // TASK - STYLE - PRODUCTION
 const stylePro = () => {
@@ -134,7 +135,7 @@ const stylePro = () => {
     .pipe(prefixer())
     .pipe(cssMinify())
     .pipe(gulpClean())
-    .pipe(rename("style.min.css"))
+    .pipe(rename("style.css"))
     .pipe(dest(DEST_FOLDER.style));
 };
 
@@ -179,11 +180,12 @@ const watcher = async () => {
   });
   console.log("Watch Run");
   // WATCH STYLE CSS AND SASS
-  watch(SRC_FOLDER.styleWatch, parallel(styleDev, reload));
+  watch(["./src/css/*.css", "./tailwind.config.js"], parallel(styleDev, reload));
   // WATCH JAVASCRIPT
   watch(SRC_FOLDER.js, parallel(jsDev, reload));
   // WATCH PUG
-  watch(SRC_FOLDER.pug2, parallel(pug, reload));
+  // watch(SRC_FOLDER.pug2, parallel(pug, reload));
+  watch("./src/**/*.html", parallel(html, reload));
   // WATCH USE JAVASCRIPT MODULE
   // watch(SRC_FOLDER.js, parallel(jsModule, reload));
 };
@@ -191,6 +193,7 @@ const watcher = async () => {
 // EXPORTS
 // DEFAULT NORMAL
 // exports.default = parallel(pug, styleDev, jsDev, watcher);
-exports.build = series(stylePro, jsPro, imageMin);
+exports.default = parallel(html, styleDev, jsDev, watcher);
+// exports.build = series(stylePro, jsPro, imageMin);
 // DEFAULT USE JS MODULE
 // exports.default = parallel(pug, styleDev, jsModule, watcher);
