@@ -1,4 +1,5 @@
 $(function () {
+  // ALL VARIABLES
   const year = $("#year");
   const video = $("#video");
   const playVideo = $("#play-video");
@@ -8,20 +9,27 @@ $(function () {
   const closeBanar = $("#close-banar");
   const links = $("#links a");
   const navbar = $("#navbar");
+  const header = $("#header");
   const heightNavbar = navbar.outerHeight();
+  const heightHeader = header.outerHeight();
   const logoL = $("#logo-l img");
+  const scrollToTop = $("#scroll-to-top");
+  const closeSidebar = $("#close-sidebar");
+  const closeSidebarShopCart = $("#close-sidebar-shop-cart");
+  const sidebarNav = $("#sidebar-nav");
+  const toggler = $("#toggler");
+  const backDrop = $(".back-drop");
+  const shoppingCart = $("#shopping-cart");
+  const iconCart = $("#icon-cart");
+  const deleteItemShopping = $(".delete-item");
+  const cartWrapper = $("#cart-wrapper");
 
+  //
   $(window).scrollTop(0);
 
-  // LINKS
-  links.on("click", function () {
-    $(this).addClass("text-como").siblings().removeClass("text-como");
-  });
-
-  // ADD YAER
-  year.text(new Date().getFullYear());
-
-  // VIDEO
+  /////////////////////////////////
+  //// CLICK
+  // VIDEO - PLAY AND PAUSE
   playVideo.on("click", function () {
     const getAttrIconVideo = iconVideo.attr("xlink:href");
     const srcIcon = getAttrIconVideo.split("#")[0];
@@ -43,23 +51,28 @@ $(function () {
     video[0].pause();
   });
 
-  // SLIDER
-  $(".owl-carousel").owlCarousel({
-    items: 1,
-    animateOut: "fadeOut",
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    loop: true,
+  // CHANGE ACTIVE CLASS ON LINKS
+  links.on("click", function () {
+    $(this).addClass("text-como").siblings().removeClass("text-como");
+    closeSidebarNav();
   });
 
-  // BANAR
+  // CLOSE BANAR
   closeBanar.on("click", function () {
     $(this).parent().slideUp();
   });
+  // SCROLL TO TOP SMOOTHLY
+  scrollToTop.on("click", () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
 
-  // FIXED NAVBAR WHEN SCROLL
-  $(window).on("scroll", function () {
+  /////////////////////////////////
+  //// FUNCTIONS
+  const _fixedNavbar = () => {
     if ($(this).scrollTop() > heightNavbar) {
       navbar.removeClass("sm:absolute sm:bg-transparent");
       navbar.addClass("fixed sm:bg-plantation");
@@ -70,5 +83,95 @@ $(function () {
     navbar.addClass("sm:absolute sm:bg-transparent");
     navbar.removeClass("fixed sm:bg-plantation");
     logoL.css("max-height", "100px");
+  };
+
+  const showBtnScrollToTop = () => {
+    if ($(this).scrollTop() > heightHeader) {
+      scrollToTop.addClass("-translate-y-10");
+      scrollToTop.removeClass("translate-y-48");
+      return;
+    }
+
+    scrollToTop.addClass("translate-y-48");
+    scrollToTop.removeClass("-translate-y-10");
+  };
+
+  // SCROLL WILL TRIGGER ONE MORE THAN FUNCTION
+  $(window).on("scroll", function () {
+    //
+    _fixedNavbar();
+    //
+    showBtnScrollToTop();
   });
+
+  // SLIDER
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    animateOut: "fadeOut",
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    loop: true,
+  });
+
+  function openSidebarNav() {
+    sidebarNav.toggleClass("translate-x-0 -translate-x-full");
+    backDrop.toggleClass("block hidden");
+    $("body, html").css("overflow-y", "hidden");
+  }
+
+  function closeSidebarNav() {
+    sidebarNav.addClass("translate-x-0 -translate-x-full");
+    backDrop.toggleClass("block hidden");
+    $("body, html").css("overflow-y", "visible");
+  }
+
+  if ($(document).outerWidth() <= 640) {
+    toggler.on("click", () => openSidebarNav());
+    closeSidebar.on("click", () => closeSidebarNav());
+  }
+
+  /////////////////////////////////
+  //// SHOPPING CART
+  // TOGGLE SHOPPING CART
+  iconCart.on("click", (e) => {
+    e.stopPropagation();
+    if ($(document).outerWidth() > 640) {
+      return shoppingCart.slideToggle(200);
+    }
+    shoppingCart.toggleClass("-translate-x-full sm:hidden");
+    backDrop.toggleClass("block hidden");
+    $("body, html").css("overflow-y", "hidden");
+  });
+
+  // CLOSE SIDEBAR SHOP cart
+  closeSidebarShopCart.on("click", (e) => {
+    e.stopPropagation();
+    shoppingCart.toggleClass("-translate-x-full");
+    backDrop.toggleClass("block hidden");
+    $("body, html").css("overflow-y", "visible");
+  });
+
+  // IF CLICKED ON SHOPPING CART WILL CLOSED
+  shoppingCart.on("click", (e) => {
+    if ($(document).outerWidth() <= 640) {
+      closeSidebarShopCart.trigger("click");
+    }
+  });
+
+  // DELETE ITEM FROM SHOPPING cart
+  deleteItemShopping.on("click", function (e) {
+    e.stopPropagation();
+    $(this).parent().remove();
+  });
+
+  // GLOBAL - IF CLICKED ON WINDOW
+  $(window).on("click", () => {
+    if ($(document).outerWidth() > 640) {
+      shoppingCart.slideUp(200);
+    }
+  });
+
+  // ADD YAER
+  year.text(new Date().getFullYear());
 });

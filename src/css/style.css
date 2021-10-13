@@ -15,7 +15,19 @@
   body {
     @apply font-Futura;
     @apply bg-oldLace;
-    /* height: 10000px; */
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply bg-oldLace;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-como;
   }
 }
 
@@ -64,4 +76,51 @@
 
 .owl-dots .owl-dot:not(:last-child) {
   margin-right: 1.5rem;
+}
+
+.hover-scroll-top:hover svg {
+  transform: translateY(-5px);
+}
+
+.back-drop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 640px) {
+  .responsive-sidebar-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-height: 100vh;
+    background-color: white;
+    width: 250px;
+  }
+}
+
+.translate-position {
+  left: 50%;
+}
+
+.shape-arrow {
+  transform: translate(-50%, 10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shape-arrow::after {
+  content: "";
+  border-width: 20px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: -25px;
+  z-index: -1;
+}
+
+.shopping-cart:hover .shape-arrow {
+  transform: translate(-50%, 0);
+  opacity: 1;
 }

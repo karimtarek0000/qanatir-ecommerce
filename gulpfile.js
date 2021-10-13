@@ -10,8 +10,8 @@ const cssMinify = require("gulp-clean-css");
 const prefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
-const imageminMozjpeg = require("imagemin-mozjpeg");
-const imageminOptipng = require("imagemin-optipng");
+// const imageminMozjpeg = require("imagemin-mozjpeg");
+// const imageminOptipng = require("imagemin-optipng");
 const server = require("browser-sync").create();
 const gulpClean = require("gulp-clean");
 const babel = require("gulp-babel");
@@ -23,6 +23,7 @@ const { nodeResolve } = require("@rollup/plugin-node-resolve");
 const source = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
 const postcss = require("gulp-postcss");
+const fileinclude = require("gulp-file-include");
 
 ///////////////////////////////////
 //// SRC - DEST
@@ -125,7 +126,14 @@ const pug = () => {
     .pipe(dest(DEST_FOLDER.pug));
 };
 const html = () => {
-  return src("./src/html/*.html").pipe(dest("./dist"));
+  return src("./src/html/*.html")
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
+    .pipe(dest("./dist"));
 };
 
 // TASK - STYLE - PRODUCTION

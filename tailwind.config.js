@@ -6,10 +6,6 @@ module.exports = {
     container: {
       center: true,
     },
-    height: {
-      70: "70vh",
-      full: "100%",
-    },
     fontSize: {
       xs: "1.2rem",
       md: "1.4rem",
@@ -37,6 +33,10 @@ module.exports = {
       },
       zIndex: {
         "-1": "-1",
+      },
+      height: {
+        70: "70vh",
+        full: "100%",
       },
     },
   },
