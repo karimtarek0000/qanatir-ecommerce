@@ -124,3 +124,15 @@
   transform: translate(-50%, 0);
   opacity: 1;
 }
+
+.change-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.change-scroll::-webkit-scrollbar-track {
+  @apply bg-oldLace;
+}
+
+.change-scroll::-webkit-scrollbar-thumb {
+  @apply bg-como;
+}

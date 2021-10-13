@@ -22,7 +22,8 @@ $(function () {
   const shoppingCart = $("#shopping-cart");
   const iconCart = $("#icon-cart");
   const deleteItemShopping = $(".delete-item");
-  const cartWrapper = $("#cart-wrapper");
+  const cartEmpty = $("#cart-empty");
+  const cartAction = $("#cart-actions");
 
   //
   $(window).scrollTop(0);
@@ -73,16 +74,18 @@ $(function () {
   /////////////////////////////////
   //// FUNCTIONS
   const _fixedNavbar = () => {
-    if ($(this).scrollTop() > heightNavbar) {
-      navbar.removeClass("sm:absolute sm:bg-transparent");
-      navbar.addClass("fixed sm:bg-plantation");
-      logoL.css("max-height", "50px");
-      return;
-    }
+    if (!navbar.hasClass("specific")) {
+      if ($(this).scrollTop() > heightNavbar) {
+        navbar.removeClass("sm:absolute sm:bg-transparent");
+        navbar.addClass("fixed sm:bg-plantation");
+        logoL.css("max-height", "50px");
+        return;
+      }
 
-    navbar.addClass("sm:absolute sm:bg-transparent");
-    navbar.removeClass("fixed sm:bg-plantation");
-    logoL.css("max-height", "100px");
+      navbar.addClass("sm:absolute sm:bg-transparent");
+      navbar.removeClass("fixed sm:bg-plantation");
+      logoL.css("max-height", "100px");
+    }
   };
 
   const showBtnScrollToTop = () => {
@@ -159,10 +162,20 @@ $(function () {
     }
   });
 
-  // DELETE ITEM FROM SHOPPING cart
+  // DELETE ITEM FROM SHOPPING CART
   deleteItemShopping.on("click", function (e) {
     e.stopPropagation();
+    //
+    let cartWrapper = $("#cart-wrapper > div").length;
+
+    // 1) - REMOVE ITEM FROM CART
     $(this).parent().remove();
+
+    // 2) - CHECK IF THIS ELEMENT EQIAL 1 WILL ADD MESSAGE EMPTY
+    if (cartWrapper === 1) {
+      cartEmpty.toggleClass("hidden flex");
+      cartAction.toggleClass("hidden");
+    }
   });
 
   // GLOBAL - IF CLICKED ON WINDOW

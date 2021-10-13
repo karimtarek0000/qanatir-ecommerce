@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Qanatir</title>
+  </head>
+  <body class="debug-screens">
+    <!-- BANAR -->
+    <div class="flex items-center justify-center text-white bg-como text-16" style="height: 6rem">
+      <p class="mie-5">15% Off Sale on Gift Bundles! <a href="#" class="underline">Shop Now</a></p>
+      <div id="close-banar" class="cursor-pointer">
+        <svg style="width: 2rem; height: 2rem" class="fill-white">
+          <use xlink:href="./assets/icons/sprite.svg#icon-close">
+            <title>close</title>
+          </use>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- HEADER -->
+<header class="relative overflow-hidden gradient" id="header">
+  <!-- NAVBAR -->
+  <nav
+  id="navbar"
+  class="top-0 left-0 right-0 z-40 px-5 transition duration-500 bg-white  sm:bg-transparent sm:absolute sm:px-0"
+>
+  <!--  -->
+  <div class="container relative flex items-center justify-between py-3 sm:items-start">
+    <!-- LOGO -->
+    <a id="logo-l" href="/" class="order-2 hidden sm:block">
+      <img class="max-w-full" src="./assets/images/logo/logo.svg" alt="logo" />
+    </a>
+    <!-- LOGO SMALL -->
+    <a href="/" class="order-2 sm:hidden">
+      <img class="max-w-full" src="./assets/images/logo/logo-small.svg" alt="logo" />
+    </a>
+    <!-- TOGGLER -->
+    <div class="cursor-pointer sm:mt-5 sm:hidden" id="toggler">
+      <svg style="width: 24px; height: 24px">
+        <use xlink:href="./assets/icons/sprite.svg#icon-toggler">
+          <title>toggler</title>
+        </use>
+      </svg>
+    </div>
+    <!-- LINKS -->
+    <div class="flex items-center order-3 capitalize text-md sm:mt-5">
+      <div
+        class="z-50 flex flex-col transition duration-500 transform -translate-x-full  sm:translate-x-0 responsive-sidebar-nav"
+        id="sidebar-nav"
+      >
+        <!--  -->
+        <div
+          class="flex items-center px-10 border-b border-blue-200 cursor-pointer pointer-events-none  sm:hidden opacity-70"
+          id="close-sidebar"
+        >
+          <div class="flex items-center py-5 pointer-events-auto">
+            <svg class="fill-current" style="width: 15px; height: 15px">
+              <use xlink:href="./assets/icons/sprite.svg#icon-close">
+                <title>close</title>
+              </use>
+            </svg>
+            <button class="capitalize mis-2 text-md">close</button>
+          </div>
+        </div>
+        <!--  -->
+        <div
+          id="links"
+          class="flex flex-col px-10 mt-10 text-black  sm:px-0 sm:mt-0 sm:items-center sm:text-white sm:flex-row text-16 sm:text-md"
+        >
+          <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0 text-como">shop coffee</a>
+          <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">subscriptions</a>
+          <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">gifts</a>
+          <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">brew gear</a>
+          <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">story</a>
+        </div>
+      </div>
+      <!-- SHOPPING cart -->
+      <div class="relative transition duration-500 cursor-pointer mis-4 shopping-cart">
+        <svg style="width: 24px; height: 24px" class="fill-black sm:fill-white" id="icon-cart">
+          <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
+            <title>shopping-cart</title>
+          </use>
+        </svg>
+        <!-- TITLE -->
+        <div
+          class="absolute items-center justify-center hidden mt-5 text-xs capitalize transition duration-300 bg-white rounded  shape-arrow top-full sm:flex translate-position"
+          style="width: 50px; height: 30px"
+        >
+          <span>cart</span>
+        </div>
+      </div>
+      <!-- cart -->
+      <div
+        id="shopping-cart"
+        class="fixed top-0 left-0 z-50 h-full p-5 transition duration-500 transform -translate-x-full bg-white rounded  sm:hidden sm:translate-x-0 sm:left-auto sm:absolute sm:mt-5 sm:-right-5 sm:top-20 sm:h-auto"
+        style="width: 28rem"
+      >
+        <!-- TITLE -->
+        <div
+          class="flex items-center justify-between p-5 border-b border-black  border-opacity-10 sm:hidden"
+        >
+          <span class="font-extrabold uppercase text-16">shopping cart</span>
+          <svg
+            class="cursor-pointer fill-current"
+            id="close-sidebar-shop-cart"
+            style="width: 20px; height: 20px"
+          >
+            <use xlink:href="./assets/icons/sprite.svg#icon-close">
+              <title>close</title>
+            </use>
+          </svg>
+        </div>
+        <!-- IF EMPTY -->
+        <div
+          id="cart-empty"
+          class="items-center justify-center hidden font-extrabold text-black h-28"
+        >
+          <p>shopping cart empty</p>
+        </div>
+        <!-- CART WRAPPER -->
+        <div id="cart-wrapper" class="overflow-auto max-h-100 sm:max-h-80">
+          <!-- CART CONTENT 1 -->
+          <div class="flex items-center py-5 mb-5 border-b border-black border-opacity-10">
+            <div style="width: 50px; height: 50px" class="self-start px-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <div class="px-4">
+              <p>The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mt-3">32.00</p>
+            </div>
+            <svg
+              class="self-start cursor-pointer fill-current text-como delete-item"
+              style="width: 20px; height: 20px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+          <!-- CART CONTENT 2 -->
+          <div class="flex items-center py-5 mb-5 border-b border-black border-opacity-10">
+            <div style="width: 50px; height: 50px" class="self-start px-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <div class="px-4">
+              <p>The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mt-3">32.00</p>
+            </div>
+            <svg
+              class="self-start cursor-pointer fill-current text-como delete-item"
+              style="width: 20px; height: 20px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+        </div>
+        <!-- PROCESS CART -->
+        <div id="cart-actions">
+          <div class="flex justify-between font-extrabold capitalize text-16">
+            <p>total:</p>
+            <p>$48</p>
+          </div>
+          <div class="flex flex-col items-center mt-5">
+            <button
+              class="w-full py-4 text-white uppercase transition rounded  duration-400 hover:bg-opacity-90 bg-como"
+            >
+              proceed to checkout
+            </button>
+            <button
+              class="w-full py-4 mt-3 text-black uppercase transition bg-white rounded  duration-400 hover:bg-gray-100"
+            >
+              view cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- VIDEO -->
+  <div class="relative overflow-hidden h-70">
+    <!--  -->
+    <video id="video" loop class="object-cover w-full h-full">
+      <source src="./assets/images/s.mp4" />
+    </video>
+    <!--  -->
+    <div class="absolute top-0 bottom-0 left-0 right-0" id="control-video-wrapper">
+      <img
+        class="object-cover max-w-full min-h-full transition duration-300 ease-linear"
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+        alt=""
+        id="cover-video"
+      />
+      <!-- CONTROLERS -->
+      <div
+        class="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center w-full  gradient"
+      >
+        <a href="#" class="text-white select-none text-xlg action-link-story">SEE OUR STORY</a>
+        <div class="mt-2 cursor-pointer action-toggle-video" id="play-video">
+          <svg style="width: 5rem; height: 5rem">
+            <use xlink:href="./assets/icons/sprite.svg#icon-play-video" id="icon-video">
+              <title>play-video</title>
+            </use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="container sm:w-7/12">
+    <!--  -->
+    <div class="mt-20 mb-10 text-center sm:mb-32">
+      <h3 class="uppercase text-30">our coffees</h3>
+      <p class="mt-5 text-lg">Limited edition. Eco-friendly. Not just for working out</p>
+    </div>
+    <!--  -->
+    <div class="text-16">
+      <p class="px-5 leading-loose sm:px-0">
+        Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep
+        v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag.
+      </p>
+      <div class="my-5">
+        <img
+          class="object-cover max-w-full max-h-full"
+          src="./assets/images/other/story/1.jpg"
+          alt=""
+        />
+      </div>
+      <p class="px-5 leading-loose sm:px-0">
+        Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep
+        v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag.
+      </p>
+    </div>
+  </section>
+  <!--  -->
+  <section class="mt-10 sm:mt-20">
+    <div>
+      <img
+        class="object-cover w-full max-w-full max-h-full"
+        src="./assets/images/other/story/2.jpg"
+        alt=""
+      />
+    </div>
+    <div class="py-10 mx-auto sm:w-7/12">
+      <h2 class="py-20 font-extrabold text-center text-30">YEMEN'S COFFEE HISTORY</h2>
+      <p class="px-5 leading-loose text-16 sm:px-0">
+        An Islamic Scholar and Sufi mystic discovers that if he sets a pot of water over his cook
+        fire, and boils the seeds of a certain fruit that grows wild in the hills, the water turns a
+        muddy brown. When he drinks this brew, it lifts his spirit, awakens his senses, and allows
+        him to pray and study through the night. This Monk of Mokha shares his discovery with his
+        brothers and sisters, and before long, this drink becomes prized among the Yemeni people.
+        Coffee starts getting cultivated in the mountain and valley terraces, and shared with
+        pilgrims and traders who visit the country.
+      </p>
+      <div class="my-5">
+        <img
+          class="object-cover max-w-full max-h-full"
+          src="./assets/images/other/story/1.jpg"
+          alt=""
+        />
+      </div>
+      <p class="px-5 mb-10 leading-loose text-16 sm:px-0">
+        As a kid growing up in San Francisco’s Tenderloin, Mokhtar Alkhanshali never liked coffee
+        that much. It tasted dark and bitter. As a child, Mokhtar traveled with his parents back to
+        the mountain town of Ibb, Yemen, where his family is from. He used to walk through the
+        terraced farms with his grandmother and pick bright red coffee cherries - the fruit that
+        holds the coffee beans - right off the trees.
+      </p>
+      <p class="px-5 mb-10 leading-loose text-16 sm:px-0">
+        As a kid growing up in San Francisco’s Tenderloin, Mokhtar Alkhanshali never liked coffee
+        that much. It tasted dark and bitter. As a child, Mokhtar traveled with his parents back to
+        the mountain town of Ibb, Yemen, where his family is from. He used to walk through the
+        terraced farms with his grandmother and pick bright red coffee cherries - the fruit that
+        holds the coffee beans - right off the trees.
+      </p>
+      <p class="px-5 mb-10 leading-loose text-16 sm:px-0">
+        As a kid growing up in San Francisco’s Tenderloin, Mokhtar Alkhanshali never liked coffee
+        that much. It tasted dark and bitter. As a child, Mokhtar traveled with his parents back to
+        the mountain town of Ibb, Yemen, where his family is from. He used to walk through the
+        terraced farms with his grandmother and pick bright red coffee cherries - the fruit that
+        holds the coffee beans - right off the trees.
+      </p>
+      <p class="px-5 mb-10 leading-loose text-16 sm:px-0">
+        As a kid growing up in San Francisco’s Tenderloin, Mokhtar Alkhanshali never liked coffee
+        that much. It tasted dark and bitter. As a child, Mokhtar traveled with his parents back to
+        the mountain town of Ibb, Yemen, where his family is from. He used to walk through the
+        terraced farms with his grandmother and pick bright red coffee cherries - the fruit that
+        holds the coffee beans - right off the trees.
+      </p>
+      <p class="px-5 mb-10 leading-loose text-16 sm:px-0">
+        As a kid growing up in San Francisco’s Tenderloin, Mokhtar Alkhanshali never liked coffee
+        that much. It tasted dark and bitter. As a child, Mokhtar traveled with his parents back to
+        the mountain town of Ibb, Yemen, where his family is from. He used to walk through the
+        terraced farms with his grandmother and pick bright red coffee cherries - the fruit that
+        holds the coffee beans - right off the trees.
+      </p>
+    </div>
+  </section>
+  <!--  -->
+  <section>
+    <div class="my-5">
+      <img
+        class="object-cover w-full max-w-full max-h-full"
+        src="./assets/images/other/story/3.jpg"
+        alt=""
+      />
+    </div>
+  </section>
+  <!-- SLIDER -->
+  <section class="my-28">
+    <div class="owl-carousel owl-theme" style="height: 42.4rem">
+      <!-- slide -->
+      <div class="relative flex items-center h-full">
+        <!--  -->
+        <div
+          class="relative z-50 flex flex-col items-center px-12 mx-auto text-white  lg:w-8/12 lg:px-24"
+        >
+          <p class="mt-8 leading-10 text-center text-md">
+            Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave
+            deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade
+            swag.
+          </p>
+          <!--  -->
+          <figure class="mt-16 text-center uppercase">
+            <span class="block text-16">Kevin Johnson</span>
+            <span class="block text-md">Founder of starbucks</span>
+          </figure>
+          <!--  -->
+          <button
+            style="width: 14rem; height: 5rem"
+            class="mt-16 text-xs text-white uppercase transition duration-500 ease-in-out border border-white  set-height-width hover:bg-white hover:text-black"
+          >
+            the story
+          </button>
+        </div>
+        <!--  -->
+        <div class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden g">
+          <img
+            class="object-cover w-full max-w-full min-h-full"
+            src="./assets/images/other/slide.jpg"
+            alt=""
+          />
+          <span
+            class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden  overlay bg-gradient-to-r from-como to-transparent"
+          ></span>
+        </div>
+      </div>
+      <!-- slide -->
+      <div class="relative flex items-center h-full">
+        <!--  -->
+        <div
+          class="relative z-50 flex flex-col items-center px-12 mx-auto text-white  lg:w-8/12 lg:px-24"
+        >
+          <p class="mt-8 leading-10 text-center text-md">
+            Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave
+            deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade
+            swag.
+          </p>
+          <!--  -->
+          <figure class="mt-16 text-center uppercase">
+            <span class="block text-16">Kevin Johnson</span>
+            <span class="block text-md">Founder of starbucks</span>
+          </figure>
+          <!--  -->
+          <button
+            style="width: 14rem; height: 5rem"
+            class="mt-16 text-xs text-white uppercase transition duration-500 ease-in-out border border-white  set-height-width hover:bg-white hover:text-black"
+          >
+            the story
+          </button>
+        </div>
+        <!--  -->
+        <div class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden g">
+          <img
+            class="object-cover w-full max-w-full min-h-full"
+            src="./assets/images/other/our-story/1.jpg"
+            alt=""
+          />
+          <span
+            class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden  overlay bg-gradient-to-r from-como to-transparent"
+          ></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- COFFEE -->
+  <section class="container mb-40 text-black">
+    <!--  -->
+    <div class="mt-20 mb-32 text-center">
+      <h3 class="uppercase text-30">our coffees</h3>
+      <p class="mt-5 text-lg">Limited edition. Eco-friendly. Not just for working out</p>
+    </div>
+    <!--  -->
+    <div class="grid content-center grid-cols-2 grid-rows-2 lg:grid-cols-3 gap-y-56 gap-x-5">
+      <div class="text-center text-16">
+        <img
+          class="object-cover mx-auto mb-9"
+          src="./assets/images/other/our-coffee/1.png"
+          alt=""
+        />
+        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+        <p>$32.00</p>
+      </div>
+      <div class="text-center text-16">
+        <img
+          class="object-cover mx-auto mb-9"
+          src="./assets/images/other/our-coffee/1.png"
+          alt=""
+        />
+        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+        <p>$32.00</p>
+      </div>
+      <div class="text-center text-16">
+        <img
+          class="object-cover mx-auto mb-9"
+          src="./assets/images/other/our-coffee/1.png"
+          alt=""
+        />
+        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+        <p>$32.00</p>
+      </div>
+      <div class="text-center text-16">
+        <img
+          class="object-cover mx-auto mb-9"
+          src="./assets/images/other/our-coffee/1.png"
+          alt=""
+        />
+        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+        <p>$32.00</p>
+      </div>
+      <div class="text-center text-16">
+        <img
+          class="object-cover mx-auto mb-9"
+          src="./assets/images/other/our-coffee/1.png"
+          alt=""
+        />
+        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+        <p>$32.00</p>
+      </div>
+      <div class="text-center text-16">
+        <img
+          class="object-cover mx-auto mb-9"
+          src="./assets/images/other/our-coffee/1.png"
+          alt=""
+        />
+        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+        <p>$32.00</p>
+      </div>
+    </div>
+    <!--  -->
+    <a
+      href="javascript:void(0)"
+      style="width: 14rem; height: 5rem"
+      class="flex items-center justify-center mx-auto mt-32 text-xs text-black uppercase transition duration-500 ease-in-out border border-black  hover:bg-black hover:text-white"
+    >
+      shop all
+    </a>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="pt-20 pb-10 bg-plantation">
+  <div class="container px-0">
+    <!-- INFO -->
+    <div class="flex flex-col items-center justify-between sm:items-start sm:flex-row">
+      <!--  -->
+      <div class="grid flex-grow-0 grid-cols-2 gap-5">
+        <!-- CATEGORY 1 -->
+        <ul class="text-white capitalize text-md">
+          <li class="mb-2">
+            <a class="block" href="#">home</a>
+          </li>
+          <li class="mb-2">
+            <a class="block" href="#">shop</a>
+          </li>
+          <li class="mb-2">
+            <a class="block" href="#">story</a>
+          </li>
+          <li class="mb-2">
+            <a class="block" href="#">team</a>
+          </li>
+        </ul>
+        <!-- CATEGORY 2 -->
+        <ul class="text-white capitalize text-md">
+          <li class="mb-2">
+            <a class="block" href="#">Auction </a>
+          </li>
+          <li class="mb-2">
+            <a class="block" href="#"> Wholesale </a>
+          </li>
+          <li class="mb-2">
+            <a class="block" href="#"> Press </a>
+          </li>
+          <li class="mb-2">
+            <a class="block" href="#"> Contact </a>
+          </li>
+          <li class="mb-2">
+            <a class="block" href="#"> Shipping Policy </a>
+          </li>
+          <li class="mb-2">
+            <a class="block" href="#"> Refund Policy </a>
+          </li>
+          <li class="mb-2">
+            <a class="block" href="#"> Privacy Policy </a>
+          </li>
+          <li class="mb-2">
+            <a class="block" href="#"> Terms of Service </a>
+          </li>
+        </ul>
+      </div>
+      <!--  -->
+      <div class="grid grid-cols-[2fr, 1fr] gap-2 mt-24 sm:mt-0">
+        <h6 class="mb-5 text-white text-16">Follow our unprecedented journey</h6>
+        <!-- SEND -->
+        <form class="flex items-center self-start sm:col-start-1 sm:col-end-2">
+          <div style="width: 30rem; height: 4rem" class="relative flex items-center">
+            <button
+              type="submit"
+              style="width: 5.8rem; height: 3.4rem"
+              class="absolute flex items-center justify-center p-5 cursor-pointer right-1 bg-abbey"
+            >
+              <svg style="width: 1.8rem; height: 1.8rem">
+                <use xlink:href="./assets/icons/sprite.svg#icon-send">
+                  <title>send</title>
+                </use>
+              </svg>
+            </button>
+            <input
+              class="w-full h-full placeholder-gray-500 text-md pis-5 focus:outline-none focus:ring-2 focus:ring-vistaBlue focus:border-transparent"
+              type="email"
+              placeholder="Sign up for email updates"
+            />
+          </div>
+        </form>
+        <!-- SOCIAL -->
+        <div class="flex items-center justify-center mt-5 sm:col-start-3 sm:col-end-4 sm:mt-0">
+          <a href="#" target="_blank">
+            <svg style="width: 2.4rem; height: 2.4rem">
+              <use xlink:href="./assets/icons/sprite.svg#icon-facebook">
+                <title>facebook</title>
+              </use>
+            </svg>
+          </a>
+          <a href="#" target="_blank">
+            <svg style="width: 2.4rem; height: 2.4rem" class="mis-3">
+              <use xlink:href="./assets/icons/sprite.svg#icon-instegram">
+                <title>instegram</title>
+              </use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- COPYRIGHT -->
+    <div class="flex flex-col items-center self-end mt-20 sm:-mt-20">
+      <a href="/" class="mb-12">
+        <img class="max-w-full" src="./assets/images/logo/logo.svg" alt="logo" />
+      </a>
+      <p class="text-white text-md">© Copyright <span id="year"></span>| QANATEER</p>
+    </div>
+  </div>
+</footer>
+
+<!-- BUTTON SCROLL TOP -->
+<button
+  id="scroll-to-top"
+  class="fixed bottom-0 right-0 z-10 flex items-center justify-center transition duration-500 transform translate-y-48 rounded-l-lg hover-scroll-top bg-plantation"
+  style="width: 6rem; height: 6rem"
+>
+  <svg style="width: 3rem; height: 3rem" class="transition duration-300">
+    <use xlink:href="./assets/icons/sprite.svg#icon-arrow-up" id="icon-video">
+      <title>play-video</title>
+    </use>
+  </svg>
+</button>
+
+<!-- BACKDROP -->
+<div class="fixed top-0 bottom-0 left-0 right-0 z-30 hidden sm:hidden back-drop"></div>
+
+    <!--  -->
+    <script src="./assets/js/library/jquery.3.5.1.js"></script>
+    <script src="./assets/js/library/owl.carousel.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
+

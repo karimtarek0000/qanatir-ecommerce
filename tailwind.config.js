@@ -12,8 +12,9 @@ module.exports = {
       lg: "2rem",
       xlg: "2.2rem",
       xxlg: "2.5rem",
-      30: "3rem",
       16: "1.6rem",
+      18: "1.8rem",
+      30: "3rem",
     },
     extend: {
       colors: {
@@ -23,7 +24,7 @@ module.exports = {
         plantation: "#284635",
         abbey: "#4b5254",
         boulder: "#777777",
-        test: "black",
+        mineral: "#32503f",
       },
       fontFamily: {
         Futura: ["Futura"],
@@ -37,6 +38,9 @@ module.exports = {
       height: {
         70: "70vh",
         full: "100%",
+      },
+      width: {
+        "fit-content": "fit-content",
       },
     },
   },
