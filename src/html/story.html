@@ -213,7 +213,7 @@
     </div>
   </section>
   <!-- COFFEE -->
-  <section class="container mb-40 text-black">
+  <section class="container mb-24 text-black">
     <!--  -->
     <div class="mt-20 mb-32 text-center">
       <h3 class="uppercase text-30">our coffees</h3>
@@ -221,7 +221,8 @@
     </div>
     <!--  -->
     <div class="grid content-center grid-cols-2 grid-rows-2 lg:grid-cols-3 gap-y-56 gap-x-5">
-      <div class="text-center text-16">
+      @@for (var i = 0; i < 6; i++) {
+      <div class="relative flex flex-col items-center text-center text-16 product">
         <img
           class="object-cover mx-auto mb-9"
           src="./assets/images/other/our-coffee/1.png"
@@ -229,51 +230,85 @@
         />
         <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
         <p>$32.00</p>
+        <!-- QUICK VIEW -->
+        <div
+          class="absolute flex items-center justify-center transition duration-300 ease-in-out bg-white rounded-full cursor-pointer  -bottom-20 open-modal-product sm:opacity-0 sm:-top-8 sm:right-5 drop-shadow filter quick-view"
+          style="width: 30px; height: 30px"
+        >
+          <svg class="fill-current" style="width: 17px; height: 17px">
+            <use xlink:href="./assets/icons/sprite.svg#icon-view">
+              <title>view</title>
+            </use>
+          </svg>
+          <!-- TITLE -->
+          <p
+            class="absolute top-0 hidden px-5 py-2 text-xs text-black uppercase transition duration-300 ease-out transform -translate-x-20 bg-white rounded opacity-0 pointer-events-none  sm:block -left-0 title-quick-view"
+            style="width: 100px; left: -100px"
+          >
+            quick view
+          </p>
+        </div>
       </div>
-      <div class="text-center text-16">
-        <img
-          class="object-cover mx-auto mb-9"
-          src="./assets/images/other/our-coffee/1.png"
-          alt=""
-        />
-        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
-        <p>$32.00</p>
-      </div>
-      <div class="text-center text-16">
-        <img
-          class="object-cover mx-auto mb-9"
-          src="./assets/images/other/our-coffee/1.png"
-          alt=""
-        />
-        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
-        <p>$32.00</p>
-      </div>
-      <div class="text-center text-16">
-        <img
-          class="object-cover mx-auto mb-9"
-          src="./assets/images/other/our-coffee/1.png"
-          alt=""
-        />
-        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
-        <p>$32.00</p>
-      </div>
-      <div class="text-center text-16">
-        <img
-          class="object-cover mx-auto mb-9"
-          src="./assets/images/other/our-coffee/1.png"
-          alt=""
-        />
-        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
-        <p>$32.00</p>
-      </div>
-      <div class="text-center text-16">
-        <img
-          class="object-cover mx-auto mb-9"
-          src="./assets/images/other/our-coffee/1.png"
-          alt=""
-        />
-        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
-        <p>$32.00</p>
+      }
+    </div>
+    <!-- VIEW -->
+    <div
+      class="fixed top-0 bottom-0 left-0 right-0 z-40 items-center justify-center hidden w-full h-full bg-black  bg-opacity-70"
+      id="view-modal-product"
+    >
+      <!--  -->
+      <div
+        class="relative grid w-11/12 grid-cols-1 gap-3 p-10 px-10 transition duration-300 transform -translate-y-20 bg-white rounded-lg opacity-0  md:grid-cols-5 lg:w-7/12"
+        id="modal-product"
+      >
+        <!-- IMAGE -->
+        <div
+          class="flex items-center justify-center col-start-1 col-end-3 bg-gray-500 rounded-lg  bg-opacity-5"
+        >
+          <img
+            class="object-cover max-h-full w-80"
+            src="./assets/images/other/our-coffee/1.png"
+            alt=""
+          />
+        </div>
+        <!-- INFO -->
+        <div class="flex flex-col col-start-3 font-extrabold col-span-full">
+          <h3 class="text-lg sm:text-30">The Yemen Trilogy - 3x 4oz boxes</h3>
+          <span class="text-30">$32</span>
+          <p
+            class="mt-10 leading-loose text-black  truncate-sintance text-opacity-60 text-md sm:text-16"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deleniti assumenda
+            repudiandae magni corrupti amet, enim temporibus id maxime nisi. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Labore deleniti assumenda repudiandae magni corrupti
+            amet, enim temporibus id maxime nisi.
+          </p>
+          <!-- COUNTER -->
+          <div
+            class="flex items-center justify-between mt-10 text-lg rounded-lg bg-vistaBlue"
+            style="width: 13.5rem; height: 5rem"
+          >
+            <button id="subtract" class="w-4/12">-</button>
+            <span id="count " class="text-lg">40</span>
+            <button id="add" class="w-4/12">+</button>
+          </div>
+          <!-- VIEW PRODUCT -->
+          <button
+            class="px-10 py-5 mt-10 text-white uppercase transition duration-300 rounded-lg  hover:bg-opacity-90 bg-como text-md w-fit-content"
+          >
+            view product info
+          </button>
+        </div>
+        <!-- CLOSE -->
+        <svg
+          class="absolute cursor-pointer fill-current top-5 right-5"
+          style="width: 25px; height: 25px"
+          id="close-modal-product"
+        >
+          <use xlink:href="./assets/icons/sprite.svg#icon-close">
+            <title>close</title>
+          </use>
+        </svg>
       </div>
     </div>
     <!--  -->

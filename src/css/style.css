@@ -136,3 +136,32 @@
 .change-scroll::-webkit-scrollbar-thumb {
   @apply bg-como;
 }
+
+@media (min-width: 640px) {
+  .product:hover .quick-view {
+    opacity: 1;
+  }
+}
+
+.title-quick-view::after {
+  content: "";
+  border-width: 10px 19px 12px 15px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+  position: absolute;
+  top: 3px;
+  right: -27px;
+  height: 81%;
+}
+
+.quick-view:hover .title-quick-view {
+  transform: translateX(-3px);
+  opacity: 1;
+}
+
+.truncate-sintance {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

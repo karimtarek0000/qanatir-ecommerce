@@ -24,6 +24,10 @@ $(function () {
   const deleteItemShopping = $(".delete-item");
   const cartEmpty = $("#cart-empty");
   const cartAction = $("#cart-actions");
+  const closeModalProduct = $("#close-modal-product");
+  const viewModalProduct = $("#view-modal-product");
+  const modalProduct = $("#modal-product");
+  const openModalProduct = $(".open-modal-product");
 
   //
   $(window).scrollTop(0);
@@ -178,7 +182,29 @@ $(function () {
     }
   });
 
-  // GLOBAL - IF CLICKED ON WINDOW
+  /////////////////////////////////
+  //// MODAL PRODUCT
+  // OPEN MODAL
+  openModalProduct.on("click", () => {
+    viewModalProduct.toggleClass("flex hidden");
+    $("body, html").css("overflow-y", "hidden");
+    setTimeout(() => modalProduct.removeClass("-translate-y-20 opacity-0"), 300);
+  });
+  // CLOSE MODAL
+  closeModalProduct.on("click", () => {
+    modalProduct.addClass("-translate-y-20 opacity-0");
+    setTimeout(() => viewModalProduct.toggleClass("flex hidden"), 300);
+    $("body, html").css("overflow-y", "visible");
+  });
+
+  /////////////////////////////////
+  //// GLOBAL
+  $(document).on("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeModalProduct.trigger("click");
+    }
+  });
+  // IF CLICKED ON WINDOW
   $(window).on("click", () => {
     if ($(document).outerWidth() > 640) {
       shoppingCart.slideUp(200);

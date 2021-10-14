@@ -1,6 +1,8 @@
+@@include('./extend/above.html')
+<!-- NAVBAR -->
 <nav
   id="navbar"
-  class="top-0 left-0 right-0 z-40 px-5 transition duration-500 bg-white  sm:bg-transparent sm:absolute sm:px-0"
+  class="top-0 left-0 right-0 z-40 px-5 transition duration-500 bg-transparent  specific sm:static sm:px-0"
 >
   <!--  -->
   <div class="container relative flex items-center justify-between py-3 sm:items-start">
@@ -43,7 +45,7 @@
         <!--  -->
         <div
           id="links"
-          class="flex flex-col px-10 mt-10 text-black  sm:px-0 sm:mt-0 sm:items-center sm:text-white sm:flex-row text-16 sm:text-md"
+          class="flex flex-col px-10 mt-10 text-black  sm:px-0 sm:mt-0 sm:items-center sm:flex-row text-16 sm:text-md"
         >
           <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0 text-como">shop coffee</a>
           <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">subscriptions</a>
@@ -54,7 +56,7 @@
       </div>
       <!-- SHOPPING cart -->
       <div class="relative transition duration-500 cursor-pointer mis-4 shopping-cart">
-        <svg style="width: 24px; height: 24px" class="fill-black sm:fill-white" id="icon-cart">
+        <svg style="width: 24px; height: 24px" class="fill-black" id="icon-cart">
           <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
             <title>shopping-cart</title>
           </use>
@@ -172,3 +174,110 @@
     </div>
   </div>
 </nav>
+
+<main class="container">
+  <section>
+    <h2
+      class="py-10 mb-10 font-extrabold text-center uppercase border-b border-black  border-opacity-10 text-xxlg"
+    >
+      shopping card
+    </h2>
+    <!-- SHOPPING WRAPPER -->
+    <div class="flex flex-col px-10 mb-10 overflow-auto shopping-wrapper max-h-96 change-scroll">
+      <!-- ITEM -->
+      @@for(var i = 0; i < 7; i++) {
+      <div class="grid grid-cols-12 py-10 border-b border-black sm:items-center border-opacity-10">
+        <!-- IMAGE -->
+        <div style="width: 5rem; height: 5rem">
+          <img
+            class="object-cover max-w-full"
+            src="./assets/images/other/our-coffee/1.png"
+            alt=""
+          />
+        </div>
+        <!-- CONTENT -->
+        <div
+          class="flex flex-col justify-between col-span-10 col-start-2  sm:items-center mis-5 sm:flex-row text-16"
+        >
+          <!-- INFO -->
+          <p class="mb-5 sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
+          <p class="mb-5 sm:mb-0">$32.00</p>
+          <!-- COUNTER -->
+          <div
+            class="flex items-center justify-between text-lg bg-vistaBlue"
+            style="width: 13.5rem; height: 5rem"
+          >
+            <button id="subtract" class="w-4/12">-</button>
+            <span id="count" class="text-lg">40</span>
+            <button id="add" class="w-4/12">+</button>
+          </div>
+          <p class="my-5 sm:my-5">$32.00</p>
+        </div>
+        <!-- DELETE -->
+        <svg class="cursor-pointer fill-current mis-auto" style="width: 15px; height: 15px">
+          <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+            <title>delete</title>
+          </use>
+        </svg>
+      </div>
+      }
+    </div>
+    <!-- ACTIONS -->
+    <div
+      class="flex flex-col items-center justify-between mb-10 text-black uppercase  sm:flex-row text-md md:text-18"
+    >
+      <button class="flex items-center py-5">
+        <svg class="fill-current sm:mis-20" style="width: 2.4rem; height: 2.4rem">
+          <use xlink:href="./assets/icons/sprite.svg#icon-arrow-left">
+            <title>arrow left</title>
+          </use>
+        </svg>
+        <p>CONTINUE SHOPPING</p>
+      </button>
+      <button class="flex items-center py-5">
+        <svg class="fill-current sm:mis-20" style="width: 2.4rem; height: 2.4rem">
+          <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+            <title>delete</title>
+          </use>
+        </svg>
+        <p class="mis-3">CLEAR SHOPPING CART</p>
+      </button>
+      <button class="flex items-center py-5">
+        <svg class="fill-current sm:mis-20" style="width: 2.4rem; height: 2.4rem">
+          <use xlink:href="./assets/icons/sprite.svg#icon-update">
+            <title>update</title>
+          </use>
+        </svg>
+        <p class="mis-3">UPDATE CART</p>
+      </button>
+    </div>
+    <!-- FORM -->
+    <div class="mx-auto mb-10 w-fit-content sm:mx-0">
+      <form class="flex items-center px-5 py-3 bg-mineral">
+        <input type="checkbox" id="gift" class="cursor-pointer" style="width: 20px; height: 20px" />
+        <label for="gift" class="text-white text-18 mis-4"
+          >Add a Gift Message to your Order ($0)</label
+        >
+      </form>
+      <div class="px-16 py-10 mt-5 bg-white border border-black text-18 border-opacity-10">
+        <div class="flex items-center justify-between mb-5">
+          <span>SUBTOTAL</span>
+          <span>$32</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span>GRAND TOTAL</span>
+          <span>$32</span>
+        </div>
+      </div>
+      <!--  -->
+      <button
+        style="width: 30.9rem; height: 5rem"
+        class="block mx-auto mt-10 text-white uppercase transition duration-300  hover:bg-opacity-90 text-md bg-como"
+      >
+        PROCEED CHEKOUT
+      </button>
+    </div>
+  </section>
+</main>
+
+@@include('./extend/below.html')
