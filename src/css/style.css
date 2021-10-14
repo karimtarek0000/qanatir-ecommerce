@@ -29,11 +29,11 @@
   body::-webkit-scrollbar-thumb {
     @apply bg-como;
   }
-}
 
-@font-face {
-  font-family: "Futura";
-  src: url(../fonts/futura-ltcn/FutuLt.ttf);
+  @font-face {
+    font-family: "Futura";
+    src: url(../fonts/futura-ltcn/FutuLt.ttf);
+  }
 }
 
 .gradient {

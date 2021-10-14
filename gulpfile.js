@@ -139,12 +139,14 @@ const html = () => {
 // TASK - STYLE - PRODUCTION
 const stylePro = () => {
   //
-  return src(DEST_FOLDER_PRO.style)
-    .pipe(prefixer())
-    .pipe(cssMinify())
-    .pipe(gulpClean())
-    .pipe(rename("style.css"))
-    .pipe(dest(DEST_FOLDER.style));
+  return (
+    src("./dist/assets/css/style.css")
+      .pipe(prefixer())
+      // .pipe(cssMinify())
+      // .pipe(gulpClean())
+      .pipe(rename("style.css"))
+      .pipe(dest(DEST_FOLDER.style))
+  );
 };
 
 // TASK - JS - PRODUCTION
@@ -152,7 +154,7 @@ const jsPro = () => {
   return src(DEST_FOLDER_PRO.js)
     .pipe(uglify())
     .pipe(gulpClean())
-    .pipe(rename("main.min.js"))
+    .pipe(rename("main.js"))
     .pipe(dest(DEST_FOLDER.js));
 };
 
@@ -202,6 +204,6 @@ const watcher = async () => {
 // DEFAULT NORMAL
 // exports.default = parallel(pug, styleDev, jsDev, watcher);
 exports.default = parallel(html, styleDev, jsDev, watcher);
-// exports.build = series(stylePro, jsPro, imageMin);
+// exports.build = series(stylePro, jsPro);
 // DEFAULT USE JS MODULE
 // exports.default = parallel(pug, styleDev, jsModule, watcher);

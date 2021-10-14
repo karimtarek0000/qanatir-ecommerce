@@ -1,4 +1,8 @@
 module.exports = {
+  // purge: {
+  //   enabled: true,
+  //   content: ["./dist/**/*.html", "./dist/assets/js/main.js"],
+  // },
   theme: {
     debugScreens: {
       position: ["top", "right"],
@@ -72,10 +76,4 @@ module.exports = {
       });
     },
   ],
-  // purge: {
-  //   enabled: true,
-  //   content: [
-  //     './dist/**/*.html',
-  //   ],
-  // }
 };
