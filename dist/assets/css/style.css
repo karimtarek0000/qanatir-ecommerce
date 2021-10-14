@@ -906,6 +906,10 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 3rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .mb-28 {
   margin-bottom: 7rem;
 }

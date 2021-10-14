@@ -203,7 +203,7 @@ const watcher = async () => {
 // EXPORTS
 // DEFAULT NORMAL
 // exports.default = parallel(pug, styleDev, jsDev, watcher);
-exports.default = parallel(html, styleDev, jsDev, watcher);
-// exports.build = series(stylePro, jsPro);
+// exports.default = parallel(html, styleDev, jsDev, watcher);
+exports.build = series(stylePro, jsPro);
 // DEFAULT USE JS MODULE
 // exports.default = parallel(pug, styleDev, jsModule, watcher);
