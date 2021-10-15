@@ -1,37 +1,12 @@
 @@include('./extend/above.html')
 
 <!-- HEADER -->
-<header class="relative overflow-hidden gradient" id="header">
+<header class="relative overflow-hidden gradient" id="start-scroll-top">
   <!-- NAVBAR -->
   @@include('./extend/nav.html')
   <!-- VIDEO -->
-  <div class="relative overflow-hidden h-70">
-    <!--  -->
-    <video id="video" loop class="object-cover w-full h-full">
-      <source src="./assets/images/s.mp4" />
-    </video>
-    <!--  -->
-    <div class="absolute top-0 bottom-0 left-0 right-0" id="control-video-wrapper">
-      <img
-        class="object-cover max-w-full min-h-full transition duration-300 ease-linear"
-        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
-        alt=""
-        id="cover-video"
-      />
-      <!-- CONTROLERS -->
-      <div
-        class="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center w-full  gradient"
-      >
-        <a href="#" class="text-white select-none text-xlg action-link-story">SEE OUR STORY</a>
-        <div class="mt-2 cursor-pointer action-toggle-video" id="play-video">
-          <svg style="width: 5rem; height: 5rem">
-            <use xlink:href="./assets/icons/sprite.svg#icon-play-video" id="icon-video">
-              <title>play-video</title>
-            </use>
-          </svg>
-        </div>
-      </div>
-    </div>
+  <div class="relative overflow-hidden" style="max-height: 70vh">
+    @@include('./extend/video.html')
   </div>
 </header>
 
@@ -137,20 +112,20 @@
   </section>
   <!-- SLIDER -->
   <section class="my-28">
-    <div class="owl-carousel owl-theme" style="height: 42.4rem">
+    <div class="owl-carousel our-story owl-theme" style="height: 42.4rem">
       <!-- slide -->
       <div class="relative flex items-center h-full">
         <!--  -->
         <div
-          class="relative z-50 flex flex-col items-center px-12 mx-auto text-white  lg:w-8/12 lg:px-24"
+          class="relative z-50 flex flex-col items-center px-12 text-white  sm:items-start lg:w-7/12 lg:px-24"
         >
-          <p class="mt-8 leading-10 text-center text-md">
+          <p class="mt-8 leading-10 text-center lg:w-8/12 text-md sm:text-left">
             Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave
             deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade
             swag.
           </p>
           <!--  -->
-          <figure class="mt-16 text-center uppercase">
+          <figure class="mt-16 text-center uppercase sm:text-left">
             <span class="block text-16">Kevin Johnson</span>
             <span class="block text-md">Founder of starbucks</span>
           </figure>
@@ -178,15 +153,15 @@
       <div class="relative flex items-center h-full">
         <!--  -->
         <div
-          class="relative z-50 flex flex-col items-center px-12 mx-auto text-white  lg:w-8/12 lg:px-24"
+          class="relative z-50 flex flex-col items-center px-12 text-white  sm:items-start lg:w-7/12 lg:px-24"
         >
-          <p class="mt-8 leading-10 text-center text-md">
+          <p class="mt-8 leading-10 text-center lg:w-8/12 text-md sm:text-left">
             Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave
             deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade
             swag.
           </p>
           <!--  -->
-          <figure class="mt-16 text-center uppercase">
+          <figure class="mt-16 text-center uppercase sm:text-left">
             <span class="block text-16">Kevin Johnson</span>
             <span class="block text-md">Founder of starbucks</span>
           </figure>
@@ -223,16 +198,19 @@
     <div class="grid content-center grid-cols-2 grid-rows-2 lg:grid-cols-3 gap-y-56 gap-x-5">
       @@for (var i = 0; i < 6; i++) {
       <div class="relative flex flex-col items-center text-center text-16 product">
-        <img
-          class="object-cover mx-auto mb-9"
-          src="./assets/images/other/our-coffee/1.png"
-          alt=""
-        />
+        <!-- IMAGE -->
+        <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
+          <img
+            class="object-cover max-w-full max-h-full"
+            src="./assets/images/other/our-coffee/1.png"
+            alt=""
+          />
+        </div>
         <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
         <p>$32.00</p>
         <!-- QUICK VIEW -->
         <div
-          class="absolute flex items-center justify-center transition duration-300 ease-in-out bg-white rounded-full cursor-pointer  -bottom-20 open-modal-product sm:opacity-0 sm:-top-8 sm:right-5 drop-shadow filter quick-view"
+          class="flex items-center justify-center mt-5 transition duration-300 ease-in-out bg-white rounded-full cursor-pointer  lg:mt-0 lg:absolute -bottom-20 open-modal-product lg:opacity-0 lg:-top-10 lg:right-5 drop-shadow filter quick-view"
           style="width: 30px; height: 30px"
         >
           <svg class="fill-current" style="width: 17px; height: 17px">
@@ -252,75 +230,7 @@
       }
     </div>
     <!-- VIEW -->
-    <div
-      class="fixed top-0 bottom-0 left-0 right-0 z-40 items-center justify-center hidden w-full h-full bg-black  bg-opacity-70"
-      id="view-modal-product"
-    >
-      <!--  -->
-      <div
-        class="relative grid w-11/12 grid-cols-1 gap-3 p-10 px-10 transition duration-300 transform -translate-y-20 bg-white rounded-lg opacity-0  md:grid-cols-5 lg:w-7/12"
-        id="modal-product"
-      >
-        <!-- IMAGE -->
-        <div
-          class="flex items-center justify-center col-start-1 col-end-3 bg-gray-500 rounded-lg  bg-opacity-5"
-        >
-          <img
-            class="object-cover max-h-full w-80"
-            src="./assets/images/other/our-coffee/1.png"
-            alt=""
-          />
-        </div>
-        <!-- INFO -->
-        <div class="flex flex-col col-start-3 font-extrabold col-span-full">
-          <h3 class="text-lg sm:text-30">The Yemen Trilogy - 3x 4oz boxes</h3>
-          <span class="text-30">$32</span>
-          <p
-            class="mt-10 leading-loose text-black  truncate-sintance text-opacity-60 text-md sm:text-16"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deleniti assumenda
-            repudiandae magni corrupti amet, enim temporibus id maxime nisi. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Labore deleniti assumenda repudiandae magni corrupti
-            amet, enim temporibus id maxime nisi.
-          </p>
-          <!--  -->
-          <div class="flex items-center">
-            <!-- COUNTER -->
-            <div
-              class="flex items-center justify-between mt-10 text-lg rounded-lg bg-vistaBlue"
-              style="width: 13.5rem; height: 5rem"
-            >
-              <button id="subtract" class="w-4/12">-</button>
-              <span id="count " class="text-lg">40</span>
-              <button id="add" class="w-4/12">+</button>
-            </div>
-            <!-- VIEW PRODUCT -->
-            <button
-              class="px-10 py-5 mt-10 text-white uppercase transition duration-300 rounded-lg  mis-5 hover:bg-opacity-90 bg-como text-md w-fit-content"
-            >
-              add to cart
-            </button>
-          </div>
-          <!-- VIEW PRODUCT -->
-          <a
-            href="javascript:void(0)"
-            class="py-5 mt-10 text-black uppercase transition duration-300 rounded-lg  hover:bg-opacity-90 text-md w-fit-content"
-          >
-            view product info
-          </a>
-        </div>
-        <!-- CLOSE -->
-        <svg
-          class="absolute cursor-pointer fill-current top-5 right-5"
-          style="width: 25px; height: 25px"
-          id="close-modal-product"
-        >
-          <use xlink:href="./assets/icons/sprite.svg#icon-close">
-            <title>close</title>
-          </use>
-        </svg>
-      </div>
-    </div>
+    @@include('./extend/modelViewProduct.html')
     <!--  -->
     <a
       href="javascript:void(0)"

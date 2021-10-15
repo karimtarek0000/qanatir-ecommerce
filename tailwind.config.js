@@ -29,6 +29,9 @@ module.exports = {
         abbey: "#4b5254",
         boulder: "#777777",
         mineral: "#32503f",
+        citrine: "#f9efd5",
+        amber: "#FFC107",
+        pearl: "#fcf3da",
       },
       fontFamily: {
         Futura: ["Futura"],

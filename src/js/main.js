@@ -9,7 +9,7 @@ $(function () {
   const closeBanar = $("#close-banar");
   const links = $("#links a");
   const navbar = $("#navbar");
-  const header = $("#header");
+  const header = $("#start-scroll-top");
   const heightNavbar = navbar.outerHeight();
   const heightHeader = header.outerHeight();
   const logoL = $("#logo-l img");
@@ -24,10 +24,11 @@ $(function () {
   const deleteItemShopping = $(".delete-item");
   const cartEmpty = $("#cart-empty");
   const cartAction = $("#cart-actions");
+  const openModalProduct = ".open-modal-product";
   const closeModalProduct = $("#close-modal-product");
   const viewModalProduct = $("#view-modal-product");
   const modalProduct = $("#modal-product");
-  const openModalProduct = $(".open-modal-product");
+  const reviewPerParent = $(".review-per-parent");
 
   //
   $(window).scrollTop(0);
@@ -103,22 +104,40 @@ $(function () {
     scrollToTop.removeClass("-translate-y-10");
   };
 
-  // SCROLL WILL TRIGGER ONE MORE THAN FUNCTION
-  $(window).on("scroll", function () {
-    //
-    _fixedNavbar();
-    //
-    showBtnScrollToTop();
-  });
-
-  // SLIDER
-  $(".owl-carousel").owlCarousel({
+  // SLIDERS
+  $(".owl-carousel.our-story").owlCarousel({
     items: 1,
     animateOut: "fadeOut",
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     loop: true,
+    nav: false,
+  });
+  //
+  $(".owl-carousel.related-products").owlCarousel({
+    items: 4,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    loop: true,
+    dots: false,
+    nav: true,
+    navText: ["<div class='prev-slide'></div>", "<div class='next-slide'></div>"],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+      1200: {
+        items: 4,
+      },
+    },
   });
 
   function openSidebarNav() {
@@ -185,7 +204,7 @@ $(function () {
   /////////////////////////////////
   //// MODAL PRODUCT
   // OPEN MODAL
-  openModalProduct.on("click", () => {
+  $(document).on("click", openModalProduct, () => {
     viewModalProduct.toggleClass("flex hidden");
     $("body, html").css("overflow-y", "hidden");
     setTimeout(() => modalProduct.removeClass("-translate-y-20 opacity-0"), 300);
@@ -195,6 +214,33 @@ $(function () {
     modalProduct.addClass("-translate-y-20 opacity-0");
     setTimeout(() => viewModalProduct.toggleClass("flex hidden"), 300);
     $("body, html").css("overflow-y", "visible");
+  });
+
+  /////////////////////////////////
+  //// RATING AND REVIEWS
+  const settingsRating = {
+    totalStars: 5,
+    starShape: "rounded",
+    emptyColor: "#fefbf2",
+    strokeWidth: 40,
+    strokeColor: "#777777",
+    hoverColor: "salmon",
+    activeColor: "#777777",
+    useGradient: false,
+    readOnly: true,
+  };
+  $(".rating").starRating({
+    starSize: 20,
+    ...settingsRating,
+  });
+  $(".rating-review").starRating({
+    starSize: 15,
+    ...settingsRating,
+  });
+  // RATINGS REVIEWS
+  reviewPerParent.each((_, cur) => {
+    const per = $(cur).children("span:first").attr("data-review-per");
+    $(cur).parents(".review").find(".progress").css("width", `${per}%`);
   });
 
   /////////////////////////////////
@@ -209,6 +255,13 @@ $(function () {
     if ($(document).outerWidth() > 640) {
       shoppingCart.slideUp(200);
     }
+  });
+  // SCROLL WILL TRIGGER ONE MORE THAN FUNCTION
+  $(window).on("scroll", function () {
+    //
+    _fixedNavbar();
+    //
+    showBtnScrollToTop();
   });
 
   // ADD YAER

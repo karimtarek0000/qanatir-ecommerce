@@ -1,0 +1,31 @@
+<!--  -->
+<video
+  id="video"
+  loop
+  class="object-cover w-full h-full max-w-full max-h-full"
+  style="max-height: 70vh"
+>
+  <source src="./assets/images/s.mp4" />
+</video>
+<!--  -->
+<div class="absolute top-0 bottom-0 left-0 right-0" id="control-video-wrapper">
+  <img
+    class="object-cover w-full max-w-full max-h-full transition duration-300 ease-linear"
+    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+    alt=""
+    id="cover-video"
+  />
+  <!-- CONTROLERS -->
+  <div
+    class="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center w-full  gradient"
+  >
+    <a href="#" class="text-white select-none text-xlg action-link-story">SEE OUR STORY</a>
+    <div class="mt-2 cursor-pointer action-toggle-video" id="play-video">
+      <svg style="width: 5rem; height: 5rem">
+        <use xlink:href="./assets/icons/sprite.svg#icon-play-video" id="icon-video">
+          <title>play-video</title>
+        </use>
+      </svg>
+    </div>
+  </div>
+</div>

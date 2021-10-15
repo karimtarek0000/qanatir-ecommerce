@@ -1,0 +1,479 @@
+@@include('./extend/above.html')
+
+<!-- NAVBAR -->
+<nav
+  id="navbar"
+  class="top-0 left-0 right-0 z-40 px-5 transition duration-500 bg-transparent  specific sm:static sm:px-0"
+>
+  <!--  -->
+  <div class="container relative flex items-center justify-between py-3 sm:items-start">
+    <!-- LOGO -->
+    <a id="logo-l" href="/" class="order-2 hidden sm:block">
+      <img class="max-w-full" src="./assets/images/logo/logo.svg" alt="logo" />
+    </a>
+    <!-- LOGO SMALL -->
+    <a href="/" class="order-2 sm:hidden">
+      <img class="max-w-full" src="./assets/images/logo/logo-small.svg" alt="logo" />
+    </a>
+    <!-- TOGGLER -->
+    <div class="cursor-pointer sm:mt-5 sm:hidden" id="toggler">
+      <svg style="width: 24px; height: 24px">
+        <use xlink:href="./assets/icons/sprite.svg#icon-toggler">
+          <title>toggler</title>
+        </use>
+      </svg>
+    </div>
+    <!-- LINKS -->
+    <div class="flex items-center order-3 capitalize text-md sm:mt-5">
+      <div
+        class="z-50 flex flex-col transition duration-500 transform -translate-x-full  sm:translate-x-0 responsive-sidebar-nav"
+        id="sidebar-nav"
+      >
+        <!--  -->
+        <div
+          class="flex items-center px-10 border-b border-blue-200 cursor-pointer pointer-events-none  sm:hidden opacity-70"
+          id="close-sidebar"
+        >
+          <div class="flex items-center py-5 pointer-events-auto">
+            <svg class="fill-current" style="width: 15px; height: 15px">
+              <use xlink:href="./assets/icons/sprite.svg#icon-close">
+                <title>close</title>
+              </use>
+            </svg>
+            <button class="capitalize mis-2 text-md">close</button>
+          </div>
+        </div>
+        <!--  -->
+        <div
+          id="links"
+          class="flex flex-col px-10 mt-10 text-black  sm:px-0 sm:mt-0 sm:items-center sm:flex-row text-16 sm:text-md"
+        >
+          <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0 text-como">shop coffee</a>
+          <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">subscriptions</a>
+          <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">gifts</a>
+          <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">brew gear</a>
+          <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">story</a>
+        </div>
+      </div>
+      <!-- SHOPPING cart -->
+      <div class="relative transition duration-500 cursor-pointer mis-4 shopping-cart">
+        <svg style="width: 24px; height: 24px" class="fill-black" id="icon-cart">
+          <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
+            <title>shopping-cart</title>
+          </use>
+        </svg>
+        <!-- TITLE -->
+        <div
+          class="absolute items-center justify-center hidden mt-5 text-xs capitalize transition duration-300 bg-white rounded  shape-arrow top-full sm:flex translate-position"
+          style="width: 50px; height: 30px"
+        >
+          <span>cart</span>
+        </div>
+        <!-- COUNT ITEM IN CART -->
+        <!-- <p
+          style="width: 24px; height: 24px"
+          class="absolute flex items-center justify-center text-xs text-white bg-black rounded-full pointer-events-none -top-5 -right-5"
+        >
+          44
+        </p> -->
+      </div>
+      <!-- cart -->
+      <div
+        id="shopping-cart"
+        class="fixed top-0 left-0 z-50 h-full p-5 transition duration-500 transform -translate-x-full bg-white rounded  sm:hidden sm:translate-x-0 sm:left-auto sm:absolute sm:mt-5 sm:-right-5 sm:top-20 sm:h-auto"
+        style="width: 28rem"
+      >
+        <!-- TITLE -->
+        <div
+          class="flex items-center justify-between p-5 border-b border-black  border-opacity-10 sm:hidden"
+        >
+          <span class="font-extrabold uppercase text-16">shopping cart</span>
+          <svg
+            class="cursor-pointer fill-current"
+            id="close-sidebar-shop-cart"
+            style="width: 20px; height: 20px"
+          >
+            <use xlink:href="./assets/icons/sprite.svg#icon-close">
+              <title>close</title>
+            </use>
+          </svg>
+        </div>
+        <!-- IF EMPTY -->
+        <div
+          id="cart-empty"
+          class="items-center justify-center hidden font-extrabold text-black h-28"
+        >
+          <p>shopping cart empty</p>
+        </div>
+        <!-- CART WRAPPER -->
+        <div id="cart-wrapper" class="overflow-auto max-h-100 sm:max-h-80">
+          <!-- CART CONTENT 1 -->
+          <div class="flex items-center py-5 mb-5 border-b border-black border-opacity-10">
+            <div style="width: 50px; height: 50px" class="self-start px-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <div class="px-4">
+              <p>The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mt-3">32.00</p>
+            </div>
+            <svg
+              class="self-start cursor-pointer fill-current text-como delete-item"
+              style="width: 20px; height: 20px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+          <!-- CART CONTENT 2 -->
+          <div class="flex items-center py-5 mb-5 border-b border-black border-opacity-10">
+            <div style="width: 50px; height: 50px" class="self-start px-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <div class="px-4">
+              <p>The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mt-3">32.00</p>
+            </div>
+            <svg
+              class="self-start cursor-pointer fill-current text-como delete-item"
+              style="width: 20px; height: 20px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+        </div>
+        <!-- PROCESS CART -->
+        <div id="cart-actions">
+          <div class="flex justify-between font-extrabold capitalize text-16">
+            <p>total:</p>
+            <p>$48</p>
+          </div>
+          <div class="flex flex-col items-center mt-5">
+            <button
+              class="w-full py-4 text-white uppercase transition rounded  duration-400 hover:bg-opacity-90 bg-como"
+            >
+              proceed to checkout
+            </button>
+            <button
+              class="w-full py-4 mt-3 text-black uppercase transition bg-white rounded  duration-400 hover:bg-gray-100"
+            >
+              view cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- ABOUT PRODUCT -->
+  <section class="container mt-5" id="start-scroll-top">
+    <div class="grid grid-cols-1 gap-3 p-10 px-10 bg-transparent rounded-lg md:grid-cols-5">
+      <!-- IMAGE -->
+      <div
+        class="flex items-start self-start justify-center col-start-1 col-end-3 overflow-hidden rounded-lg  bg-opacity-5"
+        style="height: 25rem"
+      >
+        <img
+          class="object-cover max-w-full max-h-full"
+          src="./assets/images/other/our-coffee/1.png"
+          alt=""
+        />
+      </div>
+      <!-- INFO -->
+      <div class="flex flex-col col-start-3 mt-3 font-extrabold col-span-full sm:mt-0">
+        <h3 class="text-lg sm:text-30">The Yemen Trilogy - 3x 4oz boxes</h3>
+        <div class="flex items-center mt-8 mb-4">
+          <span class="rating" data-rating="4"></span>
+          <span class="text-black text-18 mis-3 text-opacity-70">150 reviews</span>
+        </div>
+        <span class="text-lg sm:text-30">$32.00</span>
+        <!--  -->
+        <div class="flex flex-col items-center my-10 sm:flex-row sm:gap-x-3">
+          <!-- COUNTER -->
+          <div
+            class="flex items-center justify-between flex-shrink-0 w-full text-lg  sm:w-3/12 bg-citrine"
+            style="height: 5rem"
+          >
+            <button id="subtract" class="w-4/12">-</button>
+            <span id="count " class="text-lg">40</span>
+            <button id="add" class="w-4/12">+</button>
+          </div>
+          <!-- VIEW PRODUCT -->
+          <button
+            class="flex items-center justify-center w-full h-full px-10 py-5 mt-4 text-white uppercase transition duration-300  sm:w-7/12 sm:mt-0 hover:bg-opacity-90 bg-como text-md"
+            style="height: 5rem"
+          >
+            <svg style="width: 20px; height: 20px" class="fill-white">
+              <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
+                <title>shopping-cart</title>
+              </use>
+            </svg>
+            <span class="mis-5"> add to cart </span>
+          </button>
+        </div>
+        @@for(var i = 0; i < 3; i++) {
+        <p class="mb-10 leading-loose text-black truncate-sintance text-md sm:text-16">
+          Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave
+          deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade
+          swag.
+        </p>
+        }
+      </div>
+    </div>
+  </section>
+  <!-- CUSTOMAR REVIEW -->
+  <section class="container px-10 my-10 sm:px-0">
+    <h2 class="uppercase text-xlg">CUSTOMER REVIEWS</h2>
+    <!--  -->
+    <div class="grid grid-cols-1 py-20 mt-5 border-b border-black sm:grid-cols-8 border-opacity-5">
+      <!--  -->
+      <div class="flex flex-col sm:col-span-2 sm:col-start-1">
+        <span class="rating" data-rating="4"></span>
+        <span class="mt-3 text-black text-18">Based on 93 reviews </span>
+      </div>
+      <!--  -->
+      <div class="sm:col-span-4 sm:col-start-3">
+        <div class="flex flex-col mt-5 review-wrapper gap-y-3 sm:mt-0">
+          <!--  -->
+          <div class="flex items-center justify-between gap-3 sm:justify-center review">
+            <span style="direction: rtl" class="rating-review" data-rating="5"></span>
+            <div
+              class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
+              style="height: 2rem"
+            >
+              <span class="absolute top-0 left-0 h-full progress bg-amber"></span>
+            </div>
+            <!--  -->
+            <div class="flex items-center text-xs gap-x-5 mis-3 review-per-parent">
+              <span data-review-per="80">80%</span>
+              <span>( 88 )</span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="flex items-center justify-between gap-3 sm:justify-center review">
+            <span style="direction: rtl" class="rating-review" data-rating="4"></span>
+            <div
+              class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
+              style="height: 2rem"
+            >
+              <span class="absolute top-0 left-0 h-full progress bg-amber"></span>
+            </div>
+            <!--  -->
+            <div class="flex items-center text-xs gap-x-5 mis-3 review-per-parent">
+              <span data-review-per="70">70%</span>
+              <span>( 88 )</span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="flex items-center justify-between gap-3 sm:justify-center review">
+            <span style="direction: rtl" class="rating-review" data-rating="3"></span>
+            <div
+              class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
+              style="height: 2rem"
+            >
+              <span class="absolute top-0 left-0 h-full progress bg-amber"></span>
+            </div>
+            <!--  -->
+            <div class="flex items-center text-xs gap-x-5 mis-3 review-per-parent">
+              <span data-review-per="60">60%</span>
+              <span>( 88 )</span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="flex items-center justify-between gap-3 sm:justify-center review">
+            <span style="direction: rtl" class="rating-review" data-rating="2"></span>
+            <div
+              class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
+              style="height: 2rem"
+            >
+              <span class="absolute top-0 left-0 h-full progress bg-amber"></span>
+            </div>
+            <!--  -->
+            <div class="flex items-center text-xs gap-x-5 mis-3 review-per-parent">
+              <span data-review-per="30">30%</span>
+              <span>( 88 )</span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="flex items-center justify-between gap-3 sm:justify-center review">
+            <span style="direction: rtl" class="rating-review" data-rating="1"></span>
+            <div
+              class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
+              style="height: 2rem"
+            >
+              <span class="absolute top-0 left-0 h-full progress bg-amber"></span>
+            </div>
+            <!--  -->
+            <div class="flex items-center text-xs gap-x-5 mis-3 review-per-parent">
+              <span data-review-per="10">10%</span>
+              <span>( 88 )</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div
+        class="flex flex-col justify-between mt-10 overflow-hidden  sm:px-5 sm:items-center sm:col-start-7 sm:col-span-full sm:mt-0"
+      >
+        <!--  -->
+        <button
+          class="w-full text-xs uppercase transition duration-300 border border-black  hover:bg-black hover:text-white lg:w-9/12"
+          style="height: 5rem"
+        >
+          WRITE A REVIEW
+        </button>
+        <!--  -->
+        <div
+          class="relative flex items-center w-full mt-5 uppercase border border-black  lg:w-6/12 sm:mt-0"
+        >
+          <select
+            class="w-full text-xs text-center bg-transparent cursor-pointer"
+            style="height: 3rem"
+          >
+            <option selected hidden>Most Recent</option>
+            <option value="1">1</option>
+            <option value="1">2</option>
+            <option value="1">3</option>
+          </select>
+          <!-- ARROW DOWN -->
+          <svg
+            style="width: 10px; height: 10px"
+            class="absolute text-black pointer-events-none fill-current right-5"
+          >
+            <use xlink:href="./assets/icons/sprite.svg#icon-arrow-select">
+              <title>arrow-select</title>
+            </use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- COMMENTS -->
+  <section class="container px-5 sm:px-0">
+    <div class="flex flex-col gap-y-5">
+      <!--  -->
+      @@for(var i = 0; i < 4; i++) {
+      <div class="flex items-start py-5 border-b border-black border-opacity-5">
+        <!--  -->
+        <div
+          style="width: 7rem; height: 7rem"
+          class="flex items-center justify-center flex-shrink-0 rounded-full bg-pearl text-16"
+        >
+          <span>A</span>
+        </div>
+        <!--  -->
+        <div class="mis-5">
+          <div class="flex items-center gap-3">
+            <span class="rating" data-rating="3.5"></span>
+            <span class="text-black text-md text-opacity-60">28/12/2018</span>
+          </div>
+          <h4 class="mb-5 font-extrabold capitalize text-md">Ahmed Hamdan</h4>
+          <p class="text-black md:w-9/12 text-16 text-opacity-60">
+            I first discovered Port of Mokha via Touch of Modern. I have been purchasing this coffee
+            now for over 3 years. Every Saturday and Sunday we make a pot via our drip coffee maker.
+          </p>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+  <!-- OTHER PRODUCT -->
+  <section class="container py-20">
+    <h2 class="mb-20 font-extrabold text-center uppercase text-xlg">RELATED PRODUCTS</h2>
+    <!--  -->
+    <div class="owl-carousel related-products owl-theme">
+      <!-- slide -->
+      @@for(var i = 0; i < 8; i++) {
+      <div class="relative flex flex-col items-center py-20 text-center text-16 product">
+        <!-- IMAGE -->
+        <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
+          <img
+            class="object-cover max-w-full max-h-full"
+            src="./assets/images/other/our-coffee/1.png"
+            alt=""
+          />
+        </div>
+        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+        <div class="flex items-center my-3">
+          <span class="rating" data-rating="4"></span>
+          <span class="text-black text-18 mis-3 text-opacity-70">150 reviews</span>
+        </div>
+        <p>$32.00</p>
+        <!-- QUICK VIEW -->
+        <div
+          class="flex items-center justify-center mt-5 transition duration-300 ease-in-out bg-white rounded-full cursor-pointer  lg:mt-0 lg:absolute -bottom-20 open-modal-product lg:opacity-0 lg:-top-0 lg:right-5 drop-shadow filter quick-view"
+          style="width: 30px; height: 30px"
+        >
+          <svg class="fill-current" style="width: 17px; height: 17px">
+            <use xlink:href="./assets/icons/sprite.svg#icon-view">
+              <title>view</title>
+            </use>
+          </svg>
+          <!-- TITLE -->
+          <p
+            class="absolute top-0 hidden px-5 py-2 text-xs text-black uppercase transition duration-300 ease-out transform -translate-x-20 bg-white rounded opacity-0 pointer-events-none  sm:block -left-0 title-quick-view"
+            style="width: 100px; left: -100px"
+          >
+            quick view
+          </p>
+        </div>
+      </div>
+      }
+    </div>
+    <!-- VIEW -->
+    @@include('./extend/modelViewProduct.html')
+  </section>
+  <!-- STORY -->
+  <section
+    class="container relative flex items-center mt-20 mb-10 overflow-hidden"
+    style="min-height: 42.4rem"
+  >
+    <!--  -->
+    <div class="relative z-20 px-12 text-white lg:w-7/12 lg:px-24">
+      <h3 class="uppercase text-xxlg">
+        <span class="block">the first cup is for the guest,</span>
+        <span class="block">the second for enjoyment</span>
+      </h3>
+      <p class="mt-8 leading-10 lg:w-7/12 text-md">
+        Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep
+        v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag.
+      </p>
+
+      <button
+        style="width: 14rem; height: 5rem"
+        class="mt-16 text-xs text-white uppercase transition duration-500 ease-in-out border border-white  hover:bg-white hover:text-black"
+      >
+        the story
+      </button>
+    </div>
+    <!--  -->
+    <div class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden">
+      <img
+        class="object-cover w-full max-w-full min-h-full"
+        src="./assets/images/other/our-story/1.jpg"
+        alt=""
+      />
+      <span
+        class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden  overlay bg-gradient-to-r from-como to-transparent"
+      ></span>
+    </div>
+  </section>
+  <!-- VIDEO -->
+  <section class="relative mb-10 overflow-hidden sm:mb-20" style="max-height: 70vh">
+    @@include('./extend/video.html')
+  </section>
+</main>
+
+@@include('./extend/below.html')
