@@ -49,6 +49,9 @@ module.exports = {
       width: {
         "fit-content": "fit-content",
       },
+      transitionProperty: {
+        background: "background-color",
+      },
     },
   },
   variants: {},

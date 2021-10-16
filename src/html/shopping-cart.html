@@ -2,9 +2,9 @@
 <!-- NAVBAR -->
 <nav
   id="navbar"
-  class="top-0 left-0 right-0 z-40 px-5 transition duration-500 bg-transparent  specific sm:static sm:px-0"
+  class="top-0 left-0 right-0 z-40 px-5 text-black duration-500  bg-oldLace transition-background specific sm:px-0"
 >
-  <!--  -->
+  <!-- CONTENT NAVBAR -->
   <div class="container relative flex items-center justify-between py-3 sm:items-start">
     <!-- LOGO -->
     <a id="logo-l" href="/" class="order-2 hidden sm:block">
@@ -45,7 +45,7 @@
         <!--  -->
         <div
           id="links"
-          class="flex flex-col px-10 mt-10 text-black  sm:px-0 sm:mt-0 sm:items-center sm:flex-row text-16 sm:text-md"
+          class="flex flex-col px-10 mt-10  sm:px-0 sm:mt-0 sm:items-center sm:flex-row text-16 sm:text-md"
         >
           <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0 text-como">shop coffee</a>
           <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">subscriptions</a>
@@ -56,7 +56,7 @@
       </div>
       <!-- SHOPPING cart -->
       <div class="relative transition duration-500 cursor-pointer mis-4 shopping-cart">
-        <svg style="width: 24px; height: 24px" class="fill-black" id="icon-cart">
+        <svg style="width: 24px; height: 24px" class="fill-current" id="icon-cart">
           <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
             <title>shopping-cart</title>
           </use>
@@ -173,6 +173,8 @@
       </div>
     </div>
   </div>
+  <!-- BACKDROP -->
+  <div class="fixed top-0 bottom-0 left-0 right-0 z-30 hidden sm:hidden back-drop"></div>
 </nav>
 
 <main class="container">
@@ -186,9 +188,11 @@
     <div class="flex flex-col px-10 mb-10 overflow-auto shopping-wrapper max-h-96 change-scroll">
       <!-- ITEM -->
       @@for(var i = 0; i < 7; i++) {
-      <div class="grid grid-cols-12 py-10 border-b border-black sm:items-center border-opacity-10">
+      <div
+        class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
+      >
         <!-- IMAGE -->
-        <div style="width: 5rem; height: 5rem">
+        <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
           <img
             class="object-cover max-w-full"
             src="./assets/images/other/our-coffee/1.png"
@@ -197,7 +201,7 @@
         </div>
         <!-- CONTENT -->
         <div
-          class="flex flex-col justify-between col-span-10 col-start-2  sm:items-center mis-5 sm:flex-row text-16"
+          class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
         >
           <!-- INFO -->
           <p class="mb-5 sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
@@ -214,7 +218,10 @@
           <p class="my-5 sm:my-5">$32.00</p>
         </div>
         <!-- DELETE -->
-        <svg class="cursor-pointer fill-current mis-auto" style="width: 15px; height: 15px">
+        <svg
+          class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
+          style="width: 15px; height: 15px"
+        >
           <use xlink:href="./assets/icons/sprite.svg#icon-delete">
             <title>delete</title>
           </use>
@@ -225,6 +232,7 @@
     <!-- ACTIONS -->
     <div
       class="flex flex-col items-center justify-between mb-10 text-black uppercase  sm:flex-row text-md md:text-18"
+      id="start-scroll-top"
     >
       <button class="flex items-center py-5">
         <svg class="fill-current sm:mis-20" style="width: 2.4rem; height: 2.4rem">

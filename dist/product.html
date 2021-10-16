@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Qanatir</title>
   </head>
-  <body class="debug-screens">
+  <body>
     <!-- BANAR -->
     <div class="flex items-center justify-center text-white bg-como text-16" style="height: 6rem">
       <p class="mie-5">15% Off Sale on Gift Bundles! <a href="#" class="underline">Shop Now</a></p>
@@ -35,9 +35,9 @@
 <!-- NAVBAR -->
 <nav
   id="navbar"
-  class="top-0 left-0 right-0 z-40 px-5 transition duration-500 bg-transparent  specific sm:static sm:px-0"
+  class="top-0 left-0 right-0 z-40 px-5 text-black duration-500  bg-oldLace transition-background specific sm:px-0"
 >
-  <!--  -->
+  <!-- CONTENT NAVBAR -->
   <div class="container relative flex items-center justify-between py-3 sm:items-start">
     <!-- LOGO -->
     <a id="logo-l" href="/" class="order-2 hidden sm:block">
@@ -78,7 +78,7 @@
         <!--  -->
         <div
           id="links"
-          class="flex flex-col px-10 mt-10 text-black  sm:px-0 sm:mt-0 sm:items-center sm:flex-row text-16 sm:text-md"
+          class="flex flex-col px-10 mt-10  sm:px-0 sm:mt-0 sm:items-center sm:flex-row text-16 sm:text-md"
         >
           <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0 text-como">shop coffee</a>
           <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">subscriptions</a>
@@ -89,7 +89,7 @@
       </div>
       <!-- SHOPPING cart -->
       <div class="relative transition duration-500 cursor-pointer mis-4 shopping-cart">
-        <svg style="width: 24px; height: 24px" class="fill-black" id="icon-cart">
+        <svg style="width: 24px; height: 24px" class="fill-current" id="icon-cart">
           <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
             <title>shopping-cart</title>
           </use>
@@ -206,6 +206,8 @@
       </div>
     </div>
   </div>
+  <!-- BACKDROP -->
+  <div class="fixed top-0 bottom-0 left-0 right-0 z-30 hidden sm:hidden back-drop"></div>
 </nav>
 
 <main>
@@ -281,7 +283,9 @@
   <section class="container px-10 my-10 sm:px-0">
     <h2 class="uppercase text-xlg">CUSTOMER REVIEWS</h2>
     <!--  -->
-    <div class="grid grid-cols-1 py-20 mt-5 border-b border-black sm:grid-cols-8 border-opacity-5">
+    <div
+      class="grid grid-cols-1 py-10 mt-5 border-b border-black  sm:py-20 sm:grid-cols-8 border-opacity-5"
+    >
       <!--  -->
       <div class="flex flex-col sm:col-span-2 sm:col-start-1">
         <span class="rating" data-rating="4"></span>
@@ -501,7 +505,7 @@
   </section>
   <!-- OTHER PRODUCT -->
   <section class="container py-20">
-    <h2 class="mb-20 font-extrabold text-center uppercase text-xlg">RELATED PRODUCTS</h2>
+    <h2 class="mb-5 font-extrabold text-center uppercase sm:mb-20 text-xlg">RELATED PRODUCTS</h2>
     <!--  -->
     <div class="owl-carousel related-products owl-theme">
       <!-- slide -->
@@ -787,89 +791,10 @@
       </div>
       
     </div>
-    <!-- VIEW -->
-    <div
-  class="fixed top-0 bottom-0 left-0 right-0 z-40 items-center justify-center hidden bg-black  bg-opacity-70"
-  id="view-modal-product"
->
-  <!--  -->
-  <div
-    class="relative grid w-11/12 grid-cols-1 gap-3 p-10 px-10 overflow-auto transition duration-300 transform -translate-y-20 bg-white rounded-lg opacity-0  md:grid-cols-5 xl:w-7/12"
-    id="modal-product"
-    style="max-height: 65rem"
-  >
-    <!-- IMAGE -->
-    <div
-      class="flex items-center justify-center col-start-1 col-end-3 p-10 bg-gray-500 rounded-lg  bg-opacity-5"
-      style="height: 21rem"
-    >
-      <img
-        class="object-cover max-w-full max-h-full"
-        src="./assets/images/other/our-coffee/1.png"
-        alt=""
-      />
-    </div>
-    <!-- INFO -->
-    <div class="flex flex-col col-start-3 font-extrabold col-span-full">
-      <h3 class="text-lg sm:text-30">The Yemen Trilogy - 3x 4oz boxes</h3>
-      <span class="text-30">$32</span>
-      <p
-        class="mt-10 leading-loose text-black truncate-sintance text-opacity-60 text-md sm:text-16"
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deleniti assumenda
-        repudiandae magni corrupti amet, enim temporibus id maxime nisi. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Labore deleniti assumenda repudiandae magni corrupti amet,
-        enim temporibus id maxime nisi.
-      </p>
-      <!-- ACTIONS -->
-      <div class="flex flex-col items-center my-5 sm:my-10 sm:flex-row sm:gap-x-3">
-        <!-- COUNTER -->
-        <div
-          class="flex items-center justify-between flex-shrink-0 w-full text-lg  sm:w-3/12 bg-citrine"
-          style="height: 5rem"
-        >
-          <button id="subtract" class="w-4/12">-</button>
-          <span id="count " class="text-lg">40</span>
-          <button id="add" class="w-4/12">+</button>
-        </div>
-        <!-- VIEW PRODUCT -->
-        <button
-          class="flex items-center justify-center w-full h-full px-10 py-5 mt-4 text-white uppercase transition duration-300  sm:w-7/12 sm:mt-0 hover:bg-opacity-90 bg-como text-md"
-          style="height: 5rem"
-        >
-          <svg style="width: 20px; height: 20px" class="fill-white">
-            <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
-              <title>shopping-cart</title>
-            </use>
-          </svg>
-          <span class="mis-5"> add to cart </span>
-        </button>
-      </div>
-      <!-- VIEW PRODUCT -->
-      <a
-        href="javascript:void(0)"
-        class="py-5 text-black uppercase transition duration-300 rounded-lg  hover:bg-opacity-90 text-md w-fit-content"
-      >
-        view product info
-      </a>
-    </div>
-    <!-- CLOSE -->
-    <svg
-      class="absolute cursor-pointer fill-current top-5 right-5"
-      style="width: 25px; height: 25px"
-      id="close-modal-product"
-    >
-      <use xlink:href="./assets/icons/sprite.svg#icon-close">
-        <title>close</title>
-      </use>
-    </svg>
-  </div>
-</div>
-
   </section>
   <!-- STORY -->
   <section
-    class="container relative flex items-center mt-20 mb-10 overflow-hidden"
+    class="container relative flex items-center mt-5 mb-10 overflow-hidden sm:mt-20"
     style="min-height: 42.4rem"
   >
     <!--  -->
@@ -937,6 +862,85 @@
 </div>
 
   </section>
+  <!-- VIEW MODEL -->
+  <div
+  class="fixed top-0 bottom-0 left-0 right-0 z-40 items-center justify-center hidden bg-black  bg-opacity-70"
+  id="view-modal-product"
+>
+  <!--  -->
+  <div
+    class="relative grid w-11/12 grid-cols-1 gap-3 p-10 px-10 overflow-auto transition duration-300 transform -translate-y-20 bg-white rounded-lg opacity-0  md:grid-cols-5 xl:w-7/12"
+    id="modal-product"
+    style="max-height: 65rem"
+  >
+    <!-- IMAGE -->
+    <div
+      class="flex items-center justify-center col-start-1 col-end-3 p-10 bg-gray-500 rounded-lg  bg-opacity-5"
+      style="height: 21rem"
+    >
+      <img
+        class="object-cover max-w-full max-h-full"
+        src="./assets/images/other/our-coffee/1.png"
+        alt=""
+      />
+    </div>
+    <!-- INFO -->
+    <div class="flex flex-col col-start-3 font-extrabold col-span-full">
+      <h3 class="text-lg sm:text-30">The Yemen Trilogy - 3x 4oz boxes</h3>
+      <span class="text-30">$32</span>
+      <p
+        class="mt-5 leading-loose text-black  sm:mt-10 truncate-sintance text-opacity-60 text-md sm:text-16"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deleniti assumenda
+        repudiandae magni corrupti amet, enim temporibus id maxime nisi. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Labore deleniti assumenda repudiandae magni corrupti amet,
+        enim temporibus id maxime nisi.
+      </p>
+      <!-- ACTIONS -->
+      <div class="flex flex-col items-center my-5 sm:my-10 sm:flex-row sm:gap-x-3">
+        <!-- COUNTER -->
+        <div
+          class="flex items-center justify-between flex-shrink-0 w-full text-lg  sm:w-3/12 bg-citrine"
+          style="height: 5rem"
+        >
+          <button id="subtract" class="w-4/12">-</button>
+          <span id="count " class="text-lg">40</span>
+          <button id="add" class="w-4/12">+</button>
+        </div>
+        <!-- VIEW PRODUCT -->
+        <button
+          class="flex items-center justify-center w-full h-full px-10 py-5 mt-4 text-white uppercase transition duration-300  sm:w-7/12 sm:mt-0 hover:bg-opacity-90 bg-como text-md"
+          style="height: 5rem"
+        >
+          <svg style="width: 20px; height: 20px" class="fill-white">
+            <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
+              <title>shopping-cart</title>
+            </use>
+          </svg>
+          <span class="mis-5"> add to cart </span>
+        </button>
+      </div>
+      <!-- VIEW PRODUCT -->
+      <a
+        href="javascript:void(0)"
+        class="py-5 text-black uppercase transition duration-300 rounded-lg  hover:bg-opacity-90 text-md w-fit-content"
+      >
+        view product info
+      </a>
+    </div>
+    <!-- CLOSE -->
+    <svg
+      class="absolute cursor-pointer fill-current top-5 right-5"
+      style="width: 25px; height: 25px"
+      id="close-modal-product"
+    >
+      <use xlink:href="./assets/icons/sprite.svg#icon-close">
+        <title>close</title>
+      </use>
+    </svg>
+  </div>
+</div>
+
 </main>
 
 <!-- FOOTER -->
@@ -1055,8 +1059,8 @@
   </svg>
 </button>
 
-<!-- BACKDROP -->
-<div class="fixed top-0 bottom-0 left-0 right-0 z-30 hidden sm:hidden back-drop"></div>
+<!-- BACKDROP
+<div class="fixed top-0 bottom-0 left-0 right-0 z-30 hidden sm:hidden back-drop"></div> -->
 
     <!--  -->
     <script src="./assets/js/library/jquery.3.5.1.js"></script>
