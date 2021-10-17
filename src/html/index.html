@@ -1,11 +1,22 @@
 @@include('./extend/above.html')
 
 <!-- HEADER -->
-<header class="relative overflow-hidden h-70 gradient" id="start-scroll-top">
+<header class="relative overflow-hidden fadeInUp h-70 gradient" id="start-scroll-top">
   <!-- NAVBAR -->
   <nav
     id="navbar"
-    class="top-0 left-0 right-0 z-40 px-5 transition duration-500 bg-white  sm:bg-transparent sm:absolute sm:px-0"
+    class="
+      top-0
+      left-0
+      right-0
+      z-40
+      px-5
+      font-medium
+      transition
+      duration-500
+      bg-white
+      sm:bg-transparent sm:absolute sm:px-0
+    "
   >
     <!-- CONTENT NAVBAR -->
     <div class="container relative flex items-center justify-between py-3 sm:items-start">
@@ -28,12 +39,30 @@
       <!-- LINKS -->
       <div class="flex items-center order-3 capitalize text-md sm:mt-5">
         <div
-          class="z-50 flex flex-col transition duration-500 transform -translate-x-full  sm:translate-x-0 responsive-sidebar-nav"
+          class="
+            z-50
+            flex flex-col
+            transition
+            duration-500
+            transform
+            -translate-x-full
+            sm:translate-x-0
+            responsive-sidebar-nav
+          "
           id="sidebar-nav"
         >
           <!--  -->
           <div
-            class="flex items-center px-10 border-b border-blue-200 cursor-pointer pointer-events-none  sm:hidden opacity-70"
+            class="
+              flex
+              items-center
+              px-10
+              border-b border-blue-200
+              cursor-pointer
+              pointer-events-none
+              sm:hidden
+              opacity-70
+            "
             id="close-sidebar"
           >
             <div class="flex items-center py-5 pointer-events-auto">
@@ -48,7 +77,15 @@
           <!--  -->
           <div
             id="links"
-            class="flex flex-col px-10 mt-10 text-black  sm:px-0 sm:mt-0 sm:items-center sm:text-white sm:flex-row text-16 sm:text-md"
+            class="
+              flex flex-col
+              px-10
+              mt-10
+              text-black
+              sm:px-0 sm:mt-0 sm:items-center sm:text-white sm:flex-row
+              text-16
+              sm:text-md
+            "
           >
             <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0 text-como">shop coffee</a>
             <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">subscriptions</a>
@@ -66,7 +103,23 @@
           </svg>
           <!-- TITLE -->
           <div
-            class="absolute items-center justify-center hidden mt-5 text-xs capitalize transition duration-300 bg-white rounded  shape-arrow top-full sm:flex translate-position"
+            class="
+              absolute
+              items-center
+              justify-center
+              hidden
+              mt-5
+              text-xs
+              capitalize
+              transition
+              duration-300
+              bg-white
+              rounded
+              shape-arrow
+              top-full
+              sm:flex
+              translate-position
+            "
             style="width: 50px; height: 30px"
           >
             <span>cart</span>
@@ -82,12 +135,40 @@
         <!-- CART -->
         <div
           id="shopping-cart"
-          class="fixed top-0 left-0 z-50 h-full p-5 transition duration-500 transform -translate-x-full bg-white rounded  sm:hidden sm:translate-x-0 sm:left-auto sm:absolute sm:mt-5 sm:-right-5 sm:top-20 sm:h-auto"
+          class="
+            fixed
+            top-0
+            left-0
+            z-50
+            h-full
+            p-5
+            transition
+            duration-500
+            transform
+            -translate-x-full
+            bg-white
+            rounded
+            sm:hidden
+            sm:translate-x-0
+            sm:left-auto
+            sm:absolute
+            sm:mt-5
+            sm:-right-5
+            sm:top-20
+            sm:h-auto
+          "
           style="width: 28rem"
         >
           <!-- TITLE -->
           <div
-            class="flex items-center justify-between p-5 border-b border-black  border-opacity-10 sm:hidden"
+            class="
+              flex
+              items-center
+              justify-between
+              p-5
+              border-b border-black border-opacity-10
+              sm:hidden
+            "
           >
             <span class="font-extrabold uppercase text-16">shopping cart</span>
             <svg
@@ -162,12 +243,33 @@
             </div>
             <div class="flex flex-col items-center mt-5">
               <button
-                class="w-full py-4 text-white uppercase transition rounded  duration-400 hover:bg-opacity-90 bg-como"
+                class="
+                  w-full
+                  py-4
+                  text-white
+                  uppercase
+                  transition
+                  rounded
+                  duration-400
+                  hover:bg-opacity-90
+                  bg-como
+                "
               >
                 proceed to checkout
               </button>
               <button
-                class="w-full py-4 mt-3 text-black uppercase transition bg-white rounded  duration-400 hover:bg-gray-100"
+                class="
+                  w-full
+                  py-4
+                  mt-3
+                  text-black
+                  uppercase
+                  transition
+                  bg-white
+                  rounded
+                  duration-400
+                  hover:bg-gray-100
+                "
               >
                 view cart
               </button>
@@ -184,7 +286,17 @@
     <!-- CONTENT -->
     <div class="container text-center">
       <h1
-        class="px-5 mx-auto leading-relaxed tracking-widest text-white uppercase text-xxlg md:w-2/4"
+        class="
+          px-5
+          mx-auto
+          font-medium
+          leading-relaxed
+          tracking-widest
+          text-white
+          uppercase
+          text-xxlg
+          md:w-2/4
+        "
       >
         coffee is the best thing to douse the sunrise with
       </h1>
@@ -192,26 +304,56 @@
       <figure class="mt-10">
         <button
           style="width: 14rem; height: 5rem"
-          class="text-xs text-white uppercase transition duration-500 ease-in-out border border-white  hover:bg-white hover:text-black"
+          class="
+            text-xs text-white
+            uppercase
+            transition
+            duration-500
+            ease-in-out
+            border border-white
+            hover:bg-white hover:text-black
+          "
         >
           shop coffee
         </button>
         <button
           style="width: 14rem; height: 5rem"
-          class="text-xs text-white uppercase transition duration-500 ease-in-out border border-white  hover:bg-white hover:text-black mis-5"
+          class="
+            text-xs text-white
+            uppercase
+            transition
+            duration-500
+            ease-in-out
+            border border-white
+            hover:bg-white hover:text-black
+            mis-5
+          "
         >
           our story
         </button>
       </figure>
     </div>
     <!--  -->
-    <div class="absolute top-0 bottom-0 left-0 right-0 w-full -z-1">
-      <img
-        class="object-cover w-full max-w-full min-h-full"
-        src="./assets/images/other/header.jpg"
-        alt="header"
-      />
-    </div>
+    <video
+      loop
+      autoplay="true"
+      muted
+      crossorigin="anonymous"
+      class="
+        absolute
+        top-0
+        bottom-0
+        left-0
+        right-0
+        object-cover
+        w-full
+        h-full
+        max-w-full max-h-full
+        -z-1
+      "
+    >
+      <source src="./assets/images/s.mp4" />
+    </video>
   </div>
 </header>
 
@@ -220,8 +362,8 @@
   <!--  -->
   <article class="pt-9">
     <!-- VIDEO -->
-    <section class="container">
-      <blockquote class="px-1 mx-auto text-lg text-center md:w-2/4">
+    <section class="container wow animate__fadeInUp video-specific">
+      <blockquote class="px-1 mx-auto text-lg font-extrabold text-center md:w-2/4">
         "A CUP OF GOURMET COFFEE SHARED WITH A FRIEND IS HAPPINESS TASTED AND TIME WELL SPENT"
       </blockquote>
       <!--  -->
@@ -241,55 +383,109 @@
       </div>
     </section>
     <!-- CATEGORY -->
-    <section class="container px-5 text-center sm:px-0">
-      <h2 class="py-24 text-black uppercase text-xxlg">shop by categories</h2>
+    <section class="container px-5 text-center sm:px-0 wow animate__fadeInUp">
+      <h2 class="py-24 font-extrabold text-black uppercase text-xxlg">shop by categories</h2>
       <ul class="grid grid-cols-2 gap-5 md:grid-cols-4">
-        <li style="height: 19rem" class="flex flex-col justify-between py-10 bg-white">
+        <li
+          style="height: 19rem"
+          class="
+            flex flex-col
+            justify-between
+            py-10
+            transition
+            duration-300
+            bg-white
+            hover:bg-plantation hover:text-white
+          "
+        >
           <img
             class="object-cover max-w-full mx-auto"
             src="./assets/images/other/our-category/1.png"
             alt=""
           />
-          <span class="uppercase text-xlg">pastry</span>
+          <span class="font-medium uppercase text-xlg">pastry</span>
         </li>
-        <li style="height: 19rem" class="flex flex-col justify-between py-10 bg-white">
+        <li
+          style="height: 19rem"
+          class="
+            flex flex-col
+            justify-between
+            py-10
+            transition
+            duration-300
+            bg-white
+            hover:bg-plantation hover:text-white
+          "
+        >
           <img
             class="object-cover max-w-full mx-auto"
             src="./assets/images/other/our-category/2.png"
             alt=""
           />
-          <span class="uppercase text-xlg">flowers</span>
+          <span class="font-medium uppercase text-xlg">flowers</span>
         </li>
-        <li style="height: 19rem" class="flex flex-col justify-between py-10 bg-white">
+        <li
+          style="height: 19rem"
+          class="
+            flex flex-col
+            justify-between
+            py-10
+            transition
+            duration-300
+            bg-white
+            hover:bg-plantation hover:text-white
+          "
+        >
           <img
             class="object-cover max-w-full mx-auto"
             src="./assets/images/other/our-category/4.png"
             alt=""
           />
-          <span class="uppercase text-xlg">chocolate</span>
+          <span class="font-medium uppercase text-xlg">chocolate</span>
         </li>
-        <li style="height: 19rem" class="flex flex-col justify-between py-10 bg-white">
+        <li
+          style="height: 19rem"
+          class="
+            flex flex-col
+            justify-between
+            py-10
+            transition
+            duration-300
+            bg-white
+            hover:bg-plantation hover:text-white
+          "
+        >
           <img
             class="object-cover max-w-full mx-auto"
             src="./assets/images/other/our-category/3.png"
             alt=""
           />
-          <span class="uppercase text-xlg">coffee</span>
+          <span class="font-medium uppercase text-xlg">coffee</span>
         </li>
       </ul>
     </section>
     <!-- STORY -->
     <section
-      class="container relative flex items-center mt-20 overflow-hidden md:mt-60"
+      class="
+        container
+        relative
+        flex
+        items-center
+        mt-20
+        overflow-hidden
+        md:mt-60
+        wow
+        animate__fadeInUp
+      "
       style="min-height: 42.4rem"
     >
       <!--  -->
       <div class="relative z-20 px-12 text-white lg:w-7/12 lg:px-24">
-        <h3 class="uppercase text-xxlg">
+        <h3 class="font-medium uppercase text-xxlg">
           <span class="block">the first cup is for the guest,</span>
           <span class="block">the second for enjoyment</span>
         </h3>
-        <p class="mt-8 leading-10 lg:w-7/12 text-md">
+        <p class="mt-8 font-medium leading-10 lg:w-7/12 text-md">
           Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave
           deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade
           swag.
@@ -297,7 +493,16 @@
 
         <button
           style="width: 14rem; height: 5rem"
-          class="mt-16 text-xs text-white uppercase transition duration-500 ease-in-out border border-white  hover:bg-white hover:text-black"
+          class="
+            mt-16
+            text-xs text-white
+            uppercase
+            transition
+            duration-500
+            ease-in-out
+            border border-white
+            hover:bg-white hover:text-black
+          "
         >
           the story
         </button>
@@ -310,20 +515,41 @@
           alt=""
         />
         <span
-          class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden  overlay bg-gradient-to-r from-como to-transparent"
+          class="
+            absolute
+            top-0
+            bottom-0
+            left-0
+            right-0
+            overflow-hidden
+            overlay
+            bg-gradient-to-r
+            from-como
+            to-transparent
+          "
         ></span>
       </div>
     </section>
     <!-- COFFEE -->
-    <section class="container text-black">
+    <section class="container mb-10 text-black sm:mb-0 wow animate__fadeInUp">
       <!--  -->
       <div class="mt-20 mb-32 text-center">
-        <h3 class="uppercase text-30">our coffees</h3>
-        <p class="mt-5 text-lg">Limited edition. Eco-friendly. Not just for working out</p>
+        <h3 class="font-extrabold uppercase text-30">our coffees</h3>
+        <p class="mt-5 text-lg font-medium">
+          Limited edition. Eco-friendly. Not just for working out
+        </p>
       </div>
       <!--  -->
       <div
-        class="grid content-center grid-cols-2 grid-rows-2  lg:grid-cols-3 gap-y-10 sm:gap-y-56 gap-x-5"
+        class="
+          grid
+          content-center
+          grid-cols-2 grid-rows-2
+          lg:grid-cols-3
+          gap-y-10
+          sm:gap-y-56
+          gap-x-5
+        "
       >
         @@for (var i = 0; i < 6; i++) {
         <div class="relative flex flex-col items-center text-center text-16 product">
@@ -335,11 +561,29 @@
               alt=""
             />
           </div>
-          <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+          <h6 class="mb-2 font-extrabold">The Yemen Trilogy - 3x 4oz boxes</h6>
           <p>$32.00</p>
           <!-- QUICK VIEW -->
           <div
-            class="flex items-center justify-center mt-5 transition duration-300 ease-in-out bg-white rounded-full cursor-pointer  lg:mt-0 lg:absolute -bottom-20 open-modal-product lg:opacity-0 lg:-top-10 lg:right-5 drop-shadow filter quick-view"
+            class="
+              flex
+              items-center
+              justify-center
+              mt-5
+              transition
+              duration-300
+              ease-in-out
+              bg-white
+              rounded-full
+              cursor-pointer
+              lg:mt-0 lg:absolute
+              -bottom-20
+              open-modal-product
+              lg:opacity-0 lg:-top-10 lg:right-5
+              drop-shadow
+              filter
+              quick-view
+            "
             style="width: 30px; height: 30px"
           >
             <svg class="fill-current" style="width: 17px; height: 17px">
@@ -349,7 +593,27 @@
             </svg>
             <!-- TITLE -->
             <p
-              class="absolute top-0 hidden px-5 py-2 text-xs text-black uppercase transition duration-300 ease-out transform -translate-x-20 bg-white rounded opacity-0 pointer-events-none  sm:block -left-0 title-quick-view"
+              class="
+                absolute
+                top-0
+                hidden
+                px-5
+                py-2
+                text-xs text-black
+                uppercase
+                transition
+                duration-300
+                ease-out
+                transform
+                -translate-x-20
+                bg-white
+                rounded
+                opacity-0
+                pointer-events-none
+                sm:block
+                -left-0
+                title-quick-view
+              "
               style="width: 100px; left: -100px"
             >
               quick view
@@ -362,34 +626,66 @@
       <a
         href="javascript:void(0)"
         style="width: 14rem; height: 5rem"
-        class="flex items-center justify-center mx-auto mt-32 text-xs text-black uppercase transition duration-500 ease-in-out border border-black  hover:bg-black hover:text-white"
+        class="
+          flex
+          items-center
+          justify-center
+          mx-auto
+          mt-32
+          text-xs text-black
+          uppercase
+          transition
+          duration-500
+          ease-in-out
+          border border-black
+          hover:bg-black hover:text-white
+        "
       >
         shop all
       </a>
     </section>
     <!-- SLIDER -->
-    <section class="container px-0 mt-28">
+    <section class="container px-0 sm:mt-28 wow animate__fadeInUp">
       <div class="owl-carousel our-story owl-theme" style="height: 42.4rem">
         <!-- slide -->
         <div class="relative flex items-center h-full">
           <!--  -->
           <div
-            class="relative z-50 flex flex-col items-center px-12 text-white  sm:items-start lg:w-7/12 lg:px-24"
+            class="
+              relative
+              z-50
+              flex flex-col
+              items-center
+              px-12
+              text-white
+              sm:items-start
+              lg:w-7/12 lg:px-24
+            "
           >
-            <p class="mt-8 leading-10 text-center lg:w-8/12 text-md sm:text-left">
+            <p class="mt-8 font-medium leading-10 text-center lg:w-8/12 text-md sm:text-left">
               Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident
               chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami
               readymade swag.
             </p>
             <!--  -->
             <figure class="mt-16 text-center uppercase sm:text-left">
-              <span class="block text-16">Kevin Johnson</span>
-              <span class="block text-md">Founder of starbucks</span>
+              <span class="block font-extrabold text-16">Kevin Johnson</span>
+              <span class="block font-medium text-md">Founder of starbucks</span>
             </figure>
             <!--  -->
             <button
               style="width: 14rem; height: 5rem"
-              class="mt-16 text-xs text-white uppercase transition duration-500 ease-in-out border border-white  set-height-width hover:bg-white hover:text-black"
+              class="
+                mt-16
+                text-xs text-white
+                uppercase
+                transition
+                duration-500
+                ease-in-out
+                border border-white
+                set-height-width
+                hover:bg-white hover:text-black
+              "
             >
               the story
             </button>
@@ -402,7 +698,18 @@
               alt=""
             />
             <span
-              class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden  overlay bg-gradient-to-r from-como to-transparent"
+              class="
+                absolute
+                top-0
+                bottom-0
+                left-0
+                right-0
+                overflow-hidden
+                overlay
+                bg-gradient-to-r
+                from-como
+                to-transparent
+              "
             ></span>
           </div>
         </div>
@@ -410,22 +717,41 @@
         <div class="relative flex items-center h-full">
           <!--  -->
           <div
-            class="relative z-50 flex flex-col items-center px-12 text-white  sm:items-start lg:w-7/12 lg:px-24"
+            class="
+              relative
+              z-50
+              flex flex-col
+              items-center
+              px-12
+              text-white
+              sm:items-start
+              lg:w-7/12 lg:px-24
+            "
           >
-            <p class="mt-8 leading-10 text-center lg:w-8/12 text-md sm:text-left">
+            <p class="mt-8 font-medium leading-10 text-center lg:w-8/12 text-md sm:text-left">
               Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident
               chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami
               readymade swag.
             </p>
             <!--  -->
             <figure class="mt-16 text-center uppercase sm:text-left">
-              <span class="block text-16">Kevin Johnson</span>
-              <span class="block text-md">Founder of starbucks</span>
+              <span class="block font-extrabold text-16">Kevin Johnson</span>
+              <span class="block font-medium text-md">Founder of starbucks</span>
             </figure>
             <!--  -->
             <button
               style="width: 14rem; height: 5rem"
-              class="mt-16 text-xs text-white uppercase transition duration-500 ease-in-out border border-white  set-height-width hover:bg-white hover:text-black"
+              class="
+                mt-16
+                text-xs text-white
+                uppercase
+                transition
+                duration-500
+                ease-in-out
+                border border-white
+                set-height-width
+                hover:bg-white hover:text-black
+              "
             >
               the story
             </button>
@@ -438,14 +764,25 @@
               alt=""
             />
             <span
-              class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden  overlay bg-gradient-to-r from-como to-transparent"
+              class="
+                absolute
+                top-0
+                bottom-0
+                left-0
+                right-0
+                overflow-hidden
+                overlay
+                bg-gradient-to-r
+                from-como
+                to-transparent
+              "
             ></span>
           </div>
         </div>
       </div>
     </section>
     <!-- PRESS -->
-    <section class="container mt-10 mb-28 bg-vistaBlue">
+    <section class="container sm:mt-10 sm:mb-28 bg-vistaBlue wow animate__fadeInUp">
       <div class="py-32 text-center">
         <!--  -->
         <blockquote class="text-lg text-boulder">"Life is begin after Coffee"</blockquote>
@@ -453,40 +790,55 @@
         <ul class="grid items-center mt-20 gap-y-10 lg:grid-cols-5 sm:mt-32">
           <li>
             <img
-              class="object-cover mx-auto"
+              class="object-cover mx-auto transition duration-500 lg:opacity-50 hover:opacity-100"
               src="./assets/images/other/our-press/facebook.svg"
               alt=""
             />
           </li>
           <li>
             <img
-              class="object-cover mx-auto"
+              class="object-cover mx-auto transition duration-500 lg:opacity-50 hover:opacity-100"
               src="./assets/images/other/our-press/google.svg"
               alt=""
             />
           </li>
           <li>
             <img
-              class="object-cover mx-auto"
+              class="object-cover mx-auto transition duration-500 lg:opacity-50 hover:opacity-100"
               src="./assets/images/other/our-press/netflix.svg"
               alt=""
             />
           </li>
           <li>
             <img
-              class="object-cover mx-auto"
+              class="object-cover mx-auto transition duration-500 lg:opacity-50 hover:opacity-100"
               src="./assets/images/other/our-press/paypal.svg"
               alt=""
             />
           </li>
           <li>
-            <img class="object-cover mx-auto" src="./assets/images/other/our-press/pg.svg" alt="" />
+            <img
+              class="object-cover mx-auto transition duration-500 lg:opacity-50 hover:opacity-100"
+              src="./assets/images/other/our-press/pg.svg"
+              alt=""
+            />
           </li>
         </ul>
         <!--  -->
         <button
           style="width: 14rem; height: 5rem"
-          class="block mx-auto mt-32 text-xs text-black uppercase transition duration-500 ease-in-out border border-black  hover:bg-black hover:text-white"
+          class="
+            block
+            mx-auto
+            mt-32
+            text-xs text-black
+            uppercase
+            transition
+            duration-500
+            ease-in-out
+            border border-black
+            hover:bg-black hover:text-white
+          "
         >
           see press
         </button>

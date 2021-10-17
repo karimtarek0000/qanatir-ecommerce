@@ -1,11 +1,11 @@
 @@include('./extend/above.html')
 
 <!-- HEADER -->
-<header class="relative overflow-hidden gradient" id="start-scroll-top">
+<header class="relative overflow-hidden gradient video-specific" id="start-scroll-top">
   <!-- NAVBAR -->
   <nav
     id="navbar"
-    class="top-0 left-0 right-0 z-40 px-5 transition duration-500 bg-white  sm:bg-transparent sm:absolute sm:px-0"
+    class="top-0 left-0 right-0 z-40 px-5 font-medium transition duration-500 bg-white  sm:bg-transparent sm:absolute sm:px-0"
   >
     <!-- CONTENT NAVBAR -->
     <div class="container relative flex items-center justify-between py-3 sm:items-start">
@@ -187,33 +187,35 @@
 </header>
 
 <main>
-  <section class="container sm:w-7/12">
+  <section class="container sm:w-7/12 wow animate__fadeInUp">
     <!--  -->
     <div class="mt-20 mb-10 text-center sm:mb-32">
-      <h3 class="uppercase text-30">our coffees</h3>
-      <p class="mt-5 text-lg">Limited edition. Eco-friendly. Not just for working out</p>
+      <h3 class="font-extrabold uppercase text-30">our coffees</h3>
+      <p class="mt-5 text-lg font-medium">
+        Limited edition. Eco-friendly. Not just for working out
+      </p>
     </div>
     <!--  -->
     <div class="text-16">
-      <p class="px-5 leading-loose sm:px-0">
+      <p class="px-5 leading-loose text-black sm:px-0 text-opacity-60">
         Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep
         v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag.
       </p>
       <div class="my-5">
         <img
-          class="object-cover max-w-full max-h-full"
+          class="object-cover w-full max-w-full max-h-full"
           src="./assets/images/other/story/1.jpg"
           alt=""
         />
       </div>
-      <p class="px-5 leading-loose sm:px-0">
+      <p class="px-5 leading-loose text-black sm:px-0 text-opacity-60">
         Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep
         v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag.
       </p>
     </div>
   </section>
   <!--  -->
-  <section class="mt-10 sm:mt-20">
+  <section class="mt-10 sm:mt-20 wow animate__fadeInUp">
     <div>
       <img
         class="object-cover w-full max-w-full max-h-full"
@@ -223,7 +225,7 @@
     </div>
     <div class="py-10 mx-auto sm:w-7/12">
       <h2 class="py-5 font-extrabold text-center sm:py-20 text-30">YEMEN'S COFFEE HISTORY</h2>
-      <p class="px-5 leading-loose text-16 sm:px-0">
+      <p class="px-5 leading-loose text-black text-16 sm:px-0 text-opacity-60">
         An Islamic Scholar and Sufi mystic discovers that if he sets a pot of water over his cook
         fire, and boils the seeds of a certain fruit that grows wild in the hills, the water turns a
         muddy brown. When he drinks this brew, it lifts his spirit, awakens his senses, and allows
@@ -240,7 +242,7 @@
         />
       </div>
       @@for(var i = 0; i < 4; i++) {
-      <p class="px-5 mb-5 leading-loose sm:mb-10 text-16 sm:px-0">
+      <p class="px-5 mb-5 leading-loose text-black sm:mb-10 text-16 sm:px-0 text-opacity-60">
         As a kid growing up in San Francisco’s Tenderloin, Mokhtar Alkhanshali never liked coffee
         that much. It tasted dark and bitter. As a child, Mokhtar traveled with his parents back to
         the mountain town of Ibb, Yemen, where his family is from. He used to walk through the
@@ -251,7 +253,7 @@
     </div>
   </section>
   <!--  -->
-  <section>
+  <section class="wow animate__fadeInUp">
     <div class="my-5">
       <img
         class="object-cover w-full max-w-full max-h-full"
@@ -261,7 +263,7 @@
     </div>
   </section>
   <!-- SLIDER -->
-  <section class="my-10 sm:my-28">
+  <section class="my-10 sm:my-28 wow animate__fadeInUp">
     <div class="owl-carousel our-story owl-theme" style="height: 42.4rem">
       <!-- slide -->
       <div class="relative flex items-center h-full">
@@ -269,15 +271,15 @@
         <div
           class="relative z-50 flex flex-col items-center px-12 text-white  sm:items-start lg:w-7/12 lg:px-24"
         >
-          <p class="mt-8 leading-10 text-center lg:w-8/12 text-md sm:text-left">
+          <p class="mt-8 font-medium leading-10 text-center lg:w-8/12 text-md sm:text-left">
             Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave
             deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade
             swag.
           </p>
           <!--  -->
           <figure class="mt-16 text-center uppercase sm:text-left">
-            <span class="block text-16">Kevin Johnson</span>
-            <span class="block text-md">Founder of starbucks</span>
+            <span class="block font-extrabold text-16">Kevin Johnson</span>
+            <span class="block font-medium text-md">Founder of starbucks</span>
           </figure>
           <!--  -->
           <button
@@ -305,15 +307,15 @@
         <div
           class="relative z-50 flex flex-col items-center px-12 text-white  sm:items-start lg:w-7/12 lg:px-24"
         >
-          <p class="mt-8 leading-10 text-center lg:w-8/12 text-md sm:text-left">
+          <p class="mt-8 font-medium leading-10 text-center lg:w-8/12 text-md sm:text-left">
             Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave
             deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade
             swag.
           </p>
           <!--  -->
           <figure class="mt-16 text-center uppercase sm:text-left">
-            <span class="block text-16">Kevin Johnson</span>
-            <span class="block text-md">Founder of starbucks</span>
+            <span class="block font-extrabold text-16">Kevin Johnson</span>
+            <span class="block font-medium text-md">Founder of starbucks</span>
           </figure>
           <!--  -->
           <button
@@ -338,11 +340,13 @@
     </div>
   </section>
   <!-- COFFEE -->
-  <section class="container mb-20 text-black">
+  <section class="container mb-20 text-black wow animate__fadeInUp">
     <!--  -->
     <div class="mt-20 mb-32 text-center">
-      <h3 class="uppercase text-30">our coffees</h3>
-      <p class="mt-5 text-lg">Limited edition. Eco-friendly. Not just for working out</p>
+      <h3 class="font-extrabold uppercase text-30">our coffees</h3>
+      <p class="mt-5 text-lg font-medium">
+        Limited edition. Eco-friendly. Not just for working out
+      </p>
     </div>
     <!--  -->
     <div
@@ -358,7 +362,7 @@
             alt=""
           />
         </div>
-        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+        <h6 class="mb-2 font-medium">The Yemen Trilogy - 3x 4oz boxes</h6>
         <p>$32.00</p>
         <!-- QUICK VIEW -->
         <div

@@ -5,7 +5,7 @@
   <!-- NAVBAR -->
   <nav
     id="navbar"
-    class="top-0 left-0 right-0 z-40 px-5 transition duration-500 bg-white  sm:bg-transparent sm:absolute sm:px-0"
+    class="top-0 left-0 right-0 z-40 px-5 font-medium transition duration-500 bg-white  sm:bg-transparent sm:absolute sm:px-0"
   >
     <!-- CONTENT NAVBAR -->
     <div class="container relative flex items-center justify-between py-3 sm:items-start">
@@ -188,27 +188,29 @@
       >
         Beans
       </h1>
-      <p class="mx-auto leading-loose text-white text-18 sm:w-6/12">
+      <p class="mx-auto font-medium leading-loose text-white text-18 sm:w-6/12">
         Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep
         v laborum.
       </p>
     </div>
     <!--  -->
-    <div class="absolute top-0 bottom-0 left-0 right-0 w-full -z-1">
-      <img
-        class="object-cover w-full max-w-full min-h-full"
-        src="./assets/images/other/header-2.jpg"
-        alt="header"
-      />
-    </div>
+    <video
+      loop
+      autoplay="true"
+      muted
+      crossorigin="anonymous"
+      class="absolute top-0 bottom-0 left-0 right-0 object-cover w-full h-full max-w-full max-h-full  -z-1"
+    >
+      <source src="./assets/images/s.mp4" />
+    </video>
   </div>
 </header>
 
 <main>
-  <section class="container mt-10">
+  <section class="container px-0 mt-10 overflow-hidden wow animate__fadeInUp">
     <!-- NAVBAR -->
     <ul
-      class="flex flex-col items-center justify-center gap-10 py-5 uppercase  sm:flex-row text-xlg sm:gap-x-44"
+      class="flex flex-col items-center justify-center gap-10 py-5 font-medium uppercase  sm:flex-row text-xlg md:gap-x-32 lg:gap-x-64"
       id="category-products"
     >
       <a class="relative cursor-pointer shape-undeline" href="#beans">beans</a>
@@ -231,7 +233,7 @@
                 alt=""
               />
             </div>
-            <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+            <h6 class="mb-2 font-medium">The Yemen Trilogy - 3x 4oz boxes</h6>
             <div class="flex items-center my-3">
               <span class="rating" data-rating="4"></span>
               <span class="text-black text-18 mis-3 text-opacity-70">150 reviews</span>
@@ -269,7 +271,7 @@
                 alt=""
               />
             </div>
-            <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes 2</h6>
+            <h6 class="mb-2 font-medium">The Yemen Trilogy - 3x 4oz boxes 2</h6>
             <div class="flex items-center my-3">
               <span class="rating" data-rating="4"></span>
               <span class="text-black text-18 mis-3 text-opacity-70">150 reviews</span>
@@ -310,7 +312,7 @@
                 alt=""
               />
             </div>
-            <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes 2</h6>
+            <h6 class="mb-2 font-medium">The Yemen Trilogy - 3x 4oz boxes 2</h6>
             <div class="flex items-center my-3">
               <span class="rating" data-rating="4"></span>
               <span class="text-black text-18 mis-3 text-opacity-70">150 reviews</span>
@@ -351,7 +353,7 @@
                 alt=""
               />
             </div>
-            <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes 2</h6>
+            <h6 class="mb-2 font-medium">The Yemen Trilogy - 3x 4oz boxes 2</h6>
             <div class="flex items-center my-3">
               <span class="rating" data-rating="4"></span>
               <span class="text-black text-18 mis-3 text-opacity-70">150 reviews</span>
@@ -382,7 +384,7 @@
     </div>
   </section>
   <!-- OTHER PRODUCT -->
-  <section class="container">
+  <section class="container wow animate__fadeInUp">
     <h2 class="mb-5 font-extrabold text-center uppercase sm:mb-20 text-xlg">RECOMMENDED</h2>
     <!--  -->
     <div class="owl-carousel related-products owl-theme">
@@ -397,7 +399,7 @@
             alt=""
           />
         </div>
-        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+        <h6 class="mb-2 font-medium">The Yemen Trilogy - 3x 4oz boxes</h6>
         <div class="flex items-center my-3">
           <span class="rating" data-rating="4"></span>
           <span class="text-black text-18 mis-3 text-opacity-70">150 reviews</span>
@@ -427,16 +429,16 @@
   </section>
   <!-- STORY -->
   <section
-    class="container relative flex items-center mt-20 mb-10 overflow-hidden"
+    class="container relative flex items-center mt-20 mb-10 overflow-hidden wow animate__fadeInUp"
     style="min-height: 42.4rem"
   >
     <!--  -->
     <div class="relative z-20 px-12 text-white lg:w-7/12 lg:px-24">
-      <h3 class="uppercase text-xxlg">
+      <h3 class="font-extrabold uppercase text-xxlg">
         <span class="block">the first cup is for the guest,</span>
         <span class="block">the second for enjoyment</span>
       </h3>
-      <p class="mt-8 leading-10 lg:w-7/12 text-md">
+      <p class="mt-8 font-medium leading-10 lg:w-7/12 text-md">
         Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep
         v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag.
       </p>
@@ -461,7 +463,10 @@
     </div>
   </section>
   <!-- VIDEO -->
-  <section class="relative mb-10 overflow-hidden sm:mb-20" style="max-height: 70vh">
+  <section
+    class="relative mb-10 overflow-hidden bg-black sm:mb-20 wow animate__fadeInUp video-specific"
+    style="max-height: 70vh"
+  >
     @@include('./extend/video.html')
   </section>
   <!-- VIEW MODEL -->

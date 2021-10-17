@@ -2,7 +2,7 @@
 <!-- NAVBAR -->
 <nav
   id="navbar"
-  class="top-0 left-0 right-0 z-40 px-5 text-black duration-500  bg-oldLace transition-background specific sm:px-0"
+  class="top-0 left-0 right-0 z-40 px-5 font-medium text-black duration-500  bg-oldLace transition-background specific sm:px-0"
 >
   <!-- CONTENT NAVBAR -->
   <div class="container relative flex items-center justify-between py-3 sm:items-start">
@@ -182,10 +182,10 @@
     <h2
       class="py-10 mb-10 font-extrabold text-center uppercase border-b border-black  border-opacity-10 text-xxlg"
     >
-      shopping card
+      shopping cart
     </h2>
     <!-- SHOPPING WRAPPER -->
-    <div class="flex flex-col px-10 mb-10 overflow-auto shopping-wrapper max-h-96 change-scroll">
+    <div class="flex flex-col px-2 mb-10 overflow-auto shopping-wrapper max-h-96 change-scroll">
       <!-- ITEM -->
       @@for(var i = 0; i < 7; i++) {
       <div
@@ -204,7 +204,7 @@
           class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
         >
           <!-- INFO -->
-          <p class="mb-5 sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
+          <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
           <p class="mb-5 sm:mb-0">$32.00</p>
           <!-- COUNTER -->
           <div
@@ -260,7 +260,7 @@
       </button>
     </div>
     <!-- FORM -->
-    <div class="mx-auto mb-10 w-fit-content sm:mx-0">
+    <div class="mx-auto mb-10 lg:w-5/12 sm:mx-0">
       <form class="flex items-center px-5 py-3 bg-mineral">
         <input type="checkbox" id="gift" class="cursor-pointer" style="width: 20px; height: 20px" />
         <label for="gift" class="text-white text-18 mis-4"
@@ -269,18 +269,18 @@
       </form>
       <div class="px-16 py-10 mt-5 bg-white border border-black text-18 border-opacity-10">
         <div class="flex items-center justify-between mb-5">
-          <span>SUBTOTAL</span>
+          <span class="font-extrabold">SUBTOTAL</span>
           <span>$32</span>
         </div>
         <div class="flex items-center justify-between">
-          <span>GRAND TOTAL</span>
+          <span class="font-extrabold">GRAND TOTAL</span>
           <span>$32</span>
         </div>
       </div>
       <!--  -->
       <button
         style="width: 30.9rem; height: 5rem"
-        class="block mx-auto mt-10 text-white uppercase transition duration-300  hover:bg-opacity-90 text-md bg-como"
+        class="block mx-auto mt-10 font-medium text-white uppercase transition duration-300  hover:bg-opacity-90 text-md bg-como"
       >
         PROCEED CHEKOUT
       </button>

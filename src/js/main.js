@@ -30,9 +30,21 @@ $(function () {
   const modalProduct = $("#modal-product");
   const reviewPerParent = $(".review-per-parent");
   const categoryProducts = $("#category-products a");
+  const aboutProduct = $("#about-product").outerHeight(true);
+  const comments = $("#comments").outerHeight(true);
+  const quickViewProduct = $("#quick-view-product");
 
   //
   $(window).scrollTop(0);
+  /////////////////////////////////
+  //// WOW
+  new WOW().init();
+  //
+  $(".wow").each(function () {
+    var wowHeight = 200;
+    $(this).attr("data-wow-offset", wowHeight);
+    $(this).attr("data-wow-duration", "2s");
+  });
 
   /////////////////////////////////
   //// CLICK
@@ -40,19 +52,19 @@ $(function () {
   playVideo.on("click", function () {
     const getAttrIconVideo = iconVideo.attr("xlink:href");
     const srcIcon = getAttrIconVideo.split("#")[0];
-    //
-    coverVideo.toggleClass("opacity-0");
-    cVwrapper.toggleClass("control-hover");
 
     //
     if (!$(this).hasClass("play")) {
+      coverVideo.addClass("opacity-0");
+      cVwrapper.addClass("control-hover");
       $(this).addClass("play");
       iconVideo.attr("xlink:href", `${srcIcon}#icon-pause`);
       video[0].play();
       return;
     }
-
     //
+    coverVideo.removeClass("opacity-0");
+    cVwrapper.removeClass("control-hover");
     $(this).removeClass("play");
     iconVideo.attr("xlink:href", `${srcIcon}#icon-play-video`);
     video[0].pause();
@@ -256,11 +268,27 @@ $(function () {
     starSize: 15,
     ...settingsRating,
   });
-  // RATINGS REVIEWS
-  reviewPerParent.each((_, cur) => {
-    const per = $(cur).children("span:first").attr("data-review-per");
-    $(cur).parents(".review").find(".progress").css("width", `${per}%`);
-  });
+  const progressReview = () => {
+    if ($(this).scrollTop() >= aboutProduct) {
+      // RATINGS REVIEWS
+      reviewPerParent.each((_, cur) => {
+        const per = $(cur).children("span:first").attr("data-review-per");
+        $(cur).parents(".review").find(".progress").css("width", `${per}%`);
+      });
+    }
+  };
+
+  /////////////////////////////////
+  //// QUICK VIEW PRODUCT
+  const toggleQuickProduct = () => {
+    if ($(this).scrollTop() >= comments) {
+      quickViewProduct.removeClass("translate-y-96");
+      quickViewProduct.addClass("translate-y-0");
+      return;
+    }
+    quickViewProduct.addClass("translate-y-96");
+    quickViewProduct.removeClass("translate-y-0");
+  };
 
   /////////////////////////////////
   //// CATEGORY PRODUCTS
@@ -285,6 +313,7 @@ $(function () {
 
   /////////////////////////////////
   //// GLOBAL
+  //
   $(document).on("keydown", (e) => {
     if (e.key === "Escape") {
       closeModalProduct.trigger("click");
@@ -298,10 +327,44 @@ $(function () {
   });
   // SCROLL WILL TRIGGER ONE MORE THAN FUNCTION
   $(window).on("scroll", function () {
-    //
     _fixedNavbar();
-    //
     showBtnScrollToTop();
+    toggleQuickProduct();
+    progressReview();
+    // TOGGLE PLAY VIDEO WHEN SCROLL
+    $(".video-specific").each(function () {
+      const playVideo = $(this).find("#play-video");
+      const getAttrIconVideo = iconVideo.attr("xlink:href");
+      const srcIcon = getAttrIconVideo.split("#")[0];
+      const getHeightAndTop = $(this).outerHeight() + $(this).offset().top;
+      //
+      if (
+        $(window).scrollTop() >= $(this).offset().top - 50 &&
+        $(window).scrollTop() < getHeightAndTop - 200
+      ) {
+        //
+        if (!$(playVideo).hasClass("play")) {
+          coverVideo.addClass("opacity-0");
+          cVwrapper.addClass("control-hover");
+          $(playVideo).addClass("play");
+          iconVideo.attr("xlink:href", `${srcIcon}#icon-pause`);
+          video[0].play();
+          return;
+        }
+      }
+
+      if (
+        $(window).scrollTop() < $(this).offset().top - 50 ||
+        $(window).scrollTop() >= getHeightAndTop - 200
+      ) {
+        coverVideo.removeClass("opacity-0");
+        cVwrapper.removeClass("control-hover");
+        $(playVideo).removeClass("play");
+        iconVideo.attr("xlink:href", `${srcIcon}#icon-play-video`);
+        video[0].pause();
+        return;
+      }
+    });
   });
 
   // RUN FUNCTIONS

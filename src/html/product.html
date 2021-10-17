@@ -3,7 +3,7 @@
 <!-- NAVBAR -->
 <nav
   id="navbar"
-  class="top-0 left-0 right-0 z-40 px-5 text-black duration-500  bg-oldLace transition-background specific sm:px-0"
+  class="top-0 left-0 right-0 z-40 px-5 font-medium text-black duration-500  bg-oldLace transition-background specific sm:px-0"
 >
   <!-- CONTENT NAVBAR -->
   <div class="container relative flex items-center justify-between py-3 sm:items-start">
@@ -180,7 +180,7 @@
 
 <main>
   <!-- ABOUT PRODUCT -->
-  <section class="container mt-5" id="start-scroll-top">
+  <section class="container mt-5 overflow-hidden wow animate__fadeInUp" id="about-product">
     <div class="grid grid-cols-1 gap-3 p-10 px-10 bg-transparent rounded-lg md:grid-cols-5">
       <!-- IMAGE -->
       <div
@@ -198,14 +198,14 @@
         <h3 class="text-lg sm:text-30">The Yemen Trilogy - 3x 4oz boxes</h3>
         <div class="flex items-center mt-8 mb-4">
           <span class="rating" data-rating="4"></span>
-          <span class="text-black text-18 mis-3 text-opacity-70">150 reviews</span>
+          <span class="font-medium text-black text-18 mis-3 text-opacity-70">150 reviews</span>
         </div>
-        <span class="text-lg sm:text-30">$32.00</span>
+        <span class="text-lg font-medium sm:text-30">$32.00</span>
         <!--  -->
         <div class="flex flex-col items-center my-10 sm:flex-row sm:gap-x-3">
           <!-- COUNTER -->
           <div
-            class="flex items-center justify-between flex-shrink-0 w-full text-lg  sm:w-3/12 bg-citrine"
+            class="flex items-center justify-between flex-shrink-0 w-full text-lg font-medium  sm:w-3/12 bg-citrine"
             style="height: 5rem"
           >
             <button id="subtract" class="w-4/12">-</button>
@@ -226,7 +226,7 @@
           </button>
         </div>
         @@for(var i = 0; i < 3; i++) {
-        <p class="mb-10 leading-loose text-black truncate-sintance text-md sm:text-16">
+        <p class="mb-10 font-medium leading-loose text-black truncate-sintance text-md sm:text-16">
           Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave
           deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade
           swag.
@@ -236,16 +236,25 @@
     </div>
   </section>
   <!-- CUSTOMAR REVIEW -->
-  <section class="container px-10 my-10 sm:px-0">
-    <h2 class="uppercase text-xlg">CUSTOMER REVIEWS</h2>
+  <section
+    class="container px-10 my-10 overflow-hidden sm:px-0 wow animate__fadeInUp"
+    id="start-scroll-top"
+  >
+    <h2 class="font-extrabold uppercase text-xlg">CUSTOMER REVIEWS</h2>
     <!--  -->
     <div
       class="grid grid-cols-1 py-10 mt-5 border-b border-black  sm:py-20 sm:grid-cols-8 border-opacity-5"
     >
+      <button
+        class="w-full mb-5 text-xs uppercase transition duration-300 border border-black  sm:hidden hover:bg-black hover:text-white lg:w-9/12"
+        style="height: 5rem"
+      >
+        WRITE A REVIEW
+      </button>
       <!--  -->
       <div class="flex flex-col sm:col-span-2 sm:col-start-1">
         <span class="rating" data-rating="4"></span>
-        <span class="mt-3 text-black text-18">Based on 93 reviews </span>
+        <span class="mt-3 font-medium text-black text-18">Based on 93 reviews </span>
       </div>
       <!--  -->
       <div class="sm:col-span-4 sm:col-start-3">
@@ -257,7 +266,9 @@
               class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
               style="height: 2rem"
             >
-              <span class="absolute top-0 left-0 h-full progress bg-amber"></span>
+              <span
+                class="absolute top-0 left-0 w-0 h-full duration-1000 ease-out  transition-width progress bg-amber"
+              ></span>
             </div>
             <!--  -->
             <div class="flex items-center text-xs gap-x-5 mis-3 review-per-parent">
@@ -272,7 +283,9 @@
               class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
               style="height: 2rem"
             >
-              <span class="absolute top-0 left-0 h-full progress bg-amber"></span>
+              <span
+                class="absolute top-0 left-0 w-0 h-full duration-1000 ease-out  transition-width progress bg-amber"
+              ></span>
             </div>
             <!--  -->
             <div class="flex items-center text-xs gap-x-5 mis-3 review-per-parent">
@@ -287,7 +300,9 @@
               class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
               style="height: 2rem"
             >
-              <span class="absolute top-0 left-0 h-full progress bg-amber"></span>
+              <span
+                class="absolute top-0 left-0 w-0 h-full duration-1000 ease-out  transition-width progress bg-amber"
+              ></span>
             </div>
             <!--  -->
             <div class="flex items-center text-xs gap-x-5 mis-3 review-per-parent">
@@ -302,7 +317,9 @@
               class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
               style="height: 2rem"
             >
-              <span class="absolute top-0 left-0 h-full progress bg-amber"></span>
+              <span
+                class="absolute top-0 left-0 w-0 h-full duration-1000 ease-out  transition-width progress bg-amber"
+              ></span>
             </div>
             <!--  -->
             <div class="flex items-center text-xs gap-x-5 mis-3 review-per-parent">
@@ -317,7 +334,9 @@
               class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
               style="height: 2rem"
             >
-              <span class="absolute top-0 left-0 h-full progress bg-amber"></span>
+              <span
+                class="absolute top-0 left-0 w-0 h-full duration-1000 ease-out  transition-width progress bg-amber"
+              ></span>
             </div>
             <!--  -->
             <div class="flex items-center text-xs gap-x-5 mis-3 review-per-parent">
@@ -333,14 +352,14 @@
       >
         <!--  -->
         <button
-          class="w-full text-xs uppercase transition duration-300 border border-black  hover:bg-black hover:text-white lg:w-9/12"
+          class="hidden w-full text-xs uppercase transition duration-300 border border-black  sm:block hover:bg-black hover:text-white lg:w-9/12"
           style="height: 5rem"
         >
           WRITE A REVIEW
         </button>
-        <!--  -->
+        <!-- MOST RECENT -->
         <div
-          class="relative flex items-center w-full mt-5 uppercase border border-black  lg:w-6/12 sm:mt-0"
+          class="relative flex items-center w-5/12 mt-5 ml-auto uppercase border border-black  sm:ml-0 sm:w-full lg:w-6/12 sm:mt-0"
         >
           <select
             class="w-full text-xs text-center bg-transparent cursor-pointer"
@@ -365,7 +384,7 @@
     </div>
   </section>
   <!-- COMMENTS -->
-  <section class="container px-5 sm:px-0">
+  <section id="comments" class="container px-5 overflow-hidden sm:px-0 wow animate__fadeInUp">
     <div class="flex flex-col gap-y-5">
       <!--  -->
       @@for(var i = 0; i < 4; i++) {
@@ -394,7 +413,7 @@
     </div>
   </section>
   <!-- OTHER PRODUCT -->
-  <section class="container py-20">
+  <section class="container py-20 wow animate__fadeInUp">
     <h2 class="mb-5 font-extrabold text-center uppercase sm:mb-20 text-xlg">RELATED PRODUCTS</h2>
     <!--  -->
     <div class="owl-carousel related-products owl-theme">
@@ -409,7 +428,7 @@
             alt=""
           />
         </div>
-        <h6 class="mb-2">The Yemen Trilogy - 3x 4oz boxes</h6>
+        <h6 class="mb-2 font-medium">The Yemen Trilogy - 3x 4oz boxes</h6>
         <div class="flex items-center my-3">
           <span class="rating" data-rating="4"></span>
           <span class="text-black text-18 mis-3 text-opacity-70">150 reviews</span>
@@ -439,16 +458,16 @@
   </section>
   <!-- STORY -->
   <section
-    class="container relative flex items-center mt-5 mb-10 overflow-hidden sm:mt-20"
+    class="container relative flex items-center mt-5 mb-10 overflow-hidden  sm:mt-20 wow animate__fadeInUp"
     style="min-height: 42.4rem"
   >
     <!--  -->
     <div class="relative z-20 px-12 text-white lg:w-7/12 lg:px-24">
-      <h3 class="uppercase text-xxlg">
+      <h3 class="font-extrabold uppercase text-xxlg">
         <span class="block">the first cup is for the guest,</span>
         <span class="block">the second for enjoyment</span>
       </h3>
-      <p class="mt-8 leading-10 lg:w-7/12 text-md">
+      <p class="mt-8 font-medium leading-10 lg:w-7/12 text-md">
         Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep
         v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag.
       </p>
@@ -473,11 +492,67 @@
     </div>
   </section>
   <!-- VIDEO -->
-  <section class="relative mb-10 overflow-hidden sm:mb-20" style="max-height: 70vh">
+  <section
+    class="relative mb-10 overflow-hidden sm:mb-20 wow animate__fadeInUp"
+    style="max-height: 70vh"
+  >
     @@include('./extend/video.html')
   </section>
   <!-- VIEW MODEL -->
   @@include('./extend/modelViewProduct.html')
+  <!-- VIEW PRODUCT -->
+  <div
+    class="fixed bottom-0 z-20 w-full py-5 overflow-hidden text-white transition duration-500 ease-in-out transform  translate-y-96 bg-plantation"
+    id="quick-view-product"
+  >
+    <div
+      class="container flex flex-col items-center justify-center gap-y-3 md:flex-row"
+      style="max-height: 100px"
+    >
+      <!-- INFO -->
+      <div class="flex items-center md:w-7/12 lg:w-5/12">
+        <!-- IMAGE -->
+        <div class="flex items-start flex-shrink-0 mx-2" style="height: 5rem">
+          <img
+            class="object-cover max-w-full max-h-full"
+            src="./assets/images/other/our-coffee/1.png"
+            alt=""
+          />
+        </div>
+        <!--  -->
+        <div>
+          <h3 class="max-w-md font-extrabold truncate text-18">
+            The Yemen Trilogy - 3x 4oz boxes boxes
+          </h3>
+          <span class="font-medium text-16">$32.00</span>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center flex-shrink-0 w-5/12 gap-3 sm:w-3/12">
+        <!-- COUNTER -->
+        <div
+          class="flex items-center justify-center flex-shrink-0 w-full text-lg font-medium text-black  md:w-6/12 lg:w-5/12 bg-vistaBlue"
+          style="height: 5rem"
+        >
+          <button id="subtract" class="w-4/12">-</button>
+          <span id="count " class="text-lg">40</span>
+          <button id="add" class="w-4/12">+</button>
+        </div>
+        <!-- VIEW PRODUCT -->
+        <button
+          class="flex items-center justify-center flex-shrink-0 w-full h-full px-5 text-white uppercase transition duration-300  md:w-10/12 lg:w-9/12 sm:mt-0 hover:bg-opacity-90 bg-como text-md"
+          style="height: 5rem"
+        >
+          <svg style="width: 20px; height: 20px" class="fill-white">
+            <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
+              <title>shopping-cart</title>
+            </use>
+          </svg>
+          <span class="mis-5"> add to cart </span>
+        </button>
+      </div>
+    </div>
+  </div>
 </main>
 
 @@include('./extend/below.html')
