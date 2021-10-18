@@ -32,6 +32,7 @@ module.exports = {
         citrine: "#f9efd5",
         amber: "#FFC107",
         pearl: "#fcf3da",
+        golden: "#dba31f",
       },
       fontFamily: {
         Futura: ["Futura"],

@@ -72,7 +72,7 @@ $(function () {
 
   // CHANGE ACTIVE CLASS ON LINKS
   links.on("click", function () {
-    $(this).addClass("text-como").siblings().removeClass("text-como");
+    $(this).addClass("text-golden").siblings().removeClass("text-golden");
     closeSidebarNav();
   });
 
@@ -235,7 +235,9 @@ $(function () {
   /////////////////////////////////
   //// MODAL PRODUCT
   // OPEN MODAL
-  $(document).on("click", openModalProduct, () => {
+  $(document).on("click", openModalProduct, (e) => {
+    e.stopPropagation();
+    e.preventDefault();
     viewModalProduct.toggleClass("flex hidden");
     $("body, html").css("overflow-y", "hidden");
     setTimeout(() => modalProduct.removeClass("-translate-y-20 opacity-0"), 300);

@@ -50,15 +50,35 @@
             id="links"
             class="flex flex-col px-10 mt-10 text-black  sm:px-0 sm:mt-0 sm:items-center sm:text-white sm:flex-row text-16 sm:text-md"
           >
-            <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0 text-como">shop coffee</a>
-            <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">subscriptions</a>
-            <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">gifts</a>
-            <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">brew gear</a>
-            <a href="javascript:void(0)" class="mb-5 sm:mx-4 sm:mb-0">story</a>
+            <a
+              href="javascript:void(0)"
+              class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden text-golden"
+              >shop coffee</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
+              >subscriptions</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
+              >gifts</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
+              >brew gear</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
+              >story</a
+            >
           </div>
         </div>
         <!-- SHOPPING cart -->
-        <div class="relative transition duration-500 cursor-pointer mis-4 shopping-cart">
+        <div class="relative z-30 transition duration-500 cursor-pointer mis-4 shopping-cart">
           <svg style="width: 24px; height: 24px" class="fill-black sm:fill-white" id="icon-cart">
             <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
               <title>shopping-cart</title>
@@ -224,7 +244,10 @@
       <div class="owl-carousel products">
         <div class="grid py-10 mb-24 sm:grid-cols-2 lg:grid-cols-3 gap-y-24" data-hash="beans">
           @@for(var i = 0; i < 6; i++) {
-          <div class="relative flex flex-col items-center text-center text-16 product">
+          <a
+            href="product.html"
+            class="relative flex flex-col items-center text-center text-16 product"
+          >
             <!-- IMAGE -->
             <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
               <img
@@ -257,12 +280,15 @@
                 quick view
               </p>
             </div>
-          </div>
+          </a>
           }
         </div>
         <div class="grid py-10 mb-24 sm:grid-cols-2 lg:grid-cols-3 gap-y-24" data-hash="gifts">
           @@for(var i = 0; i < 6; i++) {
-          <div class="relative flex flex-col items-center text-center text-16 product">
+          <a
+            href="product.html"
+            class="relative flex flex-col items-center text-center text-16 product"
+          >
             <!-- IMAGE -->
             <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
               <img
@@ -295,7 +321,7 @@
                 quick view
               </p>
             </div>
-          </div>
+          </a>
           }
         </div>
         <div
@@ -303,7 +329,10 @@
           data-hash="subscriptions"
         >
           @@for(var i = 0; i < 6; i++) {
-          <div class="relative flex flex-col items-center text-center text-16 product">
+          <a
+            href="product.html"
+            class="relative flex flex-col items-center text-center text-16 product"
+          >
             <!-- IMAGE -->
             <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
               <img
@@ -336,7 +365,7 @@
                 quick view
               </p>
             </div>
-          </div>
+          </a>
           }
         </div>
         <div
@@ -344,7 +373,10 @@
           data-hash="single-serve"
         >
           @@for(var i = 0; i < 3; i++) {
-          <div class="relative flex flex-col items-center text-center text-16 product">
+          <a
+            href="product.html"
+            class="relative flex flex-col items-center text-center text-16 product"
+          >
             <!-- IMAGE -->
             <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
               <img
@@ -377,7 +409,7 @@
                 quick view
               </p>
             </div>
-          </div>
+          </a>
           }
         </div>
       </div>
@@ -390,7 +422,10 @@
     <div class="owl-carousel related-products owl-theme">
       <!-- slide -->
       @@for(var i = 0; i < 8; i++) {
-      <div class="relative flex flex-col items-center py-20 text-center text-16 product">
+      <a
+        href="product.html"
+        class="relative flex flex-col items-center py-20 text-center text-16 product"
+      >
         <!-- IMAGE -->
         <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
           <img
@@ -423,7 +458,7 @@
             quick view
           </p>
         </div>
-      </div>
+      </a>
       }
     </div>
   </section>
@@ -442,13 +477,14 @@
         Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep
         v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag.
       </p>
-
-      <button
+      <!--  -->
+      <a
+        href="story.html"
         style="width: 14rem; height: 5rem"
-        class="mt-16 text-xs text-white uppercase transition duration-500 ease-in-out border border-white  hover:bg-white hover:text-black"
+        class="flex items-center justify-center mt-16 text-xs text-white uppercase transition duration-500 ease-in-out border border-white  set-height-width hover:bg-white hover:text-black"
       >
         the story
-      </button>
+      </a>
     </div>
     <!--  -->
     <div class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden">
