@@ -184,11 +184,12 @@
             >
               proceed to checkout
             </button>
-            <button
-              class="w-full py-4 mt-3 text-black uppercase transition bg-white rounded  duration-400 hover:bg-gray-100"
+            <a
+              href="shopping-cart.html"
+              class="flex items-center justify-center w-full py-4 mt-3 text-black uppercase transition bg-white rounded  duration-400 hover:bg-gray-100"
             >
               view cart
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -222,7 +223,7 @@
         </div>
         <span class="text-lg font-medium sm:text-30">$32.00</span>
         <!--  -->
-        <div class="flex flex-col items-center my-10 sm:flex-row sm:gap-x-3">
+        <div class="flex flex-col items-center my-10 sm:space-x-3 sm:flex-row">
           <!-- COUNTER -->
           <div
             class="flex items-center justify-between flex-shrink-0 w-full text-lg font-medium  sm:w-3/12 bg-citrine"
@@ -278,12 +279,12 @@
       </div>
       <!--  -->
       <div class="sm:col-span-4 sm:col-start-3">
-        <div class="flex flex-col mt-5 review-wrapper gap-y-3 sm:mt-0">
+        <div class="flex flex-col mt-5 review-wrapper sm:mt-0">
           <!--  -->
-          <div class="flex items-center justify-between gap-3 sm:justify-center review">
+          <div class="flex items-center justify-between mb-3 sm:justify-center review">
             <span style="direction: rtl" class="rating-review" data-rating="5"></span>
             <div
-              class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
+              class="relative w-5/12 text-black border border-black  mis-2 sm:w-4/12 border-opacity-20 text-18"
               style="height: 2rem"
             >
               <span
@@ -297,10 +298,10 @@
             </div>
           </div>
           <!--  -->
-          <div class="flex items-center justify-between gap-3 sm:justify-center review">
+          <div class="flex items-center justify-between mb-3 sm:justify-center review">
             <span style="direction: rtl" class="rating-review" data-rating="4"></span>
             <div
-              class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
+              class="relative w-5/12 text-black border border-black  mis-2 sm:w-4/12 border-opacity-20 text-18"
               style="height: 2rem"
             >
               <span
@@ -314,10 +315,10 @@
             </div>
           </div>
           <!--  -->
-          <div class="flex items-center justify-between gap-3 sm:justify-center review">
+          <div class="flex items-center justify-between mb-3 sm:justify-center review">
             <span style="direction: rtl" class="rating-review" data-rating="3"></span>
             <div
-              class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
+              class="relative w-5/12 text-black border border-black  mis-2 sm:w-4/12 border-opacity-20 text-18"
               style="height: 2rem"
             >
               <span
@@ -331,10 +332,10 @@
             </div>
           </div>
           <!--  -->
-          <div class="flex items-center justify-between gap-3 sm:justify-center review">
+          <div class="flex items-center justify-between mb-3 sm:justify-center review">
             <span style="direction: rtl" class="rating-review" data-rating="2"></span>
             <div
-              class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
+              class="relative w-5/12 text-black border border-black  mis-2 sm:w-4/12 border-opacity-20 text-18"
               style="height: 2rem"
             >
               <span
@@ -348,10 +349,10 @@
             </div>
           </div>
           <!--  -->
-          <div class="flex items-center justify-between gap-3 sm:justify-center review">
+          <div class="flex items-center justify-between mb-3 sm:justify-center review">
             <span style="direction: rtl" class="rating-review" data-rating="1"></span>
             <div
-              class="relative w-5/12 text-black border border-black  sm:w-4/12 border-opacity-20 text-18"
+              class="relative w-5/12 text-black border border-black  mis-2 sm:w-4/12 border-opacity-20 text-18"
               style="height: 2rem"
             >
               <span
@@ -382,7 +383,7 @@
           class="relative flex items-center w-5/12 mt-5 ml-auto uppercase border border-black  sm:ml-0 sm:w-full lg:w-6/12 sm:mt-0"
         >
           <select
-            class="w-full text-xs text-center bg-transparent cursor-pointer"
+            class="w-full px-10 text-xs text-center bg-transparent cursor-pointer"
             style="height: 3rem"
           >
             <option selected hidden>Most Recent</option>
@@ -418,9 +419,9 @@
         </div>
         <!--  -->
         <div class="mis-5">
-          <div class="flex items-center gap-3">
+          <div class="flex items-center">
             <span class="rating" data-rating="3.5"></span>
-            <span class="text-black text-md text-opacity-60">28/12/2018</span>
+            <span class="text-black text-md text-opacity-60 mis-2">28/12/2018</span>
           </div>
           <h4 class="mb-5 font-extrabold capitalize text-md">Ahmed Hamdan</h4>
           <p class="text-black md:w-9/12 text-16 text-opacity-60">
@@ -446,7 +447,7 @@
         <!-- IMAGE -->
         <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
           <img
-            class="object-cover max-w-full max-h-full"
+            class="object-contain max-w-full max-h-full"
             src="./assets/images/other/our-coffee/1.png"
             alt=""
           />
@@ -552,7 +553,7 @@
         </div>
       </div>
 
-      <div class="flex items-center justify-center flex-shrink-0 w-5/12 gap-3 sm:w-3/12">
+      <div class="flex items-center justify-center flex-shrink-0 w-5/12 sm:w-3/12">
         <!-- COUNTER -->
         <div
           class="flex items-center justify-center flex-shrink-0 w-full text-lg font-medium text-black  md:w-6/12 lg:w-5/12 bg-vistaBlue"
@@ -564,7 +565,7 @@
         </div>
         <!-- VIEW PRODUCT -->
         <button
-          class="flex items-center justify-center flex-shrink-0 w-full h-full px-5 text-white uppercase transition duration-300  md:w-10/12 lg:w-9/12 sm:mt-0 hover:bg-opacity-90 bg-como text-md"
+          class="flex items-center justify-center flex-shrink-0 w-full h-full px-5 text-white uppercase transition duration-300  mis-2 md:w-10/12 lg:w-9/12 sm:mt-0 hover:bg-opacity-90 bg-como text-md"
           style="height: 5rem"
         >
           <svg style="width: 20px; height: 20px" class="fill-white">

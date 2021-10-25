@@ -80,13 +80,17 @@ $(function () {
   closeBanar.on("click", function () {
     $(this).parent().slideUp();
   });
-  // SCROLL TO TOP SMOOTHLY
-  scrollToTop.on("click", () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+
+  // SCROLL TO TOP WHEN CLICKED IN BUTTON SMOOTHLY
+  scrollToTop.on("click", function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      {
+        duration: 700,
+      }
+    );
   });
 
   /////////////////////////////////

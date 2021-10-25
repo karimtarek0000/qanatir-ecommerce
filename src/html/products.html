@@ -186,11 +186,12 @@
               >
                 proceed to checkout
               </button>
-              <button
-                class="w-full py-4 mt-3 text-black uppercase transition bg-white rounded  duration-400 hover:bg-gray-100"
+              <a
+                href="shopping-cart.html"
+                class="flex items-center justify-center w-full py-4 mt-3 text-black uppercase transition bg-white rounded  duration-400 hover:bg-gray-100"
               >
                 view cart
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -230,16 +231,16 @@
   <section class="container px-0 mt-10 overflow-hidden wow animate__fadeInUp">
     <!-- NAVBAR -->
     <ul
-      class="flex flex-col items-center justify-center gap-10 py-5 font-medium uppercase  sm:flex-row text-xlg md:gap-x-32 lg:gap-x-64"
+      class="flex flex-col items-center justify-between py-5 mx-auto font-medium uppercase  sm:w-10/12 sm:flex-row text-xlg"
       id="category-products"
     >
-      <a class="relative cursor-pointer shape-undeline" href="#beans">beans</a>
-      <a class="relative cursor-pointer" href="#gifts">gifts</a>
-      <a class="relative cursor-pointer" href="#subscriptions">subscriptions</a>
-      <a class="relative cursor-pointer" href="#single-serve">single serve</a>
+      <a class="relative mb-4 cursor-pointer sm:mb-0 shape-undeline" href="#beans">beans</a>
+      <a class="relative mb-4 cursor-pointer sm:mb-0" href="#gifts">gifts</a>
+      <a class="relative mb-4 cursor-pointer sm:mb-0" href="#subscriptions">subscriptions</a>
+      <a class="relative mb-4 cursor-pointer sm:mb-0" href="#single-serve">single serve</a>
     </ul>
     <!-- PRODUCTS -->
-    <div class="mt-20 overflow-auto">
+    <div class="overflow-auto sm:mt-20">
       <!--  -->
       <div class="owl-carousel products">
         <div class="grid py-10 mb-24 sm:grid-cols-2 lg:grid-cols-3 gap-y-24" data-hash="beans">
@@ -251,7 +252,7 @@
             <!-- IMAGE -->
             <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
               <img
-                class="object-cover max-w-full max-h-full"
+                class="object-contain max-w-full max-h-full"
                 src="./assets/images/other/our-coffee/1.png"
                 alt=""
               />
@@ -292,7 +293,7 @@
             <!-- IMAGE -->
             <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
               <img
-                class="object-cover max-w-full max-h-full"
+                class="object-contain max-w-full max-h-full"
                 src="./assets/images/other/our-coffee/1.png"
                 alt=""
               />
@@ -336,7 +337,7 @@
             <!-- IMAGE -->
             <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
               <img
-                class="object-cover max-w-full max-h-full"
+                class="object-contain max-w-full max-h-full"
                 src="./assets/images/other/our-coffee/1.png"
                 alt=""
               />
@@ -380,7 +381,7 @@
             <!-- IMAGE -->
             <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
               <img
-                class="object-cover max-w-full max-h-full"
+                class="object-contain max-w-full max-h-full"
                 src="./assets/images/other/our-coffee/1.png"
                 alt=""
               />
@@ -429,7 +430,7 @@
         <!-- IMAGE -->
         <div class="flex items-start justify-center mb-5 overflow-hidden" style="height: 10rem">
           <img
-            class="object-cover max-w-full max-h-full"
+            class="object-contain max-w-full max-h-full"
             src="./assets/images/other/our-coffee/1.png"
             alt=""
           />
