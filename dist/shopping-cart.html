@@ -32,711 +32,717 @@
         </svg>
       </div>
     </div>
-  </body>
-</html>
 
-<!-- NAVBAR -->
-<nav
-  id="navbar"
-  class="top-0 left-0 right-0 z-40 px-5 font-medium text-black duration-500  bg-oldLace transition-background specific sm:px-0"
->
-  <!-- CONTENT NAVBAR -->
-  <div class="container relative flex items-center justify-between py-3 sm:items-start">
-    <!-- LOGO -->
-    <a id="logo-l" href="/" class="order-2 hidden sm:block">
-      <img class="max-w-full" src="./assets/images/logo/logo.svg" alt="logo" />
-    </a>
-    <!-- LOGO SMALL -->
-    <a href="/" class="order-2 sm:hidden">
-      <img class="max-w-full" src="./assets/images/logo/logo-small.svg" alt="logo" />
-    </a>
-    <!-- TOGGLER -->
-    <div class="cursor-pointer sm:mt-5 sm:hidden" id="toggler">
-      <svg style="width: 24px; height: 24px">
-        <use xlink:href="./assets/icons/sprite.svg#icon-toggler">
-          <title>toggler</title>
-        </use>
-      </svg>
-    </div>
-    <!-- LINKS -->
-    <div class="flex items-center order-3 capitalize text-md sm:mt-5">
-      <div
-        class="z-50 flex flex-col transition duration-500 transform -translate-x-full  sm:translate-x-0 responsive-sidebar-nav"
-        id="sidebar-nav"
-      >
-        <!--  -->
-        <div
-          class="flex items-center px-10 border-b border-blue-200 cursor-pointer pointer-events-none  sm:hidden opacity-70"
-          id="close-sidebar"
-        >
-          <div class="flex items-center py-5 pointer-events-auto">
-            <svg class="fill-current" style="width: 15px; height: 15px">
-              <use xlink:href="./assets/icons/sprite.svg#icon-close">
-                <title>close</title>
-              </use>
-            </svg>
-            <button class="capitalize mis-2 text-md">close</button>
-          </div>
+    <!-- NAVBAR -->
+    <nav
+      id="navbar"
+      class="top-0 left-0 right-0 z-40 px-5 font-medium text-black duration-500  bg-oldLace transition-background specific sm:px-0"
+    >
+      <!-- CONTENT NAVBAR -->
+      <div class="container relative flex items-center justify-between py-3 sm:items-start">
+        <!-- LOGO -->
+        <a id="logo-l" href="/" class="order-2 hidden sm:block">
+          <img class="max-w-full" src="./assets/images/logo/logo.svg" alt="logo" />
+        </a>
+        <!-- LOGO SMALL -->
+        <a href="/" class="order-2 sm:hidden">
+          <img class="max-w-full" src="./assets/images/logo/logo-small.svg" alt="logo" />
+        </a>
+        <!-- TOGGLER -->
+        <div class="cursor-pointer sm:mt-5 sm:hidden" id="toggler">
+          <svg style="width: 24px; height: 24px">
+            <use xlink:href="./assets/icons/sprite.svg#icon-toggler">
+              <title>toggler</title>
+            </use>
+          </svg>
         </div>
-        <!--  -->
-        <div class="flex flex-col h-full sm:items-center md:flex-row">
-          <!--  -->
+        <!-- LINKS -->
+        <div class="flex items-center order-3 capitalize text-md sm:mt-5">
           <div
-            id="links"
-            class="flex flex-col px-10 mt-10  sm:px-0 sm:mt-0 sm:items-center sm:flex-row text-16 sm:text-md"
+            class="z-50 flex flex-col transition duration-500 transform -translate-x-full  sm:translate-x-0 responsive-sidebar-nav"
+            id="sidebar-nav"
           >
-            <a
-              href="javascript:void(0)"
-              class="mb-5 transition duration-200 sm:mx-4 sm:mb-0 hover:text-golden text-golden"
-              >shop coffee</a
-            >
-            <a
-              href="javascript:void(0)"
-              class="mb-5 transition duration-200 sm:mx-4 hover:text-golden sm:mb-0"
-              >subscriptions</a
-            >
-            <a
-              href="javascript:void(0)"
-              class="mb-5 transition duration-200 sm:mx-4 hover:text-golden sm:mb-0"
-              >gifts</a
-            >
-            <a
-              href="javascript:void(0)"
-              class="mb-5 transition duration-200 sm:mx-4 hover:text-golden sm:mb-0"
-              >brew gear</a
-            >
-            <a
-              href="javascript:void(0)"
-              class="mb-5 transition duration-200 sm:mx-4 hover:text-golden sm:mb-0"
-              >story</a
-            >
-          </div>
-          <!-- CHANGE LANGUAGE -->
-          <div
-            class="relative flex items-center w-11/12 mx-auto mt-auto mb-5  sm:hidden text-md mobile-lang"
-          >
-            <select
-              class="w-full px-2 mx-auto uppercase change-lang"
-              style="height: 40px; direction: ltr"
-            >
-              <option value="ar">عربي</option>
-              <option value="en" selected>en</option>
-            </select>
             <!--  -->
-            <svg style="width: 1.5rem; height: 1.5rem" class="absolute right-0 pointer-events-none">
-              <use xlink:href="./assets/icons/sprite.svg#icon-arrow-down">
-                <title></title>
+            <div
+              class="flex items-center px-10 border-b border-blue-200 cursor-pointer pointer-events-none  sm:hidden opacity-70"
+              id="close-sidebar"
+            >
+              <div class="flex items-center py-5 pointer-events-auto">
+                <svg class="fill-current" style="width: 15px; height: 15px">
+                  <use xlink:href="./assets/icons/sprite.svg#icon-close">
+                    <title>close</title>
+                  </use>
+                </svg>
+                <button class="capitalize mis-2 text-md">close</button>
+              </div>
+            </div>
+            <!--  -->
+            <div class="flex flex-col h-full sm:items-center md:flex-row">
+              <!--  -->
+              <div
+                id="links"
+                class="flex flex-col px-10 mt-10  sm:px-0 sm:mt-0 sm:items-center sm:flex-row text-16 sm:text-md"
+              >
+                <a
+                  href="javascript:void(0)"
+                  class="mb-5 transition duration-200 sm:mx-4 sm:mb-0 hover:text-golden text-golden"
+                  >shop coffee</a
+                >
+                <a
+                  href="javascript:void(0)"
+                  class="mb-5 transition duration-200 sm:mx-4 hover:text-golden sm:mb-0"
+                  >subscriptions</a
+                >
+                <a
+                  href="javascript:void(0)"
+                  class="mb-5 transition duration-200 sm:mx-4 hover:text-golden sm:mb-0"
+                  >gifts</a
+                >
+                <a
+                  href="javascript:void(0)"
+                  class="mb-5 transition duration-200 sm:mx-4 hover:text-golden sm:mb-0"
+                  >brew gear</a
+                >
+                <a
+                  href="javascript:void(0)"
+                  class="mb-5 transition duration-200 sm:mx-4 hover:text-golden sm:mb-0"
+                  >story</a
+                >
+              </div>
+              <!-- CHANGE LANGUAGE -->
+              <div
+                class="relative flex items-center w-11/12 mx-auto mt-auto mb-5  sm:hidden text-md mobile-lang"
+              >
+                <select
+                  class="w-full px-2 mx-auto uppercase change-lang"
+                  style="height: 40px; direction: ltr"
+                >
+                  <option value="ar">عربي</option>
+                  <option value="en" selected>en</option>
+                </select>
+                <!--  -->
+                <svg
+                  style="width: 1.5rem; height: 1.5rem"
+                  class="absolute right-0 pointer-events-none"
+                >
+                  <use xlink:href="./assets/icons/sprite.svg#icon-arrow-down">
+                    <title></title>
+                  </use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- SHOPPING cart -->
+          <div class="relative transition duration-500 cursor-pointer mis-4 shopping-cart">
+            <svg style="width: 24px; height: 24px" class="fill-current" id="icon-cart">
+              <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
+                <title>shopping-cart</title>
               </use>
             </svg>
-          </div>
-        </div>
-      </div>
-      <!-- SHOPPING cart -->
-      <div class="relative transition duration-500 cursor-pointer mis-4 shopping-cart">
-        <svg style="width: 24px; height: 24px" class="fill-current" id="icon-cart">
-          <use xlink:href="./assets/icons/sprite.svg#icon-shopping-cart">
-            <title>shopping-cart</title>
-          </use>
-        </svg>
-        <!-- TITLE -->
-        <div
-          class="absolute items-center justify-center hidden mt-5 text-xs text-black capitalize transition duration-300 bg-white rounded  shape-arrow top-full sm:flex translate-position"
-          style="width: 50px; height: 30px"
-        >
-          <span>cart</span>
-        </div>
-        <!-- COUNT ITEM IN CART -->
-        <!-- <p
+            <!-- TITLE -->
+            <div
+              class="absolute items-center justify-center hidden mt-5 text-xs text-black capitalize transition duration-300 bg-white rounded  shape-arrow top-full sm:flex translate-position"
+              style="width: 50px; height: 30px"
+            >
+              <span>cart</span>
+            </div>
+            <!-- COUNT ITEM IN CART -->
+            <!-- <p
           style="width: 24px; height: 24px"
           class="absolute flex items-center justify-center text-xs text-white bg-black rounded-full pointer-events-none -top-5 -right-5"
         >
           44
         </p> -->
-      </div>
-      <!-- CART -->
-      <div
-        id="shopping-cart"
-        class="fixed top-0 left-0 z-50 h-full p-5 text-black transition duration-500 transform -translate-x-full bg-white rounded  shopping-cart sm:hidden sm:translate-x-0 sm:absolute sm:mt-5 sm:top-20 sm:h-auto"
-        style="width: 28rem"
-      >
-        <!-- TITLE -->
-        <div
-          class="flex items-center justify-between p-5 border-b border-black  border-opacity-10 sm:hidden"
-        >
-          <span class="font-extrabold uppercase text-16">shopping cart</span>
-          <svg
-            class="cursor-pointer fill-current"
-            id="close-sidebar-shop-cart"
-            style="width: 20px; height: 20px"
+          </div>
+          <!-- CART -->
+          <div
+            id="shopping-cart"
+            class="fixed top-0 left-0 z-50 h-full p-5 text-black transition duration-500 transform -translate-x-full bg-white rounded  shopping-cart sm:hidden sm:translate-x-0 sm:absolute sm:mt-5 sm:top-20 sm:h-auto"
+            style="width: 28rem"
           >
-            <use xlink:href="./assets/icons/sprite.svg#icon-close">
-              <title>close</title>
-            </use>
-          </svg>
-        </div>
-        <!-- IF EMPTY -->
-        <div
-          id="cart-empty"
-          class="items-center justify-center hidden font-extrabold text-black h-28"
-        >
-          <p>shopping cart empty</p>
-        </div>
-        <!-- CART WRAPPER -->
-        <div id="cart-wrapper" class="overflow-auto max-h-100 sm:max-h-80">
-          <!-- CART CONTENT 1 -->
-          <div class="flex items-center py-5 mb-5 border-b border-black border-opacity-10">
-            <div style="width: 50px; height: 50px" class="self-start px-2">
-              <img
-                class="object-cover max-w-full"
-                src="./assets/images/other/our-coffee/1.png"
-                alt=""
-              />
-            </div>
-            <div class="px-4">
-              <p>The Yemen Trilogy - 3x 4oz boxes</p>
-              <p class="mt-3">32.00</p>
-            </div>
-            <svg
-              class="self-start cursor-pointer fill-current text-como delete-item"
-              style="width: 20px; height: 20px"
+            <!-- TITLE -->
+            <div
+              class="flex items-center justify-between p-5 border-b border-black  border-opacity-10 sm:hidden"
             >
-              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
-                <title>delete</title>
-              </use>
-            </svg>
-          </div>
-          <!-- CART CONTENT 2 -->
-          <div class="flex items-center py-5 mb-5 border-b border-black border-opacity-10">
-            <div style="width: 50px; height: 50px" class="self-start px-2">
-              <img
-                class="object-cover max-w-full"
-                src="./assets/images/other/our-coffee/1.png"
-                alt=""
-              />
-            </div>
-            <div class="px-4">
-              <p>The Yemen Trilogy - 3x 4oz boxes</p>
-              <p class="mt-3">32.00</p>
-            </div>
-            <svg
-              class="self-start cursor-pointer fill-current text-como delete-item"
-              style="width: 20px; height: 20px"
-            >
-              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
-                <title>delete</title>
-              </use>
-            </svg>
-          </div>
-        </div>
-        <!-- PROCESS CART -->
-        <div id="cart-actions">
-          <div class="flex justify-between font-extrabold capitalize text-16">
-            <p>total:</p>
-            <p>$48</p>
-          </div>
-          <div class="flex flex-col items-center mt-5">
-            <button
-              class="w-full py-4 text-white uppercase transition rounded  duration-400 hover:bg-opacity-90 bg-como"
-            >
-              proceed to checkout
-            </button>
-            <a
-              href="shopping-cart.html"
-              class="flex items-center justify-center w-full py-4 mt-3 text-black uppercase transition bg-white rounded  duration-400 hover:bg-gray-100"
-            >
-              view cart
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- BACKDROP -->
-  <div class="fixed top-0 bottom-0 left-0 right-0 z-30 hidden sm:hidden back-drop"></div>
-</nav>
-
-<main class="container">
-  <section>
-    <h2
-      class="py-10 mb-10 font-extrabold text-center uppercase border-b border-black  border-opacity-10 text-xxlg"
-    >
-      shopping cart
-    </h2>
-    <!-- SHOPPING WRAPPER -->
-    <div class="flex flex-col px-2 mb-10 overflow-auto shopping-wrapper max-h-96 change-scroll">
-      <!-- ITEM -->
-      
-      <div
-        class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
-      >
-        <!-- IMAGE -->
-        <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
-          <img
-            class="object-cover max-w-full"
-            src="./assets/images/other/our-coffee/1.png"
-            alt=""
-          />
-        </div>
-        <!-- CONTENT -->
-        <div
-          class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
-        >
-          <!-- INFO -->
-          <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
-          <p class="mb-5 sm:mb-0">$32.00</p>
-          <!-- COUNTER -->
-          <div
-            class="flex items-center justify-between text-lg bg-citrine"
-            style="width: 13.5rem; height: 5rem; direction: ltr"
-          >
-            <button id="subtract" class="w-4/12">-</button>
-            <span id="count" class="text-lg">40</span>
-            <button id="add" class="w-4/12">+</button>
-          </div>
-          <p class="my-5 sm:my-5">$32.00</p>
-        </div>
-        <!-- DELETE -->
-        <svg
-          class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
-          style="width: 15px; height: 15px"
-        >
-          <use xlink:href="./assets/icons/sprite.svg#icon-delete">
-            <title>delete</title>
-          </use>
-        </svg>
-      </div>
-      
-      <div
-        class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
-      >
-        <!-- IMAGE -->
-        <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
-          <img
-            class="object-cover max-w-full"
-            src="./assets/images/other/our-coffee/1.png"
-            alt=""
-          />
-        </div>
-        <!-- CONTENT -->
-        <div
-          class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
-        >
-          <!-- INFO -->
-          <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
-          <p class="mb-5 sm:mb-0">$32.00</p>
-          <!-- COUNTER -->
-          <div
-            class="flex items-center justify-between text-lg bg-citrine"
-            style="width: 13.5rem; height: 5rem; direction: ltr"
-          >
-            <button id="subtract" class="w-4/12">-</button>
-            <span id="count" class="text-lg">40</span>
-            <button id="add" class="w-4/12">+</button>
-          </div>
-          <p class="my-5 sm:my-5">$32.00</p>
-        </div>
-        <!-- DELETE -->
-        <svg
-          class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
-          style="width: 15px; height: 15px"
-        >
-          <use xlink:href="./assets/icons/sprite.svg#icon-delete">
-            <title>delete</title>
-          </use>
-        </svg>
-      </div>
-      
-      <div
-        class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
-      >
-        <!-- IMAGE -->
-        <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
-          <img
-            class="object-cover max-w-full"
-            src="./assets/images/other/our-coffee/1.png"
-            alt=""
-          />
-        </div>
-        <!-- CONTENT -->
-        <div
-          class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
-        >
-          <!-- INFO -->
-          <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
-          <p class="mb-5 sm:mb-0">$32.00</p>
-          <!-- COUNTER -->
-          <div
-            class="flex items-center justify-between text-lg bg-citrine"
-            style="width: 13.5rem; height: 5rem; direction: ltr"
-          >
-            <button id="subtract" class="w-4/12">-</button>
-            <span id="count" class="text-lg">40</span>
-            <button id="add" class="w-4/12">+</button>
-          </div>
-          <p class="my-5 sm:my-5">$32.00</p>
-        </div>
-        <!-- DELETE -->
-        <svg
-          class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
-          style="width: 15px; height: 15px"
-        >
-          <use xlink:href="./assets/icons/sprite.svg#icon-delete">
-            <title>delete</title>
-          </use>
-        </svg>
-      </div>
-      
-      <div
-        class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
-      >
-        <!-- IMAGE -->
-        <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
-          <img
-            class="object-cover max-w-full"
-            src="./assets/images/other/our-coffee/1.png"
-            alt=""
-          />
-        </div>
-        <!-- CONTENT -->
-        <div
-          class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
-        >
-          <!-- INFO -->
-          <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
-          <p class="mb-5 sm:mb-0">$32.00</p>
-          <!-- COUNTER -->
-          <div
-            class="flex items-center justify-between text-lg bg-citrine"
-            style="width: 13.5rem; height: 5rem; direction: ltr"
-          >
-            <button id="subtract" class="w-4/12">-</button>
-            <span id="count" class="text-lg">40</span>
-            <button id="add" class="w-4/12">+</button>
-          </div>
-          <p class="my-5 sm:my-5">$32.00</p>
-        </div>
-        <!-- DELETE -->
-        <svg
-          class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
-          style="width: 15px; height: 15px"
-        >
-          <use xlink:href="./assets/icons/sprite.svg#icon-delete">
-            <title>delete</title>
-          </use>
-        </svg>
-      </div>
-      
-      <div
-        class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
-      >
-        <!-- IMAGE -->
-        <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
-          <img
-            class="object-cover max-w-full"
-            src="./assets/images/other/our-coffee/1.png"
-            alt=""
-          />
-        </div>
-        <!-- CONTENT -->
-        <div
-          class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
-        >
-          <!-- INFO -->
-          <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
-          <p class="mb-5 sm:mb-0">$32.00</p>
-          <!-- COUNTER -->
-          <div
-            class="flex items-center justify-between text-lg bg-citrine"
-            style="width: 13.5rem; height: 5rem; direction: ltr"
-          >
-            <button id="subtract" class="w-4/12">-</button>
-            <span id="count" class="text-lg">40</span>
-            <button id="add" class="w-4/12">+</button>
-          </div>
-          <p class="my-5 sm:my-5">$32.00</p>
-        </div>
-        <!-- DELETE -->
-        <svg
-          class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
-          style="width: 15px; height: 15px"
-        >
-          <use xlink:href="./assets/icons/sprite.svg#icon-delete">
-            <title>delete</title>
-          </use>
-        </svg>
-      </div>
-      
-      <div
-        class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
-      >
-        <!-- IMAGE -->
-        <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
-          <img
-            class="object-cover max-w-full"
-            src="./assets/images/other/our-coffee/1.png"
-            alt=""
-          />
-        </div>
-        <!-- CONTENT -->
-        <div
-          class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
-        >
-          <!-- INFO -->
-          <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
-          <p class="mb-5 sm:mb-0">$32.00</p>
-          <!-- COUNTER -->
-          <div
-            class="flex items-center justify-between text-lg bg-citrine"
-            style="width: 13.5rem; height: 5rem; direction: ltr"
-          >
-            <button id="subtract" class="w-4/12">-</button>
-            <span id="count" class="text-lg">40</span>
-            <button id="add" class="w-4/12">+</button>
-          </div>
-          <p class="my-5 sm:my-5">$32.00</p>
-        </div>
-        <!-- DELETE -->
-        <svg
-          class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
-          style="width: 15px; height: 15px"
-        >
-          <use xlink:href="./assets/icons/sprite.svg#icon-delete">
-            <title>delete</title>
-          </use>
-        </svg>
-      </div>
-      
-      <div
-        class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
-      >
-        <!-- IMAGE -->
-        <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
-          <img
-            class="object-cover max-w-full"
-            src="./assets/images/other/our-coffee/1.png"
-            alt=""
-          />
-        </div>
-        <!-- CONTENT -->
-        <div
-          class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
-        >
-          <!-- INFO -->
-          <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
-          <p class="mb-5 sm:mb-0">$32.00</p>
-          <!-- COUNTER -->
-          <div
-            class="flex items-center justify-between text-lg bg-citrine"
-            style="width: 13.5rem; height: 5rem; direction: ltr"
-          >
-            <button id="subtract" class="w-4/12">-</button>
-            <span id="count" class="text-lg">40</span>
-            <button id="add" class="w-4/12">+</button>
-          </div>
-          <p class="my-5 sm:my-5">$32.00</p>
-        </div>
-        <!-- DELETE -->
-        <svg
-          class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
-          style="width: 15px; height: 15px"
-        >
-          <use xlink:href="./assets/icons/sprite.svg#icon-delete">
-            <title>delete</title>
-          </use>
-        </svg>
-      </div>
-      
-    </div>
-    <!-- ACTIONS -->
-    <div
-      class="flex flex-col items-center justify-between mb-10 text-black uppercase  sm:flex-row text-md md:text-18"
-      id="start-scroll-top"
-      style="direction: ltr"
-    >
-      <button class="flex items-center py-5">
-        <svg class="fill-current sm:mis-20" style="width: 2.4rem; height: 2.4rem">
-          <use xlink:href="./assets/icons/sprite.svg#icon-arrow-left">
-            <title>arrow left</title>
-          </use>
-        </svg>
-        <p>CONTINUE SHOPPING</p>
-      </button>
-      <button class="flex items-center py-5">
-        <svg class="fill-current sm:mis-20" style="width: 2.4rem; height: 2.4rem">
-          <use xlink:href="./assets/icons/sprite.svg#icon-delete">
-            <title>delete</title>
-          </use>
-        </svg>
-        <p class="mis-3">CLEAR SHOPPING CART</p>
-      </button>
-      <button class="flex items-center py-5">
-        <svg class="fill-current sm:mis-20" style="width: 2.4rem; height: 2.4rem">
-          <use xlink:href="./assets/icons/sprite.svg#icon-update">
-            <title>update</title>
-          </use>
-        </svg>
-        <p class="mis-3">UPDATE CART</p>
-      </button>
-    </div>
-    <!-- FORM -->
-    <div class="mx-2 mb-10 lg:w-5/12 sm:mx-0">
-      <form class="flex items-center px-5 py-3 bg-mineral">
-        <input type="checkbox" id="gift" class="cursor-pointer" style="width: 20px; height: 20px" />
-        <label for="gift" class="text-white text-18 mis-4"
-          >Add a Gift Message to your Order ($0)</label
-        >
-      </form>
-      <div class="px-16 py-10 mt-5 bg-white border border-black text-18 border-opacity-10">
-        <div class="flex items-center justify-between mb-5">
-          <span class="font-extrabold">SUBTOTAL</span>
-          <span>$32</span>
-        </div>
-        <div class="flex items-center justify-between">
-          <span class="font-extrabold">GRAND TOTAL</span>
-          <span>$32</span>
-        </div>
-      </div>
-      <!--  -->
-      <button
-        style="height: 5rem"
-        class="block w-full mx-auto mt-10 font-medium text-white uppercase transition duration-300  hover:bg-opacity-90 text-md bg-como"
-      >
-        PROCEED CHEKOUT
-      </button>
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
-<footer class="pt-20 pb-10 bg-plantation">
-  <div class="container px-0">
-    <!-- INFO -->
-    <div class="flex flex-col items-center justify-between sm:items-start sm:flex-row">
-      <!--  -->
-      <div class="grid flex-grow-0 grid-cols-2 gap-5">
-        <!-- CATEGORY 1 -->
-        <ul class="font-medium text-white capitalize text-md">
-          <li class="mb-2">
-            <a class="block" href="#">home</a>
-          </li>
-          <li class="mb-2">
-            <a class="block" href="#">shop</a>
-          </li>
-          <li class="mb-2">
-            <a class="block" href="#">story</a>
-          </li>
-          <li class="mb-2">
-            <a class="block" href="#">team</a>
-          </li>
-        </ul>
-        <!-- CATEGORY 2 -->
-        <ul class="font-medium text-white capitalize text-md">
-          <li class="mb-2">
-            <a class="block" href="#">Auction </a>
-          </li>
-          <li class="mb-2">
-            <a class="block" href="#"> Wholesale </a>
-          </li>
-          <li class="mb-2">
-            <a class="block" href="#"> Press </a>
-          </li>
-          <li class="mb-2">
-            <a class="block" href="#"> Contact </a>
-          </li>
-          <li class="mb-2">
-            <a class="block" href="#"> Shipping Policy </a>
-          </li>
-          <li class="mb-2">
-            <a class="block" href="#"> Refund Policy </a>
-          </li>
-          <li class="mb-2">
-            <a class="block" href="#"> Privacy Policy </a>
-          </li>
-          <li class="mb-2">
-            <a class="block" href="#"> Terms of Service </a>
-          </li>
-        </ul>
-      </div>
-      <!--  -->
-      <div class="grid grid-cols-[2fr, 1fr] gap-2 mt-24 sm:mt-0">
-        <h6 class="hidden mb-5 font-medium text-white sm:block text-16">Follow our unprecedented journey</h6>
-        <!-- SEND -->
-        <form class="flex items-center self-start sm:col-start-1 sm:col-end-2">
-          <div style="width: 30rem; height: 4rem" class="relative flex items-center">
-            <button
-              type="submit"
-              style="width: 5.8rem; height: 3.4rem"
-              class="absolute flex items-center justify-center p-5 cursor-pointer send-icon bg-abbey"
-            >
-              <svg style="width: 1.8rem; height: 1.8rem">
-                <use xlink:href="./assets/icons/sprite.svg#icon-send">
-                  <title>send</title>
+              <span class="font-extrabold uppercase text-16">shopping cart</span>
+              <svg
+                class="cursor-pointer fill-current"
+                id="close-sidebar-shop-cart"
+                style="width: 20px; height: 20px"
+              >
+                <use xlink:href="./assets/icons/sprite.svg#icon-close">
+                  <title>close</title>
                 </use>
               </svg>
-            </button>
-            <input
-              class="w-full h-full placeholder-gray-500 text-md pis-5 focus:outline-none focus:ring-2 focus:ring-vistaBlue focus:border-transparent"
-              type="email"
-              placeholder="Sign up for email updates"
-            />
+            </div>
+            <!-- IF EMPTY -->
+            <div
+              id="cart-empty"
+              class="items-center justify-center hidden font-extrabold text-black h-28"
+            >
+              <p>shopping cart empty</p>
+            </div>
+            <!-- CART WRAPPER -->
+            <div id="cart-wrapper" class="overflow-auto max-h-100 sm:max-h-80">
+              <!-- CART CONTENT 1 -->
+              <div class="flex items-center py-5 mb-5 border-b border-black border-opacity-10">
+                <div style="width: 50px; height: 50px" class="self-start px-2">
+                  <img
+                    class="object-cover max-w-full"
+                    src="./assets/images/other/our-coffee/1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="px-4">
+                  <p>The Yemen Trilogy - 3x 4oz boxes</p>
+                  <p class="mt-3">32.00</p>
+                </div>
+                <svg
+                  class="self-start cursor-pointer fill-current text-como delete-item"
+                  style="width: 20px; height: 20px"
+                >
+                  <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                    <title>delete</title>
+                  </use>
+                </svg>
+              </div>
+              <!-- CART CONTENT 2 -->
+              <div class="flex items-center py-5 mb-5 border-b border-black border-opacity-10">
+                <div style="width: 50px; height: 50px" class="self-start px-2">
+                  <img
+                    class="object-cover max-w-full"
+                    src="./assets/images/other/our-coffee/1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="px-4">
+                  <p>The Yemen Trilogy - 3x 4oz boxes</p>
+                  <p class="mt-3">32.00</p>
+                </div>
+                <svg
+                  class="self-start cursor-pointer fill-current text-como delete-item"
+                  style="width: 20px; height: 20px"
+                >
+                  <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                    <title>delete</title>
+                  </use>
+                </svg>
+              </div>
+            </div>
+            <!-- PROCESS CART -->
+            <div id="cart-actions">
+              <div class="flex justify-between font-extrabold capitalize text-16">
+                <p>total:</p>
+                <p>$48</p>
+              </div>
+              <div class="flex flex-col items-center mt-5">
+                <button
+                  class="w-full py-4 text-white uppercase transition rounded  duration-400 hover:bg-opacity-90 bg-como"
+                >
+                  proceed to checkout
+                </button>
+                <a
+                  href="shopping-cart.html"
+                  class="flex items-center justify-center w-full py-4 mt-3 text-black uppercase transition bg-white rounded  duration-400 hover:bg-gray-100"
+                >
+                  view cart
+                </a>
+              </div>
+            </div>
           </div>
-        </form>
-        <!-- SOCIAL -->
-        <div class="flex items-center justify-center mt-5 sm:col-start-3 sm:col-end-4 sm:mt-0">
-          <a href="#" target="_blank">
-            <svg style="width: 2.4rem; height: 2.4rem">
-              <use xlink:href="./assets/icons/sprite.svg#icon-facebook">
-                <title>facebook</title>
-              </use>
-            </svg>
-          </a>
-          <a href="#" target="_blank">
-            <svg style="width: 2.4rem; height: 2.4rem" class="mis-3">
-              <use xlink:href="./assets/icons/sprite.svg#icon-instegram">
-                <title>instegram</title>
-              </use>
-            </svg>
-          </a>
         </div>
       </div>
+      <!-- BACKDROP -->
+      <div class="fixed top-0 bottom-0 left-0 right-0 z-30 hidden sm:hidden back-drop"></div>
+    </nav>
+
+    <main class="container">
+      <section>
+        <h2
+          class="py-10 mb-10 font-extrabold text-center uppercase border-b border-black  border-opacity-10 text-xxlg"
+        >
+          shopping cart
+        </h2>
+        <!-- SHOPPING WRAPPER -->
+        <div class="flex flex-col px-2 mb-10 overflow-auto shopping-wrapper max-h-96 change-scroll">
+          <!-- ITEM -->
+
+          <div
+            class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
+          >
+            <!-- IMAGE -->
+            <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <!-- CONTENT -->
+            <div
+              class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
+            >
+              <!-- INFO -->
+              <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mb-5 sm:mb-0">$32.00</p>
+              <!-- COUNTER -->
+              <div
+                class="flex items-center justify-between text-lg bg-citrine"
+                style="width: 13.5rem; height: 5rem; direction: ltr"
+              >
+                <button id="subtract" class="w-4/12">-</button>
+                <span id="count" class="text-lg">40</span>
+                <button id="add" class="w-4/12">+</button>
+              </div>
+              <p class="my-5 sm:my-5">$32.00</p>
+            </div>
+            <!-- DELETE -->
+            <svg
+              class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
+              style="width: 15px; height: 15px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+
+          <div
+            class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
+          >
+            <!-- IMAGE -->
+            <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <!-- CONTENT -->
+            <div
+              class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
+            >
+              <!-- INFO -->
+              <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mb-5 sm:mb-0">$32.00</p>
+              <!-- COUNTER -->
+              <div
+                class="flex items-center justify-between text-lg bg-citrine"
+                style="width: 13.5rem; height: 5rem; direction: ltr"
+              >
+                <button id="subtract" class="w-4/12">-</button>
+                <span id="count" class="text-lg">40</span>
+                <button id="add" class="w-4/12">+</button>
+              </div>
+              <p class="my-5 sm:my-5">$32.00</p>
+            </div>
+            <!-- DELETE -->
+            <svg
+              class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
+              style="width: 15px; height: 15px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+
+          <div
+            class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
+          >
+            <!-- IMAGE -->
+            <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <!-- CONTENT -->
+            <div
+              class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
+            >
+              <!-- INFO -->
+              <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mb-5 sm:mb-0">$32.00</p>
+              <!-- COUNTER -->
+              <div
+                class="flex items-center justify-between text-lg bg-citrine"
+                style="width: 13.5rem; height: 5rem; direction: ltr"
+              >
+                <button id="subtract" class="w-4/12">-</button>
+                <span id="count" class="text-lg">40</span>
+                <button id="add" class="w-4/12">+</button>
+              </div>
+              <p class="my-5 sm:my-5">$32.00</p>
+            </div>
+            <!-- DELETE -->
+            <svg
+              class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
+              style="width: 15px; height: 15px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+
+          <div
+            class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
+          >
+            <!-- IMAGE -->
+            <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <!-- CONTENT -->
+            <div
+              class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
+            >
+              <!-- INFO -->
+              <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mb-5 sm:mb-0">$32.00</p>
+              <!-- COUNTER -->
+              <div
+                class="flex items-center justify-between text-lg bg-citrine"
+                style="width: 13.5rem; height: 5rem; direction: ltr"
+              >
+                <button id="subtract" class="w-4/12">-</button>
+                <span id="count" class="text-lg">40</span>
+                <button id="add" class="w-4/12">+</button>
+              </div>
+              <p class="my-5 sm:my-5">$32.00</p>
+            </div>
+            <!-- DELETE -->
+            <svg
+              class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
+              style="width: 15px; height: 15px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+
+          <div
+            class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
+          >
+            <!-- IMAGE -->
+            <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <!-- CONTENT -->
+            <div
+              class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
+            >
+              <!-- INFO -->
+              <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mb-5 sm:mb-0">$32.00</p>
+              <!-- COUNTER -->
+              <div
+                class="flex items-center justify-between text-lg bg-citrine"
+                style="width: 13.5rem; height: 5rem; direction: ltr"
+              >
+                <button id="subtract" class="w-4/12">-</button>
+                <span id="count" class="text-lg">40</span>
+                <button id="add" class="w-4/12">+</button>
+              </div>
+              <p class="my-5 sm:my-5">$32.00</p>
+            </div>
+            <!-- DELETE -->
+            <svg
+              class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
+              style="width: 15px; height: 15px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+
+          <div
+            class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
+          >
+            <!-- IMAGE -->
+            <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <!-- CONTENT -->
+            <div
+              class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
+            >
+              <!-- INFO -->
+              <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mb-5 sm:mb-0">$32.00</p>
+              <!-- COUNTER -->
+              <div
+                class="flex items-center justify-between text-lg bg-citrine"
+                style="width: 13.5rem; height: 5rem; direction: ltr"
+              >
+                <button id="subtract" class="w-4/12">-</button>
+                <span id="count" class="text-lg">40</span>
+                <button id="add" class="w-4/12">+</button>
+              </div>
+              <p class="my-5 sm:my-5">$32.00</p>
+            </div>
+            <!-- DELETE -->
+            <svg
+              class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
+              style="width: 15px; height: 15px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+
+          <div
+            class="grid grid-cols-6 py-10 border-b border-black  md:grid-cols-12 md:items-center border-opacity-10"
+          >
+            <!-- IMAGE -->
+            <div style="width: 5rem; height: 5rem" class="col-start-1 col-end-2">
+              <img
+                class="object-cover max-w-full"
+                src="./assets/images/other/our-coffee/1.png"
+                alt=""
+              />
+            </div>
+            <!-- CONTENT -->
+            <div
+              class="flex flex-col justify-between col-start-2 col-end-6  md:col-end-10 md:col-start-2 md:items-center md:flex-row text-16"
+            >
+              <!-- INFO -->
+              <p class="mb-5 font-medium sm:mb-0">The Yemen Trilogy - 3x 4oz boxes</p>
+              <p class="mb-5 sm:mb-0">$32.00</p>
+              <!-- COUNTER -->
+              <div
+                class="flex items-center justify-between text-lg bg-citrine"
+                style="width: 13.5rem; height: 5rem; direction: ltr"
+              >
+                <button id="subtract" class="w-4/12">-</button>
+                <span id="count" class="text-lg">40</span>
+                <button id="add" class="w-4/12">+</button>
+              </div>
+              <p class="my-5 sm:my-5">$32.00</p>
+            </div>
+            <!-- DELETE -->
+            <svg
+              class="col-start-6 col-end-6 cursor-pointer fill-current  mis-auto md:col-start-12 md:col-end-12"
+              style="width: 15px; height: 15px"
+            >
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+          </div>
+        </div>
+        <!-- ACTIONS -->
+        <div
+          class="flex flex-col items-center justify-between mb-10 text-black uppercase  sm:flex-row text-md md:text-18"
+          id="start-scroll-top"
+          style="direction: ltr"
+        >
+          <button class="flex items-center py-5">
+            <svg class="fill-current sm:mis-20" style="width: 2.4rem; height: 2.4rem">
+              <use xlink:href="./assets/icons/sprite.svg#icon-arrow-left">
+                <title>arrow left</title>
+              </use>
+            </svg>
+            <p>CONTINUE SHOPPING</p>
+          </button>
+          <button class="flex items-center py-5">
+            <svg class="fill-current sm:mis-20" style="width: 2.4rem; height: 2.4rem">
+              <use xlink:href="./assets/icons/sprite.svg#icon-delete">
+                <title>delete</title>
+              </use>
+            </svg>
+            <p class="mis-3">CLEAR SHOPPING CART</p>
+          </button>
+          <button class="flex items-center py-5">
+            <svg class="fill-current sm:mis-20" style="width: 2.4rem; height: 2.4rem">
+              <use xlink:href="./assets/icons/sprite.svg#icon-update">
+                <title>update</title>
+              </use>
+            </svg>
+            <p class="mis-3">UPDATE CART</p>
+          </button>
+        </div>
+        <!-- FORM -->
+        <div class="mx-2 mb-10 lg:w-5/12 sm:mx-0">
+          <form class="flex items-center px-5 py-3 bg-mineral">
+            <input
+              type="checkbox"
+              id="gift"
+              class="cursor-pointer"
+              style="width: 20px; height: 20px"
+            />
+            <label for="gift" class="text-white text-18 mis-4"
+              >Add a Gift Message to your Order ($0)</label
+            >
+          </form>
+          <div class="px-16 py-10 mt-5 bg-white border border-black text-18 border-opacity-10">
+            <div class="flex items-center justify-between mb-5">
+              <span class="font-extrabold">SUBTOTAL</span>
+              <span>$32</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-extrabold">GRAND TOTAL</span>
+              <span>$32</span>
+            </div>
+          </div>
+          <!--  -->
+          <button
+            style="height: 5rem"
+            class="block w-full mx-auto mt-10 font-medium text-white uppercase transition duration-300  hover:bg-opacity-90 text-md bg-como"
+          >
+            PROCEED CHEKOUT
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="pt-20 pb-10 bg-plantation">
+      <div class="container px-0">
+        <!-- INFO -->
+        <div class="flex flex-col items-center justify-between sm:items-start sm:flex-row">
+          <!--  -->
+          <div class="grid flex-grow-0 grid-cols-2 gap-5">
+            <!-- CATEGORY 1 -->
+            <ul class="font-medium text-white capitalize text-md">
+              <li class="mb-2">
+                <a class="block" href="#">home</a>
+              </li>
+              <li class="mb-2">
+                <a class="block" href="#">shop</a>
+              </li>
+              <li class="mb-2">
+                <a class="block" href="#">story</a>
+              </li>
+              <li class="mb-2">
+                <a class="block" href="#">team</a>
+              </li>
+            </ul>
+            <!-- CATEGORY 2 -->
+            <ul class="font-medium text-white capitalize text-md">
+              <li class="mb-2">
+                <a class="block" href="#">Auction </a>
+              </li>
+              <li class="mb-2">
+                <a class="block" href="#"> Wholesale </a>
+              </li>
+              <li class="mb-2">
+                <a class="block" href="#"> Press </a>
+              </li>
+              <li class="mb-2">
+                <a class="block" href="#"> Contact </a>
+              </li>
+              <li class="mb-2">
+                <a class="block" href="#"> Shipping Policy </a>
+              </li>
+              <li class="mb-2">
+                <a class="block" href="#"> Refund Policy </a>
+              </li>
+              <li class="mb-2">
+                <a class="block" href="#"> Privacy Policy </a>
+              </li>
+              <li class="mb-2">
+                <a class="block" href="#"> Terms of Service </a>
+              </li>
+            </ul>
+          </div>
+          <!--  -->
+          <div class="grid grid-cols-[2fr, 1fr] gap-2 mt-24 sm:mt-0">
+            <h6 class="hidden mb-5 font-medium text-white sm:block text-16">
+              Follow our unprecedented journey
+            </h6>
+            <!-- SEND -->
+            <form class="flex items-center self-start sm:col-start-1 sm:col-end-2">
+              <div style="width: 30rem; height: 4rem" class="relative flex items-center">
+                <button
+                  type="submit"
+                  style="width: 5.8rem; height: 3.4rem"
+                  class="absolute flex items-center justify-center p-5 cursor-pointer  send-icon bg-abbey"
+                >
+                  <svg style="width: 1.8rem; height: 1.8rem">
+                    <use xlink:href="./assets/icons/sprite.svg#icon-send">
+                      <title>send</title>
+                    </use>
+                  </svg>
+                </button>
+                <input
+                  class="w-full h-full placeholder-gray-500  text-md pis-5 focus:outline-none focus:ring-2 focus:ring-vistaBlue focus:border-transparent"
+                  type="email"
+                  placeholder="Sign up for email updates"
+                />
+              </div>
+            </form>
+            <!-- SOCIAL -->
+            <div class="flex items-center justify-center mt-5 sm:col-start-3 sm:col-end-4 sm:mt-0">
+              <a href="#" target="_blank">
+                <svg style="width: 2.4rem; height: 2.4rem">
+                  <use xlink:href="./assets/icons/sprite.svg#icon-facebook">
+                    <title>facebook</title>
+                  </use>
+                </svg>
+              </a>
+              <a href="#" target="_blank">
+                <svg style="width: 2.4rem; height: 2.4rem" class="mis-3">
+                  <use xlink:href="./assets/icons/sprite.svg#icon-instegram">
+                    <title>instegram</title>
+                  </use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- COPYRIGHT -->
+        <div class="flex flex-col items-center self-end mt-20 sm:-mt-20">
+          <a href="/" class="mb-12">
+            <img class="max-w-full" src="./assets/images/logo/logo.svg" alt="logo" />
+          </a>
+          <p class="text-white text-md">© Copyright <span id="year"></span>| QANATEER</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BUTTON SCROLL TOP -->
+    <button
+      id="scroll-to-top"
+      class="fixed bottom-0 right-0 z-30 flex items-center justify-center transition duration-500 transform translate-y-48 rounded-l-lg  hover-scroll-top bg-plantation"
+      style="width: 6rem; height: 6rem"
+    >
+      <svg style="width: 3rem; height: 3rem" class="transition duration-300">
+        <use xlink:href="./assets/icons/sprite.svg#icon-arrow-up" id="icon-video">
+          <title>play-video</title>
+        </use>
+      </svg>
+    </button>
+
+    <!-- CHANGE LANGUAGE -->
+    <div class="absolute right-0 z-20 hidden sm:flex sm:items-center top-72 text-md desktop-lang">
+      <select class="px-2 uppercase change-lang" style="width: 50px; height: 40px; direction: ltr">
+        <option value="ar">عربي</option>
+        <option value="en" selected>en</option>
+      </select>
+      <!--  -->
+      <svg style="width: 1.5rem; height: 1.5rem" class="absolute right-0 pointer-events-none">
+        <use xlink:href="./assets/icons/sprite.svg#icon-arrow-down">
+          <title></title>
+        </use>
+      </svg>
     </div>
-    <!-- COPYRIGHT -->
-    <div class="flex flex-col items-center self-end mt-20 sm:-mt-20">
-      <a href="/" class="mb-12">
-        <img class="max-w-full" src="./assets/images/logo/logo.svg" alt="logo" />
-      </a>
-      <p class="text-white text-md">© Copyright <span id="year"></span>| QANATEER</p>
-    </div>
-  </div>
-</footer>
-
-<!-- BUTTON SCROLL TOP -->
-<button
-  id="scroll-to-top"
-  class="fixed bottom-0 right-0 z-30 flex items-center justify-center transition duration-500 transform translate-y-48 rounded-l-lg hover-scroll-top bg-plantation"
-  style="width: 6rem; height: 6rem"
->
-  <svg style="width: 3rem; height: 3rem" class="transition duration-300">
-    <use xlink:href="./assets/icons/sprite.svg#icon-arrow-up" id="icon-video">
-      <title>play-video</title>
-    </use>
-  </svg>
-</button>
-
- <!-- CHANGE LANGUAGE -->
- <div class="absolute right-0 z-20 hidden sm:flex sm:items-center top-72 text-md desktop-lang">
-   <select  class="px-2 uppercase change-lang" style="width: 50px; height: 40px; direction: ltr;">
-     <option value="ar">عربي</option>
-     <option value="en" selected>en</option>
-   </select>
-   <!--  -->
-   <svg style="width: 1.5rem; height: 1.5rem" class="absolute right-0 pointer-events-none">
-    <use xlink:href="./assets/icons/sprite.svg#icon-arrow-down">
-      <title></title>
-    </use>
-  </svg>
- </div>
-
 
     <!--  -->
     <script src="./assets/js/library/jquery.3.5.1.js"></script>
@@ -746,4 +752,3 @@
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
-
