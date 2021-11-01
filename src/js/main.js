@@ -33,7 +33,43 @@ $(function () {
   const aboutProduct = $("#about-product").outerHeight(true);
   const comments = $("#comments").outerHeight(true);
   const quickViewProduct = $("#quick-view-product");
+  let getDir = null;
+  ////////////////////////////////////
+  //// LANGUAGE
+  if ($(window).outerWidth() <= 600) $(".desktop-lang").remove();
+  if ($(window).outerWidth() > 600) $(".mobile-lang").remove();
 
+  function language() {
+    // 1) - GET LANGUAGE FROM LOCAL STORAGE
+    const getLang = localStorage.getItem("lang");
+    //
+    if (getLang === "ar" || $(".change-lang").val() === "ar") {
+      $("html").attr({
+        dir: "rtl",
+        lang: "ar",
+      });
+      $(`.change-lang option[value=${getLang}]`).prop("selected", true);
+    }
+    if (getLang === "en" || $(".change-lang").val() === "en") {
+      $("html").attr({
+        dir: "ltr",
+        lang: "en",
+      });
+      $(`.change-lang option[value=${getLang}]`).prop("selected", true);
+    }
+    // 2) - CHECK IF DIR EQUAL RTL
+    getDir = $("html").attr("dir") === "rtl" ? true : false;
+    // 3) - CHANGE LANGUAGE FROM USER
+    $(".change-lang").on("change", function () {
+      const getLang = $(this).val();
+      //
+      if (getLang === "ar") localStorage.setItem("lang", "ar");
+      if (getLang === "en") localStorage.setItem("lang", "en");
+      //
+      setTimeout(() => location.reload(), 500);
+    });
+  }
+  language();
   //
   $(window).scrollTop(0);
   /////////////////////////////////
@@ -140,6 +176,7 @@ $(function () {
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     loop: true,
+    rtl: getDir,
     nav: false,
   });
   //
@@ -152,6 +189,7 @@ $(function () {
     loop: true,
     dots: false,
     nav: true,
+    rtl: getDir,
     navText: ["<div class='prev-slide'></div>", "<div class='next-slide'></div>"],
     responsive: {
       0: {
@@ -169,6 +207,7 @@ $(function () {
     },
   });
 
+  //
   function whenDragged() {
     const category = location.href.split("#")[1];
     $("#category-products")
@@ -177,6 +216,9 @@ $(function () {
       .siblings()
       .removeClass("shape-undeline");
   }
+
+  // RUN FUNCTIONS
+  whenDragged();
 
   // TOGGLE SIDEBAR NAV
   function openSidebarNav() {
@@ -311,6 +353,7 @@ $(function () {
     dots: false,
     autoplay: false,
     smartSpeed: 200,
+    rtl: getDir,
     URLhashListener: true,
     autoplayHoverPause: true,
     startPosition: "URLHash",
@@ -372,9 +415,6 @@ $(function () {
       }
     });
   });
-
-  // RUN FUNCTIONS
-  whenDragged();
 
   // ADD YAER
   year.text(new Date().getFullYear());

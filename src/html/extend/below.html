@@ -57,7 +57,7 @@
             <button
               type="submit"
               style="width: 5.8rem; height: 3.4rem"
-              class="absolute flex items-center justify-center p-5 cursor-pointer right-1 bg-abbey"
+              class="absolute flex items-center justify-center p-5 cursor-pointer send-icon bg-abbey"
             >
               <svg style="width: 1.8rem; height: 1.8rem">
                 <use xlink:href="./assets/icons/sprite.svg#icon-send">
@@ -113,6 +113,20 @@
     </use>
   </svg>
 </button>
+
+ <!-- CHANGE LANGUAGE -->
+ <div class="absolute right-0 z-20 hidden sm:flex sm:items-center top-72 text-md desktop-lang">
+   <select  class="px-2 uppercase change-lang" style="width: 50px; height: 40px; direction: ltr;">
+     <option value="ar">عربي</option>
+     <option value="en" selected>en</option>
+   </select>
+   <!--  -->
+   <svg style="width: 1.5rem; height: 1.5rem" class="absolute right-0 pointer-events-none">
+    <use xlink:href="./assets/icons/sprite.svg#icon-arrow-down">
+      <title></title>
+    </use>
+  </svg>
+ </div>
 
 
     <!--  -->

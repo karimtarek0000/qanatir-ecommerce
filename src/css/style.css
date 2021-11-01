@@ -320,3 +320,46 @@ select:focus {
 .wow {
   visibility: hidden;
 }
+
+/* 
+  DIRECTIONS 
+*/
+/* GENERAL */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+/* SHOPPING-CART */
+html[dir="rtl"] .shopping-cart {
+  @apply sm:left-5 sm:right-auto;
+}
+
+.shopping-cart {
+  @apply sm:left-auto sm:right-5;
+}
+
+/* OVERLAY */
+html[dir="rtl"] .overlay {
+  @apply bg-gradient-to-r from-transparent to-como;
+}
+.overlay {
+  @apply bg-gradient-to-r from-como to-transparent;
+}
+
+/* SLIDE */
+html[dir="rtl"] .slide-dir {
+  @apply text-center sm:text-right;
+}
+
+.slide-dir {
+  @apply text-center sm:text-left;
+}
+
+/* SEND ICON */
+html[dir="rtl"] .send-icon {
+  @apply right-auto left-1;
+}
+
+.send-icon {
+  @apply left-auto right-1;
+}

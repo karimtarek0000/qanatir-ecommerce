@@ -46,35 +46,59 @@
             </div>
           </div>
           <!--  -->
-          <div
-            id="links"
-            class="flex flex-col px-10 mt-10 text-black  sm:px-0 sm:mt-0 sm:items-center sm:text-white sm:flex-row text-16 sm:text-md"
-          >
-            <a
-              href="javascript:void(0)"
-              class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden text-golden"
-              >shop coffee</a
+          <div class="flex flex-col h-full sm:items-center md:flex-row">
+            <!--  -->
+            <div
+              id="links"
+              class="flex flex-col px-10 mt-10 text-black  sm:px-0 sm:mt-0 sm:items-center sm:text-white sm:flex-row text-16 sm:text-md"
             >
-            <a
-              href="javascript:void(0)"
-              class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
-              >subscriptions</a
+              <a
+                href="javascript:void(0)"
+                class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden text-golden"
+                >shop coffee</a
+              >
+              <a
+                href="javascript:void(0)"
+                class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
+                >subscriptions</a
+              >
+              <a
+                href="javascript:void(0)"
+                class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
+                >gifts</a
+              >
+              <a
+                href="javascript:void(0)"
+                class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
+                >brew gear</a
+              >
+              <a
+                href="javascript:void(0)"
+                class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
+                >story</a
+              >
+            </div>
+            <!-- CHANGE LANGUAGE -->
+            <div
+              class="relative flex items-center w-11/12 mx-auto mt-auto mb-5  sm:hidden text-md mobile-lang"
             >
-            <a
-              href="javascript:void(0)"
-              class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
-              >gifts</a
-            >
-            <a
-              href="javascript:void(0)"
-              class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
-              >brew gear</a
-            >
-            <a
-              href="javascript:void(0)"
-              class="mb-5 transition duration-300 sm:mx-4 sm:mb-0 hover:text-golden"
-              >story</a
-            >
+              <select
+                class="w-full px-2 mx-auto uppercase change-lang"
+                style="height: 40px; direction: ltr"
+              >
+                <option value="ar">عربي</option>
+                <option value="en" selected>en</option>
+              </select>
+              <!--  -->
+              <svg
+                style="width: 1.5rem; height: 1.5rem"
+                class="absolute right-0 pointer-events-none"
+              >
+                <use xlink:href="./assets/icons/sprite.svg#icon-arrow-down">
+                  <title></title>
+                </use>
+              </svg>
+            </div>
           </div>
         </div>
         <!-- SHOPPING cart -->
@@ -102,7 +126,7 @@
         <!-- CART -->
         <div
           id="shopping-cart"
-          class="fixed top-0 left-0 z-50 h-full p-5 transition duration-500 transform -translate-x-full bg-white rounded  sm:hidden sm:translate-x-0 sm:left-auto sm:absolute sm:mt-5 sm:-right-5 sm:top-20 sm:h-auto"
+          class="fixed top-0 left-0 z-50 h-full p-5 transition duration-500 transform -translate-x-full bg-white rounded  shopping-cart sm:hidden sm:translate-x-0 sm:absolute sm:mt-5 sm:top-20 sm:h-auto"
           style="width: 28rem"
         >
           <!-- TITLE -->
@@ -494,9 +518,7 @@
         src="./assets/images/other/our-story/1.jpg"
         alt=""
       />
-      <span
-        class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden  overlay bg-gradient-to-r from-como to-transparent"
-      ></span>
+      <span class="absolute top-0 bottom-0 left-0 right-0 overflow-hidden overlay"></span>
     </div>
   </section>
   <!-- VIDEO -->
