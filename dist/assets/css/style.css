@@ -2172,6 +2172,149 @@ select:focus {
   visibility: hidden;
 }
 
+/* STORY PAGE */
+
+.story__section-1 div:nth-child(1) {
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .story__section-1 div:nth-child(1) {
+    margin-bottom: 8rem;
+  }
+}
+
+.story__section-1 div:nth-child(1) h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.story__section-1 div:nth-child(1) p {
+  margin-top: 1.25rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.story__section-1 div:nth-child(2) {
+  font-size: 1.6rem;
+}
+
+.story__section-1 div:nth-child(2) div, .story__section-2 div:nth-child(2) div, .story__section-3 div {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.story__section-1 div:nth-child(2) p {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  line-height: 2;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  --tw-text-opacity: 0.6;
+}
+
+@media (min-width: 640px) {
+  .story__section-1 div:nth-child(2) p {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.story__section-1 div:nth-child(2) img {
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.story__section-2 div:nth-child(1) img, .story__section-2 div:nth-child(2) img, .story__section-3 img {
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.story__section-2 div:nth-child(2) {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .story__section-2 div:nth-child(2) {
+    width: 58.333333%;
+  }
+}
+
+.story__section-2 div:nth-child(2) h2 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+@media (min-width: 640px) {
+  .story__section-2 div:nth-child(2) h2 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.story__section-2 div:nth-child(2) p {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: 1.6rem;
+  line-height: 2;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  --tw-text-opacity: 0.6;
+}
+
+@media (min-width: 640px) {
+  .story__section-2 div:nth-child(2) p {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.story__section-2 div:nth-child(2) p:not(:first-of-type) {
+  margin-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: 1.6rem;
+  line-height: 2;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  --tw-text-opacity: 0.6;
+}
+
+@media (min-width: 640px) {
+  .story__section-2 div:nth-child(2) p:not(:first-of-type) {
+    margin-bottom: 2.5rem;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.story__section-4 div:nth-child(1) h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.story__section-4 div:nth-child(1) p {
+  margin-top: 1.25rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 /* 
   DIRECTIONS 
 */
@@ -2250,6 +2393,11 @@ html[dir="rtl"] .send-icon {
 .send-icon {
   right: 0.25rem;
   left: auto;
+}
+
+html[dir="rtl"] .owl-dots .owl-dot:not(:last-child) {
+  margin-left: 1rem;
+  margin-right: 0;
 }
 
 @media (min-width: 640px) {
@@ -2355,20 +2503,12 @@ html[dir="rtl"] .send-icon {
     margin-bottom: 0px;
   }
 
-  .sm\:mb-10 {
-    margin-bottom: 2.5rem;
-  }
-
   .sm\:mb-20 {
     margin-bottom: 5rem;
   }
 
   .sm\:mb-28 {
     margin-bottom: 7rem;
-  }
-
-  .sm\:mb-32 {
-    margin-bottom: 8rem;
   }
 
   .sm\:ml-0 {
